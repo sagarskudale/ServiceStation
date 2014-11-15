@@ -7,10 +7,14 @@
 //
 
 #import "BikeDetailsViewController.h"
+#import "PdfViewController.h"
 #import "Constants.h"
 #import "Utils.h"
+#import "TechSpecsContainerView.h"
 
-@interface BikeDetailsViewController ()
+@interface BikeDetailsViewController (){
+    
+}
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIImageView *bikeImageView;
 @property (weak, nonatomic) IBOutlet UITextView *notesTextView;
@@ -23,12 +27,14 @@
     [super viewDidLoad];
     [self setStatusBarHidden];
     [self loadAllData];
+    
 }
 
 - (void) loadAllData
 {
     DebugLog(@"");
-    self.backButton.titleLabel.text = self.bikeDetails.bikeName;
+//    self.backButton.titleLabel.text = self.bikeDetails.bikeName;
+    [self.backButton setTitle:self.bikeDetails.bikeName forState:UIControlStateNormal];
     self.notesTextView.text = self.bikeDetails.notes;
     
     [Utils downloadImageWithURL:[NSURL URLWithString:self.bikeDetails.bikeImageUrl] completionBlock:^(BOOL succeeded, UIImage *image) {
@@ -55,8 +61,20 @@
 }
 
 - (IBAction)actionGetQuotationButton:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    PdfViewController *pdfVC = [storyboard instantiateViewControllerWithIdentifier:@"PdfViewController"];
+    pdfVC.pdfURL = self.bikeDetails.pdfURL;
+    [self.navigationController pushViewController:pdfVC animated:YES];
+    
 }
 - (IBAction)actionTechnicalSpecsButton:(id)sender {
+//    NSMutableDictionary *dictData = [[NSMutableDictionary alloc] init];
+//    [dictData setObject:self.bikeDetails.chasisArray forKey:KEY_CHASIS_DATA_ARRAY];
+//    [dictData setObject:self.bikeDetails.engineArray forKey:KEY_ENGINE_DATA_ARRAY];
+    
+//    TechSpecsContainerView *techSpecsContainerView = [[TechSpecsContainerView alloc] initWithFrame:self.view.frame withDictData:dictData];
+//    [self.view addSubview:techSpecsContainerView];
 }
 
 #pragma mark-
