@@ -20,17 +20,20 @@
     }
     
     self.accountInformation = [decoder decodeObjectForKey:@"accountInformation"];
+    self.allBikeInformation = [decoder decodeObjectForKey:@"AllBikeInformation"];
     
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:self.accountInformation forKey:@"accountInformation"];
+    [encoder encodeObject:self.allBikeInformation forKey:@"AllBikeInformation"];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
     AllUserData *allUserData = [[AllUserData allocWithZone:zone] init];
     allUserData.accountInformation = [self.accountInformation copy];
+    allUserData.allBikeInformation = [self.allBikeInformation copy];
     return allUserData;
 }
 

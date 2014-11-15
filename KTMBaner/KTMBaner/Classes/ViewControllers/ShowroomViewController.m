@@ -9,6 +9,9 @@
 #import "ShowroomViewController.h"
 #import "BikeDetailView.h"
 #import "Constants.h"
+#import "ArchiveManager.h"
+#import "AllUserData.h"
+#import "BikeDetailsViewController.h"
 
 @interface ShowroomViewController (){
     NSArray *bikeInfoArray;
@@ -21,8 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    [self setStatusBarHidden];
     [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_MERCHANT_VEHICAL withData:nil withDelegate:self];
 }
 
@@ -42,6 +44,7 @@
         CGPoint position = CGPointMake(((i % 2) * (30 + width)) + 15,height );
         
         BikeDetailView *detailView = [[BikeDetailView alloc] initWithFrame:CGRectMake(position.x, position.y, detailViewSize.width, detailViewSize.height) withBikeDetails:[bikeInfoArray objectAtIndex:i]];
+        detailView.delegate = self;
         [self.scrollView addSubview:detailView];
         
         if (i > 0 && (i % 2) == 0) {
@@ -50,6 +53,15 @@
         
     }
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height);
+}
+
+- (void) saveDataToArchiver:(NSArray *) bikeData
+{
+    DebugLog(@"");
+    AllUserData *userData = [ArchiveManager getUserData];
+    userData.allBikeInformation = bikeData;
+    
+    [ArchiveManager storeDataToFile:userData];
 }
 
 - (void) saveAndLoadData:(NSArray *) data
@@ -64,6 +76,7 @@
     }
     
     bikeInfoArray = [NSArray arrayWithArray:allBikesInformation];
+    [self saveDataToArchiver:bikeInfoArray];
     [self addBikeDetails];
 }
 
@@ -93,6 +106,29 @@
 - (void) onTestRideButtonClicked:(BikeDetail *) bikeDetail
 {
     DebugLog(@"");
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    BikeDetailsViewController *bikeDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"BikeDetailsViewController"];
+    bikeDetailVC.bikeDetails = bikeDetail;
+    [self.navigationController pushViewController:bikeDetailVC animated:YES];
+}
+
+#pragma mark-
+#pragma mark- Status Bar
+#pragma mark-
+
+- (void) setStatusBarHidden
+{
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        // iOS 7
+        [self prefersStatusBarHidden];
+        [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
+    } else {
+        // iOS 6
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    }
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 @end

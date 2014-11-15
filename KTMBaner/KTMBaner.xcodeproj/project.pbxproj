@@ -58,6 +58,7 @@
 		6335FA3F1A08779600655BFA /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6335FA241A08779600655BFA /* ServerController.m */; };
 		6335FA411A087BA400655BFA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA401A087BA400655BFA /* CFNetwork.framework */; };
 		6335FA431A087C8E00655BFA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA421A087C8E00655BFA /* libz.dylib */; };
+		6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */; };
 		6359F80C1A1271DB00135CBE /* AppointmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359F80B1A1271DB00135CBE /* AppointmentTableViewCell.m */; };
 		6359F80F1A12752800135CBE /* AppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359F80E1A12752800135CBE /* AppointmentViewController.m */; };
 		635EEFF91A111C7C00203873 /* AccountInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 635EEFF81A111C7C00203873 /* AccountInformation.m */; };
@@ -183,6 +184,8 @@
 		6335FA241A08779600655BFA /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
 		6335FA401A087BA400655BFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6335FA421A087C8E00655BFA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		634264091A171B3F00EA34F8 /* BikeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetailsViewController.h; sourceTree = "<group>"; };
+		6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetailsViewController.m; sourceTree = "<group>"; };
 		6359F80A1A1271DB00135CBE /* AppointmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentTableViewCell.h; sourceTree = "<group>"; };
 		6359F80B1A1271DB00135CBE /* AppointmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentTableViewCell.m; sourceTree = "<group>"; };
 		6359F80D1A12752800135CBE /* AppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentViewController.h; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 				6359F80E1A12752800135CBE /* AppointmentViewController.m */,
 				6382DE4F1A15177D00BE182F /* ShowroomViewController.h */,
 				6382DE501A15177D00BE182F /* ShowroomViewController.m */,
+				634264091A171B3F00EA34F8 /* BikeDetailsViewController.h */,
+				6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				632BD0931A069A2700ADBBED /* DashBoardViewController.m in Sources */,
 				6335FA341A08779600655BFA /* SBJsonStreamParserAccumulator.m in Sources */,
 				6335FA3D1A08779600655BFA /* MBProgressHUD.m in Sources */,
+				6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */,
 				6335FA3F1A08779600655BFA /* ServerController.m in Sources */,
 				6335FA371A08779600655BFA /* SBJsonStreamWriter.m in Sources */,
 				6335FA291A08779600655BFA /* ASIDownloadCache.m in Sources */,

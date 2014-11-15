@@ -12,5 +12,6 @@
 @interface AllUserData : NSObject<NSCoding, NSCopying>
 
 @property (nonatomic, strong) AccountInformation * accountInformation;
+@property (nonatomic, strong) NSArray *allBikeInformation;
 
 @end
