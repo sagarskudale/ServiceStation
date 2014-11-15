@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollapsableTableViewDelegate.h"
 
 #define KEY_CHASIS_DATA_ARRAY @"ChasisDataArray"
 #define KEY_ENGINE_DATA_ARRAY @"EngineDataArray"
 
-@interface TechSpecsContainerView : UIView
+@interface TechSpecsContainerView : UIView<UITableViewDataSource,UITableViewDelegate,CollapsableTableViewDelegate>
+{
+    UITableView * tableView;
+}
 
-- (id)initWithFrame:(CGRect)frame withDictData: (NSDictionary *) dictData;
+- (id)initWithDictData: (NSDictionary *) dictData;
 
 @end

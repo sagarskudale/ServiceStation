@@ -69,12 +69,12 @@
     
 }
 - (IBAction)actionTechnicalSpecsButton:(id)sender {
-//    NSMutableDictionary *dictData = [[NSMutableDictionary alloc] init];
-//    [dictData setObject:self.bikeDetails.chasisArray forKey:KEY_CHASIS_DATA_ARRAY];
-//    [dictData setObject:self.bikeDetails.engineArray forKey:KEY_ENGINE_DATA_ARRAY];
+    NSMutableDictionary *dictData = [[NSMutableDictionary alloc] init];
+    [dictData setObject:self.bikeDetails.chasisArray forKey:KEY_CHASIS_DATA_ARRAY];
+    [dictData setObject:self.bikeDetails.engineArray forKey:KEY_ENGINE_DATA_ARRAY];
     
-//    TechSpecsContainerView *techSpecsContainerView = [[TechSpecsContainerView alloc] initWithFrame:self.view.frame withDictData:dictData];
-//    [self.view addSubview:techSpecsContainerView];
+    TechSpecsContainerView *techSpecsContainerView = [[TechSpecsContainerView alloc] initWithDictData:dictData];
+    [self.view addSubview:techSpecsContainerView];
 }
 
 #pragma mark-

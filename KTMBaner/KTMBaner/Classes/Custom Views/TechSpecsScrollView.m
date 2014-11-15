@@ -7,6 +7,8 @@
 //
 
 #import "TechSpecsScrollView.h"
+#import "TechSpecsContainerView.h"
+#import "CollapsableTableView.h"
 #import "Constants.h"
 
 @implementation TechSpecsScrollView
@@ -26,33 +28,155 @@
 - (void) initiaizeScrollViewWithData: (NSDictionary *) data
 {
     DebugLog(@"");
-    NSArray *chasisArray = [data objectForKey:KEY_CHASIS_DATA_ARRAY];
-    NSArray *engineArray = [data objectForKey:KEY_ENGINE_DATA_ARRAY];
-    DebugLog(@"chasis aray: %@",chasisArray);
-    DebugLog(@"engine aray: %@",engineArray);
+    TechSpecsContainerView *techView =
+    [[[NSBundle mainBundle] loadNibNamed:@"TechSpecsContainerView"
+                                   owner:self
+                                 options:nil]
+     objectAtIndex:0];
+    [techView setFrame:CGRectMake(0,
+                              0,
+                              [[UIScreen mainScreen]bounds].size.width,
+                              [[UIScreen mainScreen]bounds].size.height)];
+    [self setFrame:CGRectMake(0,
+                              0,
+                              techView.frame.size.width,
+                              techView.frame.size.height)];
+    techView.center = self.center;
+    [self addSubview:techView];
     
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
-    imgView.backgroundColor = [UIColor blackColor];
-    [self addSubview:imgView];
+    self.tableView.frame = CGRectMake(50, 50, techView.frame.size.width - 100, techView.frame.size.height - 100);
     
-    self.frame = CGRectMake(0, 0, imgView.frame.size.width, imgView.frame.size.height);
-    self.center = self.center;
+    self.backgroundColor =[UIColor blackColor];
+    CollapsableTableView* tblView = (CollapsableTableView*)self.tableView;
+    tblView.collapsableTableViewDelegate = self;
 }
 
-- (UITableView *) addTechSpecsTableView
+
+#pragma mark -
+#pragma mark UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    DebugLog(@"");
-    CGRect fr = CGRectMake(101, 45, 100, 416);
+    return 10;
+}
+
+
+- (NSString*) titleForHeaderForSection:(int) section
+{
+    switch (section)
+    {
+        case 0 : return @"First Section";
+        case 1 : return @"Second Section";
+        case 2 : return @"Third Section";
+        case 3 : return @"Fourth Section";
+        case 4 : return @"Fifth Section";
+        default : return [NSString stringWithFormat:@"Section no. %i",section + 1];
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self titleForHeaderForSection:(int)section];
+}
+
+// Uncomment the following two methods to use custom header views.
+//- (UILabel *) createHeaderLabel: (UITableView *) tableView :(NSString *)headerTitle {
+//    UILabel *titleLabel = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+//    titleLabel.frame =CGRectMake(0, 0, tableView.frame.size.width - 20, 60);
+//    titleLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+//    titleLabel.backgroundColor = [UIColor clearColor];
+//    titleLabel.textColor = [UIColor whiteColor];
+//    titleLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:20];
+//    titleLabel.text = headerTitle;
+//    titleLabel.textAlignment = UITextAlignmentRight;
+//    return titleLabel;
+//}
+//
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    // create the parent view that will hold header Label
+//    UIView * customView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, tableView.frame.size.width , 60)]autorelease];
+//    UILabel *titleLabel;
+//    titleLabel = [self createHeaderLabel: tableView :[CollapsableTableViewViewController titleForHeaderForSection:section]];
+//
+//    [customView addSubview:titleLabel];
+//
+//    UILabel* collapsedLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10,0,50,60)] autorelease];
+//    collapsedLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+//    collapsedLabel.backgroundColor = [UIColor clearColor];
+//    collapsedLabel.textColor = [UIColor whiteColor];
+//    collapsedLabel.text = @"-";
+//    collapsedLabel.tag = COLLAPSED_INDICATOR_LABEL_TAG;
+//    [customView addSubview:collapsedLabel];
+//
+//    customView.tag = section;
+//    customView.backgroundColor = [UIColor blackColor];
+//    return customView;
+//}
+
+//- (NSString*) tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+//{
+//    return [NSString stringWithFormat:@"Footer %i",section + 1];
+//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    switch (section)
+    {
+        case 2 : return 0;
+        case 3 : return 30;
+        default : return 8;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
     
-    UITableView *tabrleView = [[UITableView alloc] initWithFrame:fr
-                                                           style:UITableViewStylePlain];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
-    tabrleView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    tabrleView.delegate = self;
-    tabrleView.dataSource = self;
-    [tabrleView reloadData];
+    // Configure the cell.
     
-    return tabrleView;
+    switch (indexPath.row)
+    {
+        case 0 : cell.textLabel.text = @"First Cell"; break;
+        case 1 : cell.textLabel.text = @"Second Cell"; break;
+        case 2 : cell.textLabel.text = @"Third Cell"; break;
+        case 3 : cell.textLabel.text = @"Fourth Cell"; break;
+        case 4 : cell.textLabel.text = @"Fifth Cell"; break;
+        case 5 : cell.textLabel.text = @"Sixth Cell"; break;
+        case 6 : cell.textLabel.text = @"Seventh Cell"; break;
+        case 7 : cell.textLabel.text = @"Eighth Cell"; break;
+        default : cell.textLabel.text = [NSString stringWithFormat:@"Cell %i",indexPath.row + 1];
+    }
+    
+    //cell.detailTextLabel.text = ...;
+    
+    return cell;
+}
+
+
+#pragma mark -
+#pragma mark CollapsableTableViewDelegate
+
+- (void) collapsableTableView:(CollapsableTableView*) tableView willCollapseSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
+{
+}
+
+- (void) collapsableTableView:(CollapsableTableView*) tableView didCollapseSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
+{
+}
+
+- (void) collapsableTableView:(CollapsableTableView*) tableView willExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
+{
+}
+
+- (void) collapsableTableView:(CollapsableTableView*) tableView didExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
+{
 }
 
 @end
