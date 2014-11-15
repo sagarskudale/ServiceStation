@@ -63,8 +63,8 @@
     sectionIdxToHeaderTitleMap = [[NSMutableDictionary alloc] init];
     heightOfShortestCellSeen = 35;
     temporaryRowCountOverrideSectionIdx = -1;
-    collapsedIndicator = [[NSString alloc] initWithString:@"^"];
-    expandedIndicator = [[NSString alloc] initWithString:@"v"];
+    collapsedIndicator = [[NSString alloc] initWithString:@"v"];
+    expandedIndicator = [[NSString alloc] initWithString:@"^"];
     showBusyIndicator = YES;
     sectionsInitiallyCollapsed = NO;
 }

@@ -10,10 +10,17 @@
 #import "Constants.h"
 #import "CollapsableTableView.h"
 
+#define HIEGHT_FOR_HEADER 40
 
 @implementation TechSpecsContainerView
 {
-    
+    CollapsableTableView *collapseTableView;
+    NSArray *chasisDataArray;
+    NSArray *engineDataArray;
+    int noOfRowsInChasis;
+    int noOfRowsEngine;
+    BOOL isChasisCollapsed;
+    BOOL isEngingeCollapsed;
 }
 
 - (id)initWithDictData: (NSDictionary *) dictData
@@ -21,6 +28,10 @@
     DebugLog(@"");
     self = [super init];
     if (self) {
+        chasisDataArray = (NSArray *)[dictData objectForKey:KEY_CHASIS_DATA_ARRAY];
+        noOfRowsInChasis = chasisDataArray.count;
+        engineDataArray = (NSArray *)[dictData objectForKey:KEY_ENGINE_DATA_ARRAY];
+        noOfRowsEngine = engineDataArray.count;
         [self initializeViewWithData:dictData];
     }
     return self;
@@ -36,13 +47,22 @@
     [self setFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width,
                                   [[UIScreen mainScreen]bounds].size.height)];
     
-    CollapsableTableView *collapseTableView = [[CollapsableTableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width - 30, self.frame.size.height)];
+    UIView *bkgView = [[UIView alloc] initWithFrame:self.frame];
+    bkgView.backgroundColor = [UIColor whiteColor];
+    bkgView.alpha = 0.75;
+    [self addSubview:bkgView];
+    
+    collapseTableView = [[CollapsableTableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width - 30, HIEGHT_FOR_HEADER * 2)];
     [self addSubview:collapseTableView];
     collapseTableView.center = self.center;
     collapseTableView.delegate = self;
     collapseTableView.dataSource = self;
+//    collapseTableView.sectionsInitiallyCollapsed = YES;
+    [collapseTableView setIsCollapsed:YES forHeaderWithTitle:@"Chasis"];
+    [collapseTableView setIsCollapsed:YES forHeaderWithTitle:@"Engine"];
     collapseTableView.collapsableTableViewDelegate = self;
-    
+    isChasisCollapsed = YES;
+    isEngingeCollapsed = YES;
 }
 
 #pragma mark -
@@ -50,7 +70,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    return 2;
 }
 
 
@@ -58,13 +78,24 @@
 {
     switch (section)
     {
-        case 0 : return @"First Section";
-        case 1 : return @"Second Section";
-        case 2 : return @"Third Section";
-        case 3 : return @"Fourth Section";
-        case 4 : return @"Fifth Section";
+        case 0 : return @"Chasis";
+        case 1 : return @"Engine";
         default : return [NSString stringWithFormat:@"Section no. %i",section + 1];
     }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
+    v.backgroundColor = [UIColor blackColor];
+    
+    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(15,0,300,44)];
+    tempLabel.backgroundColor=[UIColor clearColor];
+    tempLabel.textColor = [UIColor whiteColor]; //here you can change the text color of header.
+    tempLabel.text=@"Header Text";
+    
+    [v addSubview:tempLabel];
+    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -74,56 +105,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 40;
+    return HIEGHT_FOR_HEADER;
 }
-
-// Uncomment the following two methods to use custom header views.
-//- (UILabel *) createHeaderLabel: (UITableView *) tableView :(NSString *)headerTitle {
-//    UILabel *titleLabel = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
-//    titleLabel.frame =CGRectMake(0, 0, tableView.frame.size.width - 20, 60);
-//    titleLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-//    titleLabel.backgroundColor = [UIColor clearColor];
-//    titleLabel.textColor = [UIColor whiteColor];
-//    titleLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:20];
-//    titleLabel.text = headerTitle;
-//    titleLabel.textAlignment = UITextAlignmentRight;
-//    return titleLabel;
-//}
-//
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    // create the parent view that will hold header Label
-//    UIView * customView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, tableView.frame.size.width , 60)]autorelease];
-//    UILabel *titleLabel;
-//    titleLabel = [self createHeaderLabel: tableView :[CollapsableTableViewViewController titleForHeaderForSection:section]];
-//
-//    [customView addSubview:titleLabel];
-//
-//    UILabel* collapsedLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10,0,50,60)] autorelease];
-//    collapsedLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-//    collapsedLabel.backgroundColor = [UIColor clearColor];
-//    collapsedLabel.textColor = [UIColor whiteColor];
-//    collapsedLabel.text = @"-";
-//    collapsedLabel.tag = COLLAPSED_INDICATOR_LABEL_TAG;
-//    [customView addSubview:collapsedLabel];
-//
-//    customView.tag = section;
-//    customView.backgroundColor = [UIColor blackColor];
-//    return customView;
-//}
-
-//- (NSString*) tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
-//{
-//    return [NSString stringWithFormat:@"Footer %i",section + 1];
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section)
     {
-        case 2 : return 0;
-        case 3 : return 30;
-        default : return 8;
+        case 0 : return noOfRowsInChasis;
+        case 1 : return noOfRowsEngine;
+        default : return 0;
     }
 }
 
@@ -138,22 +129,16 @@
     }
     
     // Configure the cell.
-    
-    switch (indexPath.row)
-    {
-        case 0 : cell.textLabel.text = @"First Cell"; break;
-        case 1 : cell.textLabel.text = @"Second Cell"; break;
-        case 2 : cell.textLabel.text = @"Third Cell"; break;
-        case 3 : cell.textLabel.text = @"Fourth Cell"; break;
-        case 4 : cell.textLabel.text = @"Fifth Cell"; break;
-        case 5 : cell.textLabel.text = @"Sixth Cell"; break;
-        case 6 : cell.textLabel.text = @"Seventh Cell"; break;
-        case 7 : cell.textLabel.text = @"Eighth Cell"; break;
-        default : cell.textLabel.text = [NSString stringWithFormat:@"Cell %i",indexPath.row + 1];
+    NSArray *dataArray;
+    if(indexPath.section == 0){
+        dataArray = chasisDataArray;
+    }else if(indexPath.section == 1){
+        dataArray = engineDataArray;
     }
-    
-    //cell.detailTextLabel.text = ...;
-    
+    NSString *cellHeader = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    NSString *cellDetails = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"Value"];
+    cell.textLabel.text = cellHeader;
+    cell.detailTextLabel.text = cellDetails;
     return cell;
 }
 
@@ -163,6 +148,19 @@
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView willCollapseSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
+    if([sectionTitle isEqualToString:@"Chasis"]){
+        if(isEngingeCollapsed){
+            collapseTableView.frame = CGRectMake(0, 0, collapseTableView.frame.size.width, HIEGHT_FOR_HEADER * 2);
+        }
+        isChasisCollapsed = YES;
+        collapseTableView.center = self.center;
+    }else if([sectionTitle isEqualToString:@"Engine"]){
+        if(isChasisCollapsed){
+            collapseTableView.frame = CGRectMake(0, 0, collapseTableView.frame.size.width, HIEGHT_FOR_HEADER * 2);
+        }
+        isEngingeCollapsed = YES;
+        collapseTableView.center = self.center;
+    }
 }
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView didCollapseSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
@@ -171,6 +169,15 @@
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView willExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
+    if([sectionTitle isEqualToString:@"Chasis"]){
+        isChasisCollapsed = NO;
+        collapseTableView.frame = CGRectMake(0, 0, collapseTableView.frame.size.width, self.frame.size.height);
+        collapseTableView.center = self.center;
+    }else if([sectionTitle isEqualToString:@"Engine"]){
+        isEngingeCollapsed = NO;
+        collapseTableView.frame = CGRectMake(0, 0, collapseTableView.frame.size.width, self.frame.size.height);
+        collapseTableView.center = self.center;
+    }
 }
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView didExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
