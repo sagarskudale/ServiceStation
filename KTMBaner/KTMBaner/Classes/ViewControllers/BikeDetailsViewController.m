@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIImageView *bikeImageView;
 @property (weak, nonatomic) IBOutlet UITextView *notesTextView;
+@property (weak, nonatomic) IBOutlet UIButton *getQuotationBtn;
+@property (weak, nonatomic) IBOutlet UIButton *techSpecsBtn;
+@property (weak, nonatomic) IBOutlet UIButton *bookBtn;
 
 @end
 
@@ -43,6 +46,11 @@
             self.bikeImageView.image = image;
         }
     }];
+    
+    if([self.bikeDetails.bikeName isEqualToString:@"Test"]){
+        self.getQuotationBtn.hidden = YES;
+        self.techSpecsBtn.hidden = YES;
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -3934,7 +3934,10 @@ BANER, Pune 411045</string>
                     <connections>
                         <outlet property="backButton" destination="vao-hn-bzf" id="6Ip-bk-heC"/>
                         <outlet property="bikeImageView" destination="nt7-1d-CZC" id="M3L-GL-noK"/>
+                        <outlet property="bookBtn" destination="xlI-I4-UKE" id="pJ1-ba-Owg"/>
+                        <outlet property="getQuotationBtn" destination="fdk-ml-ypB" id="ySU-na-8pF"/>
                         <outlet property="notesTextView" destination="grk-Wd-iHu" id="x7W-4P-njy"/>
+                        <outlet property="techSpecsBtn" destination="5im-Yc-fXH" id="lMK-tV-EQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEZ-9s-g9g" userLabel="First Responder" sceneMemberID="firstResponder"/>

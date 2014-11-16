@@ -52,6 +52,16 @@
     self.year = [[bikeInfo objectForKey:@"Year"] integerValue];
     
     NSString *notesString =[bikeInfo objectForKey:@"Notes"];
+    [self parseNotesString:notesString];
+}
+
+- (void) parseNotesString: (NSString *) notesString
+{
+    DebugLog(@"");
+    if([notesString isEqualToString:@"Test"]){
+        [self setDataForTestBike];
+        return;
+    }
     
     NSData *jdata = [notesString dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary* responseDict = [NSJSONSerialization
@@ -61,30 +71,49 @@
     
     self.notes = [responseDict objectForKey:@"Notes"];
     NSString *textFileUrl = [responseDict objectForKey:@"File"];
-    
+    [self downLoadTextFileWithUrl:textFileUrl];
+}
+
+- (void) setDataForTestBike
+{
+    DebugLog(@"");
+    self.notes = @"Test";
+    self.bikeImageUrl = @"http://ktmbaner.com/FileUploads/rsz_ktm200duketechbits01_560x420.jpg";
+    self.chasisArray = nil;
+    self.engineArray = nil;
+}
+
+- (void) downLoadTextFileWithUrl: (NSString *) textFileUrl
+{
+    DebugLog(@"");
     NSURL *url = [NSURL URLWithString:textFileUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     if (data != nil) {
-        NSError* error;
-        NSDictionary* textFileDictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                                           options:kNilOptions
-                                                                             error:&error];
-        
-        
-        self.bikeImageUrl = [[textFileDictionary objectForKey:@"ImageUrls"] objectAtIndex:0];
-        self.contact = [textFileDictionary objectForKey:@"Contact"];
-        
-        NSArray *techSpecArray = [textFileDictionary objectForKey:@"Info"];
-        for (NSDictionary * specDic in techSpecArray) {
-            if ([[specDic objectForKey:@"Title"] isEqualToString:@"Chasis"]) {
-                self.chasisArray = [specDic objectForKey:@"Data"];
-            }else if ([[specDic objectForKey:@"Title"] isEqualToString:@"Engine"]) {
-                self.engineArray = [specDic objectForKey:@"Data"];
-            }
+        [self readTextFileFromData:data];
+    }
+}
+
+- (void) readTextFileFromData: (NSData *)data
+{
+    DebugLog(@"");
+    NSError* error;
+    NSDictionary* textFileDictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                       options:kNilOptions
+                                                                         error:&error];
+    
+    
+    self.bikeImageUrl = [[textFileDictionary objectForKey:@"ImageUrls"] objectAtIndex:0];
+    self.contact = [textFileDictionary objectForKey:@"Contact"];
+    
+    NSArray *techSpecArray = [textFileDictionary objectForKey:@"Info"];
+    for (NSDictionary * specDic in techSpecArray) {
+        if ([[specDic objectForKey:@"Title"] isEqualToString:@"Chasis"]) {
+            self.chasisArray = [specDic objectForKey:@"Data"];
+        }else if ([[specDic objectForKey:@"Title"] isEqualToString:@"Engine"]) {
+            self.engineArray = [specDic objectForKey:@"Data"];
         }
     }
-   
 
 }
 

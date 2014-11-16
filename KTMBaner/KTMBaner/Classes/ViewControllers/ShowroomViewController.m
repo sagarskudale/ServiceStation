@@ -26,6 +26,8 @@
     [super viewDidLoad];
     [self setStatusBarHidden];
     [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_MERCHANT_VEHICAL withData:nil withDelegate:self];
+    CGSize scrollableSize = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
+    [self.scrollView setContentSize:scrollableSize];
 }
 
 - (void)didReceiveMemoryWarning {

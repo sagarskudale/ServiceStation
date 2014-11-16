@@ -89,6 +89,7 @@
     UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
     v.backgroundColor = [UIColor blackColor];
     
+    
 //    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(15,0,300,44)];
 //    tempLabel.backgroundColor=[UIColor clearColor];
 //    tempLabel.textColor = [UIColor whiteColor]; //here you can change the text color of header.
@@ -118,6 +119,11 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -139,9 +145,20 @@
     NSString *cellDetails = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"Value"];
     cell.textLabel.text = cellHeader;
     cell.detailTextLabel.text = cellDetails;
+    
+    cell.textLabel.font = [UIFont systemFontOfSize:12];
+    cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:13];
+    cell.detailTextLabel.numberOfLines = 3;
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleNone;
+}
 
 #pragma mark -
 #pragma mark CollapsableTableViewDelegate
@@ -182,6 +199,16 @@
 
 - (void) collapsableTableView:(CollapsableTableView*) tableView didExpandSection:(NSInteger) section title:(NSString*) sectionTitle headerView:(UIView*) headerView
 {
+}
+
+#pragma mark-
+#pragma mark- Touch delegates
+#pragma mark-
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    DebugLog(@"");
+    [self removeFromSuperview];
 }
 
 @end
