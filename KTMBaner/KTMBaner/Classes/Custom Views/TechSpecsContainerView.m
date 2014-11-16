@@ -89,12 +89,12 @@
     UITableViewHeaderFooterView *v = (UITableViewHeaderFooterView *)view;
     v.backgroundColor = [UIColor blackColor];
     
-    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(15,0,300,44)];
-    tempLabel.backgroundColor=[UIColor clearColor];
-    tempLabel.textColor = [UIColor whiteColor]; //here you can change the text color of header.
-    tempLabel.text=@"Header Text";
-    
-    [v addSubview:tempLabel];
+//    UILabel *tempLabel=[[UILabel alloc]initWithFrame:CGRectMake(15,0,300,44)];
+//    tempLabel.backgroundColor=[UIColor clearColor];
+//    tempLabel.textColor = [UIColor whiteColor]; //here you can change the text color of header.
+//    tempLabel.text=@"Header Text";
+//    
+//    [v addSubview:tempLabel];
     
 }
 

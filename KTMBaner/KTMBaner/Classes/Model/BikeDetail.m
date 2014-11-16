@@ -51,30 +51,40 @@
     self.vehicleTypeId = [[bikeInfo objectForKey:@"VehicleTypeId"] integerValue];
     self.year = [[bikeInfo objectForKey:@"Year"] integerValue];
     
-    self.notes = @"Power. Speed. Handling. Dominance. The Ninja U00ae ZX U2122-6R packs all this and more underneath its 599cc engine, twin spar aluminum frame and advanced Showa suspension. Whether you're a street rider or a racer, this bike packs the kind of potent strength that will satisfy even the most discriminating enthusiasts.";
-    NSString *textFileUrl = @"http://ktmbaner.com/FileUploads/kawasaki600.txt";
+    NSString *notesString =[bikeInfo objectForKey:@"Notes"];
+    
+    NSData *jdata = [notesString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary* responseDict = [NSJSONSerialization
+                                  JSONObjectWithData:jdata
+                                  options:kNilOptions
+                                  error:nil];
+    
+    self.notes = [responseDict objectForKey:@"Notes"];
+    NSString *textFileUrl = [responseDict objectForKey:@"File"];
     
     NSURL *url = [NSURL URLWithString:textFileUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    
-    NSError* error;
-    NSDictionary* textFileDictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:kNilOptions
-                                                           error:&error];
-    
-    
-    self.bikeImageUrl = [[textFileDictionary objectForKey:@"ImageUrls"] objectAtIndex:0];
-    self.contact = [textFileDictionary objectForKey:@"Contact"];
-    
-    NSArray *techSpecArray = [textFileDictionary objectForKey:@"Info"];
-    for (NSDictionary * specDic in techSpecArray) {
-        if ([[specDic objectForKey:@"Title"] isEqualToString:@"Chasis"]) {
-            self.chasisArray = [specDic objectForKey:@"Data"];
-        }else if ([[specDic objectForKey:@"Title"] isEqualToString:@"Engine"]) {
-            self.engineArray = [specDic objectForKey:@"Data"];
+    if (data != nil) {
+        NSError* error;
+        NSDictionary* textFileDictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                           options:kNilOptions
+                                                                             error:&error];
+        
+        
+        self.bikeImageUrl = [[textFileDictionary objectForKey:@"ImageUrls"] objectAtIndex:0];
+        self.contact = [textFileDictionary objectForKey:@"Contact"];
+        
+        NSArray *techSpecArray = [textFileDictionary objectForKey:@"Info"];
+        for (NSDictionary * specDic in techSpecArray) {
+            if ([[specDic objectForKey:@"Title"] isEqualToString:@"Chasis"]) {
+                self.chasisArray = [specDic objectForKey:@"Data"];
+            }else if ([[specDic objectForKey:@"Title"] isEqualToString:@"Engine"]) {
+                self.engineArray = [specDic objectForKey:@"Data"];
+            }
         }
     }
+   
 
 }
 
