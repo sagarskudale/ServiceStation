@@ -17,8 +17,9 @@
 
 
 #define MSG_LOGIN @"Authenticating you, Please wait..."
-#define MSG_PLEASE_WAIT @"Please wait."
+#define MSG_PLEASE_WAIT @"Please wait..."
 #define MSG_REGISTERING @"Registering. Please wait..."
+#define MSG_LOADING_MERCANT_BIKES @"Loading vehicles. Please wait..."
 
 
 @implementation ServerController{
@@ -110,6 +111,8 @@ static ServerController *sharedInstance = nil;
         return MSG_LOGIN;
     }else if ([serviceName isEqualToString:SERVICE_NAME_REGISTER_USER]){
         return MSG_REGISTERING;
+    }else if ([serviceName isEqualToString:SERVICE_MERCHANT_VEHICAL]){
+        return MSG_LOADING_MERCANT_BIKES;
     }
     
     return MSG_PLEASE_WAIT;

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KTMBaner/Classes/ViewControllers/ShowroomViewController.m"
-            timestampString = "437837079.653341"
+            timestampString = "437841561.152944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-onDataFetchComplete:"
             landmarkType = "5">
          </BreakpointContent>
@@ -48,6 +48,22 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "-initiaizeScrollViewWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KTMBaner/Classes/ViewControllers/ShowroomViewController.m"
+            timestampString = "437841561.152944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-addBikeDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

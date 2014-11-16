@@ -12,6 +12,9 @@
 #import "ArchiveManager.h"
 #import "AllUserData.h"
 #import "BikeDetailsViewController.h"
+#import "LoadingPlaceHolderView.h"
+
+#define TAG_PLACEHOLDER 12
 
 @interface ShowroomViewController (){
     NSArray *bikeInfoArray;
@@ -25,9 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setStatusBarHidden];
+    [self addPlaceHolderView];
     [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_MERCHANT_VEHICAL withData:nil withDelegate:self];
-    CGSize scrollableSize = CGSizeMake(self.view.frame.size.width, self.scrollView.frame.size.height);
-    [self.scrollView setContentSize:scrollableSize];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,26 +37,55 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) addPlaceHolderView
+{
+    DebugLog(@"");
+    LoadingPlaceHolderView *placeHolderView = [[LoadingPlaceHolderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 65) andWithScreenType:kScreenTypeShowroom];
+    placeHolderView.tag = TAG_PLACEHOLDER;
+    [self.scrollView addSubview:placeHolderView];
+}
+
+- (void) removePlaceHolderView
+{
+    DebugLog(@"");
+    LoadingPlaceHolderView *placeHolderView  = (LoadingPlaceHolderView *) [self.scrollView viewWithTag:TAG_PLACEHOLDER];
+    if (placeHolderView != nil) {
+        [placeHolderView removeFromSuperview];
+    }
+}
+
 - (void) addBikeDetails
 {
     DebugLog(@"");
-    float width = (self.scrollView.frame.size.width - 60) / 2;
+    
+    [self removePlaceHolderView];
+    
+    float width = (self.scrollView.frame.size.width - 45) / 2;
     CGSize detailViewSize = CGSizeMake(width, width * 1.4);
-    float height = 15;
+    float height = 0;
     for (int i = 0; i< [bikeInfoArray count]; i++) {
         
-        CGPoint position = CGPointMake(((i % 2) * (30 + width)) + 15,height );
+        if (i > 0 && (i % 2) == 0) {
+            height = height + width * 1.4 + 15;
+        }else if (i == 0){
+            height = height + 15;
+        }
+        
+        CGPoint position = CGPointMake(((i % 2) * (15 + width)) + 15,height );
         
         BikeDetailView *detailView = [[BikeDetailView alloc] initWithFrame:CGRectMake(position.x, position.y, detailViewSize.width, detailViewSize.height) withBikeDetails:[bikeInfoArray objectAtIndex:i]];
         detailView.delegate = self;
         [self.scrollView addSubview:detailView];
         
-        if (i > 0 && (i % 2) == 0) {
-            height = height + width * 1.4 + 15;
-        }
+        
         
     }
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height);
+    if ([bikeInfoArray count] % 2 == 0) {
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height);
+    }else{
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height + width * 1.4 + 15);
+    }
+    
 }
 
 - (void) saveDataToArchiver:(NSArray *) bikeData

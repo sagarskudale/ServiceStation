@@ -81,6 +81,8 @@
 		635EEFF91A111C7C00203873 /* AccountInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 635EEFF81A111C7C00203873 /* AccountInformation.m */; };
 		635EEFFC1A111CA000203873 /* ArchiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 635EEFFB1A111CA000203873 /* ArchiveManager.m */; };
 		635EEFFF1A111ED000203873 /* AllUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 635EEFFE1A111ED000203873 /* AllUserData.m */; };
+		636E50F21A18E99200C71BC8 /* LoadingPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */; };
+		636E50F41A18EC2B00C71BC8 /* no_records.png in Resources */ = {isa = PBXBuildFile; fileRef = 636E50F31A18EC2B00C71BC8 /* no_records.png */; };
 		6382DE511A15177D00BE182F /* ShowroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE501A15177D00BE182F /* ShowroomViewController.m */; };
 		6382DE541A151AAF00BE182F /* BikeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE531A151AAF00BE182F /* BikeDetailView.m */; };
 		6382DE571A15215F00BE182F /* BikeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE561A15215F00BE182F /* BikeDetail.m */; };
@@ -239,6 +241,9 @@
 		635EEFFB1A111CA000203873 /* ArchiveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveManager.m; sourceTree = "<group>"; };
 		635EEFFD1A111ED000203873 /* AllUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUserData.h; sourceTree = "<group>"; };
 		635EEFFE1A111ED000203873 /* AllUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUserData.m; sourceTree = "<group>"; };
+		636E50F01A18E99200C71BC8 /* LoadingPlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPlaceHolderView.h; sourceTree = "<group>"; };
+		636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPlaceHolderView.m; sourceTree = "<group>"; };
+		636E50F31A18EC2B00C71BC8 /* no_records.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_records.png; sourceTree = "<group>"; };
 		6382DE4F1A15177D00BE182F /* ShowroomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowroomViewController.h; sourceTree = "<group>"; };
 		6382DE501A15177D00BE182F /* ShowroomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowroomViewController.m; sourceTree = "<group>"; };
 		6382DE521A151AAF00BE182F /* BikeDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetailView.h; sourceTree = "<group>"; };
@@ -381,6 +386,8 @@
 				634264121A17413900EA34F8 /* TechSpecsScrollView.h */,
 				634264131A17413900EA34F8 /* TechSpecsScrollView.m */,
 				6342645F1A17840F00EA34F8 /* TechSpecsContainerView.xib */,
+				636E50F01A18E99200C71BC8 /* LoadingPlaceHolderView.h */,
+				636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -662,6 +669,7 @@
 				6335A23C1A0B1CA600C2CB7C /* call.png */,
 				6335A23D1A0B1CA600C2CB7C /* ic_launcher.png */,
 				632BD0761A06998E00ADBBED /* aboutus.png */,
+				636E50F31A18EC2B00C71BC8 /* no_records.png */,
 				632BD0771A06998E00ADBBED /* appointments.png */,
 				632BD0781A06998E00ADBBED /* bike.png */,
 				632BD0791A06998E00ADBBED /* helmet.png */,
@@ -789,6 +797,7 @@
 				634264561A177C0100EA34F8 /* CollapsableTableViewFooterViewPlain_iOS7.xib in Resources */,
 				632BD07F1A06998E00ADBBED /* aboutus.png in Resources */,
 				632BD0861A06998E00ADBBED /* service.png in Resources */,
+				636E50F41A18EC2B00C71BC8 /* no_records.png in Resources */,
 				634264601A17840F00EA34F8 /* TechSpecsContainerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,6 +818,7 @@
 			files = (
 				630AFD5F1A0D345200B73F41 /* ForgotPasswordViewController.m in Sources */,
 				632FD11A1A0DFB65006D8887 /* SignUpViewController.m in Sources */,
+				636E50F21A18E99200C71BC8 /* LoadingPlaceHolderView.m in Sources */,
 				6335FA2F1A08779600655BFA /* UIDevice+IdentifierAddition.m in Sources */,
 				635EEFFF1A111ED000203873 /* AllUserData.m in Sources */,
 				6335FA381A08779600655BFA /* SBJsonStreamWriterAccumulator.m in Sources */,
