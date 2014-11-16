@@ -233,7 +233,10 @@
     accountInformation.strName = [NSString stringWithFormat:@"%@ %@",[userData objectForKey:@"FirstName"], [userData objectForKey:@"LastName"]];
     accountInformation.strEmailID = (NSString *) [userData objectForKey:@"Email"];
     accountInformation.strPhoneNumber = (NSString *) [userData objectForKey:@"MobileNumber"];
-    accountInformation.strBirtDate = (NSString *) [userData objectForKey:@"Birthdate"];
+    
+    NSString *birtDate = (NSString *) [userData objectForKey:@"Birthdate"];
+    NSString *date = [[birtDate componentsSeparatedByString:@"T"] objectAtIndex:0];
+    accountInformation.strBirtDate = date;
     
     AllUserData * allUserData = [[AllUserData alloc] init];
     allUserData.accountInformation = accountInformation;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dax-Dg-Lgt">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -309,15 +310,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8k4-CT-pYf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="GC5-RY-mpG">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4Al-eV-Wpo">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="32" id="ukU-jc-nqc">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4Al-eV-Wpo"/>
+                                                <exclude reference="ukU-jc-nqc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="4Al-eV-Wpo"/>
+                                                <include reference="ukU-jc-nqc"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08O-xe-5sh">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="00b-Gx-xNA"/>
+                                            <constraint firstAttribute="height" constant="60" id="00b-Gx-xNA">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                             <constraint firstAttribute="width" constant="131" id="NIK-FK-U3f">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="193"/>
                                             </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Forgot Password" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,38 +365,25 @@
                                             <action selector="actionBackButton:" destination="WHQ-kJ-J0p" eventType="touchUpInside" id="Ib6-on-12R"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="GC5-RY-mpG">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="4Al-eV-Wpo"/>
-                                            <constraint firstAttribute="width" constant="32" id="ukU-jc-nqc"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="4Al-eV-Wpo"/>
-                                                <exclude reference="ukU-jc-nqc"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="4Al-eV-Wpo"/>
-                                                <include reference="ukU-jc-nqc"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="08O-xe-5sh" firstAttribute="leading" secondItem="8k4-CT-pYf" secondAttribute="leading" constant="25" id="9jB-Wa-C08"/>
-                                    <constraint firstAttribute="height" constant="83" id="Gs2-SK-GyO"/>
+                                    <constraint firstItem="08O-xe-5sh" firstAttribute="leading" secondItem="8k4-CT-pYf" secondAttribute="leading" constant="25" id="9jB-Wa-C08">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="83" id="Gs2-SK-GyO">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="08O-xe-5sh" secondAttribute="centerY" constant="-0.5" id="ald-cg-fv2"/>
                                     <constraint firstAttribute="centerY" secondItem="GC5-RY-mpG" secondAttribute="centerY" constant="-0.5" id="ibu-h9-xep"/>
-                                    <constraint firstItem="GC5-RY-mpG" firstAttribute="leading" secondItem="8k4-CT-pYf" secondAttribute="leading" id="mHZ-Hv-jUN"/>
+                                    <constraint firstItem="GC5-RY-mpG" firstAttribute="leading" secondItem="8k4-CT-pYf" secondAttribute="leading" id="mHZ-Hv-jUN">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="08O-xe-5sh"/>
                                         <exclude reference="GC5-RY-mpG"/>
+                                        <exclude reference="08O-xe-5sh"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Gs2-SK-GyO"/>
@@ -381,8 +395,8 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="08O-xe-5sh"/>
                                         <include reference="GC5-RY-mpG"/>
+                                        <include reference="08O-xe-5sh"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Gs2-SK-GyO"/>
@@ -556,43 +570,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkI-ZE-tNh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DASHBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmz-mp-AYJ">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94901960784313721" green="0.396078431372549" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="Zmz-mp-AYJ" secondAttribute="centerX" id="MZ6-RN-pfR"/>
-                                    <constraint firstAttribute="height" constant="83" id="XPI-fv-h3m"/>
-                                    <constraint firstAttribute="centerY" secondItem="Zmz-mp-AYJ" secondAttribute="centerY" id="y9U-mm-Ze3"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Zmz-mp-AYJ"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="XPI-fv-h3m"/>
-                                        <exclude reference="MZ6-RN-pfR"/>
-                                        <exclude reference="y9U-mm-Ze3"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="Zmz-mp-AYJ"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="XPI-fv-h3m"/>
-                                        <include reference="MZ6-RN-pfR"/>
-                                        <include reference="y9U-mm-Ze3"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-xN-ggt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -622,8 +599,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appointments.png" translatesAutoresizingMaskIntoConstraints="NO" id="pzf-NK-hQN">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="69" id="c4j-p1-tvW"/>
-                                                            <constraint firstAttribute="width" constant="84" id="fgW-8O-RkL"/>
+                                                            <constraint firstAttribute="height" constant="69" id="c4j-p1-tvW">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="84" id="fgW-8O-RkL">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -662,11 +643,11 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="6MQ-bb-4RR" secondAttribute="trailing" id="5mb-k4-yFZ"/>
                                                     <constraint firstAttribute="bottom" secondItem="6MQ-bb-4RR" secondAttribute="bottom" constant="8" id="6Sj-uG-aLG">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
-                                                    <constraint firstItem="pzf-NK-hQN" firstAttribute="top" secondItem="EQx-Up-VkR" secondAttribute="top" constant="14" id="BEj-fa-y7V"/>
                                                     <constraint firstAttribute="centerX" secondItem="pzf-NK-hQN" secondAttribute="centerX" constant="0.5" id="O2i-L5-j3Y"/>
                                                     <constraint firstItem="6MQ-bb-4RR" firstAttribute="leading" secondItem="EQx-Up-VkR" secondAttribute="leading" id="RzL-cA-YU2"/>
+                                                    <constraint firstAttribute="centerY" secondItem="pzf-NK-hQN" secondAttribute="centerY" constant="12.5" id="piU-Th-kdp"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="subviews">
@@ -674,11 +655,11 @@
                                                         <exclude reference="6MQ-bb-4RR"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <exclude reference="O2i-L5-j3Y"/>
+                                                        <exclude reference="piU-Th-kdp"/>
                                                         <exclude reference="5mb-k4-yFZ"/>
                                                         <exclude reference="6Sj-uG-aLG"/>
                                                         <exclude reference="RzL-cA-YU2"/>
-                                                        <exclude reference="BEj-fa-y7V"/>
-                                                        <exclude reference="O2i-L5-j3Y"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -687,11 +668,11 @@
                                                         <include reference="6MQ-bb-4RR"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <include reference="O2i-L5-j3Y"/>
+                                                        <include reference="piU-Th-kdp"/>
                                                         <include reference="5mb-k4-yFZ"/>
                                                         <include reference="6Sj-uG-aLG"/>
                                                         <include reference="RzL-cA-YU2"/>
-                                                        <include reference="BEj-fa-y7V"/>
-                                                        <include reference="O2i-L5-j3Y"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -701,7 +682,9 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike.png" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-4t-htl">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="69" id="dP5-1M-GYM"/>
+                                                            <constraint firstAttribute="height" constant="69" id="dP5-1M-GYM">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                             <constraint firstAttribute="width" constant="80" id="oDz-oF-wgd"/>
                                                         </constraints>
                                                         <variation key="default">
@@ -739,10 +722,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.94117647059999998" green="0.3921568627" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="f0J-4t-htl" firstAttribute="top" secondItem="XuE-KM-ZIP" secondAttribute="top" constant="19" id="0pP-YZ-deC"/>
+                                                    <constraint firstAttribute="centerY" secondItem="f0J-4t-htl" secondAttribute="centerY" constant="7.5" id="MJy-0X-djc"/>
                                                     <constraint firstAttribute="trailing" secondItem="AVX-TN-sJO" secondAttribute="trailing" id="R3p-oi-xCw"/>
                                                     <constraint firstAttribute="bottom" secondItem="AVX-TN-sJO" secondAttribute="bottom" constant="8" id="Tre-AV-bQp">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
                                                     <constraint firstAttribute="centerX" secondItem="f0J-4t-htl" secondAttribute="centerX" constant="0.5" id="qfc-Vi-7op"/>
                                                     <constraint firstItem="AVX-TN-sJO" firstAttribute="leading" secondItem="XuE-KM-ZIP" secondAttribute="leading" id="sHj-hE-xdK"/>
@@ -753,11 +736,11 @@
                                                         <exclude reference="AVX-TN-sJO"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <exclude reference="MJy-0X-djc"/>
+                                                        <exclude reference="qfc-Vi-7op"/>
                                                         <exclude reference="R3p-oi-xCw"/>
                                                         <exclude reference="Tre-AV-bQp"/>
                                                         <exclude reference="sHj-hE-xdK"/>
-                                                        <exclude reference="0pP-YZ-deC"/>
-                                                        <exclude reference="qfc-Vi-7op"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -766,11 +749,11 @@
                                                         <include reference="AVX-TN-sJO"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <include reference="MJy-0X-djc"/>
+                                                        <include reference="qfc-Vi-7op"/>
                                                         <include reference="R3p-oi-xCw"/>
                                                         <include reference="Tre-AV-bQp"/>
                                                         <include reference="sHj-hE-xdK"/>
-                                                        <include reference="0pP-YZ-deC"/>
-                                                        <include reference="qfc-Vi-7op"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -823,9 +806,11 @@
                                                 <constraints>
                                                     <constraint firstAttribute="centerX" secondItem="7Tq-kU-bQm" secondAttribute="centerX" constant="0.5" id="17v-1x-fMc"/>
                                                     <constraint firstAttribute="bottom" secondItem="CU3-cr-eLg" secondAttribute="bottom" constant="8" id="M2z-bn-x8U">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
-                                                    <constraint firstItem="7Tq-kU-bQm" firstAttribute="top" secondItem="mv8-9B-aPe" secondAttribute="top" constant="19" id="UgP-bE-svy"/>
+                                                    <constraint firstItem="7Tq-kU-bQm" firstAttribute="top" secondItem="mv8-9B-aPe" secondAttribute="top" constant="19" id="UgP-bE-svy">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="trailing" secondItem="CU3-cr-eLg" secondAttribute="trailing" id="bh8-V5-zjA"/>
                                                     <constraint firstItem="CU3-cr-eLg" firstAttribute="leading" secondItem="mv8-9B-aPe" secondAttribute="leading" id="mbg-Eo-SvG"/>
                                                 </constraints>
@@ -862,8 +847,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helmet.png" translatesAutoresizingMaskIntoConstraints="NO" id="yYe-SR-UtN">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="83" id="REI-Zg-XY1"/>
-                                                            <constraint firstAttribute="height" constant="67" id="vhe-Rr-lFD"/>
+                                                            <constraint firstAttribute="width" constant="83" id="REI-Zg-XY1">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="67" id="vhe-Rr-lFD">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -900,12 +889,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="yYe-SR-UtN" secondAttribute="centerY" constant="5" id="DHR-CP-C2u"/>
                                                     <constraint firstAttribute="trailing" secondItem="f8X-Mg-TxA" secondAttribute="trailing" id="NiA-pG-8rG"/>
                                                     <constraint firstAttribute="bottom" secondItem="f8X-Mg-TxA" secondAttribute="bottom" constant="8" id="RqX-D9-x0J">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
                                                     <constraint firstItem="f8X-Mg-TxA" firstAttribute="leading" secondItem="Kra-JQ-Mbd" secondAttribute="leading" id="bDC-31-x8e"/>
-                                                    <constraint firstItem="yYe-SR-UtN" firstAttribute="top" secondItem="Kra-JQ-Mbd" secondAttribute="top" constant="20" id="oZH-Zw-crP"/>
                                                     <constraint firstAttribute="centerX" secondItem="yYe-SR-UtN" secondAttribute="centerX" id="xqM-j0-6MS"/>
                                                 </constraints>
                                                 <variation key="default">
@@ -914,11 +903,11 @@
                                                         <exclude reference="f8X-Mg-TxA"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <exclude reference="DHR-CP-C2u"/>
+                                                        <exclude reference="xqM-j0-6MS"/>
                                                         <exclude reference="NiA-pG-8rG"/>
                                                         <exclude reference="RqX-D9-x0J"/>
                                                         <exclude reference="bDC-31-x8e"/>
-                                                        <exclude reference="oZH-Zw-crP"/>
-                                                        <exclude reference="xqM-j0-6MS"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -927,11 +916,11 @@
                                                         <include reference="f8X-Mg-TxA"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <include reference="DHR-CP-C2u"/>
+                                                        <include reference="xqM-j0-6MS"/>
                                                         <include reference="NiA-pG-8rG"/>
                                                         <include reference="RqX-D9-x0J"/>
                                                         <include reference="bDC-31-x8e"/>
-                                                        <include reference="oZH-Zw-crP"/>
-                                                        <include reference="xqM-j0-6MS"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -941,8 +930,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="service.png" translatesAutoresizingMaskIntoConstraints="NO" id="OTl-xO-z4O">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="73" id="38A-gn-MUu"/>
-                                                            <constraint firstAttribute="width" constant="79" id="3Ll-vO-jcC"/>
+                                                            <constraint firstAttribute="height" constant="73" id="38A-gn-MUu">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="79" id="3Ll-vO-jcC">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -979,13 +972,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.94117647059999998" green="0.3921568627" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="OTl-xO-z4O" secondAttribute="centerY" constant="9.5" id="KMv-dp-NyO"/>
                                                     <constraint firstAttribute="centerX" secondItem="OTl-xO-z4O" secondAttribute="centerX" id="TWK-2o-6Tu"/>
                                                     <constraint firstItem="rkw-Wh-D8X" firstAttribute="leading" secondItem="h7Q-io-D9H" secondAttribute="leading" id="V8M-ST-YdT"/>
                                                     <constraint firstAttribute="trailing" secondItem="rkw-Wh-D8X" secondAttribute="trailing" id="WEe-aq-HwH"/>
                                                     <constraint firstAttribute="bottom" secondItem="rkw-Wh-D8X" secondAttribute="bottom" constant="8" id="qa6-tD-ggF">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
-                                                    <constraint firstItem="OTl-xO-z4O" firstAttribute="top" secondItem="h7Q-io-D9H" secondAttribute="top" constant="17" id="xf6-uy-sCR"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="subviews">
@@ -993,11 +986,11 @@
                                                         <exclude reference="rkw-Wh-D8X"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <exclude reference="KMv-dp-NyO"/>
+                                                        <exclude reference="TWK-2o-6Tu"/>
                                                         <exclude reference="V8M-ST-YdT"/>
                                                         <exclude reference="WEe-aq-HwH"/>
                                                         <exclude reference="qa6-tD-ggF"/>
-                                                        <exclude reference="TWK-2o-6Tu"/>
-                                                        <exclude reference="xf6-uy-sCR"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1006,11 +999,11 @@
                                                         <include reference="rkw-Wh-D8X"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <include reference="KMv-dp-NyO"/>
+                                                        <include reference="TWK-2o-6Tu"/>
                                                         <include reference="V8M-ST-YdT"/>
                                                         <include reference="WEe-aq-HwH"/>
                                                         <include reference="qa6-tD-ggF"/>
-                                                        <include reference="TWK-2o-6Tu"/>
-                                                        <include reference="xf6-uy-sCR"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -1020,8 +1013,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Yh-8o-hUi">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="76" id="KoU-ek-WTm"/>
-                                                            <constraint firstAttribute="height" constant="64" id="TiK-FW-y4K"/>
+                                                            <constraint firstAttribute="width" constant="76" id="KoU-ek-WTm">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="64" id="TiK-FW-y4K">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -1062,7 +1059,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="nfF-Yy-2kg" secondAttribute="trailing" id="YPj-50-fEs"/>
                                                     <constraint firstItem="nfF-Yy-2kg" firstAttribute="leading" secondItem="1gG-qj-OUz" secondAttribute="leading" id="cmK-UY-FjN"/>
                                                     <constraint firstAttribute="bottom" secondItem="nfF-Yy-2kg" secondAttribute="bottom" constant="8" id="iBF-nU-8Dm">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
                                                     <constraint firstItem="0Yh-8o-hUi" firstAttribute="top" secondItem="1gG-qj-OUz" secondAttribute="top" constant="18" id="tyX-Zv-tjh">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="10"/>
@@ -1101,8 +1098,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showroom.png" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-KK-tWS">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="77" id="4J5-Ub-Jc0"/>
-                                                            <constraint firstAttribute="width" constant="81" id="R3d-KW-bAU"/>
+                                                            <constraint firstAttribute="height" constant="77" id="4J5-Ub-Jc0">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="81" id="R3d-KW-bAU">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -1142,7 +1143,7 @@
                                                     <constraint firstAttribute="centerX" secondItem="7bC-KK-tWS" secondAttribute="centerX" id="Li5-Li-c0n"/>
                                                     <constraint firstItem="0ur-ZP-mMP" firstAttribute="leading" secondItem="jCt-4p-6PR" secondAttribute="leading" id="Xgw-di-Nos"/>
                                                     <constraint firstAttribute="bottom" secondItem="0ur-ZP-mMP" secondAttribute="bottom" constant="8" id="gkG-uA-w44">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
                                                     <constraint firstAttribute="trailing" secondItem="0ur-ZP-mMP" secondAttribute="trailing" id="qdP-O9-97V"/>
                                                     <constraint firstItem="7bC-KK-tWS" firstAttribute="top" secondItem="jCt-4p-6PR" secondAttribute="top" constant="12" id="uag-iY-sGi">
@@ -1183,7 +1184,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="81" id="MxL-aS-LRx">
-                                                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="76"/>
                                                             </constraint>
                                                             <constraint firstAttribute="height" constant="76" id="QpW-Co-oYe"/>
                                                         </constraints>
@@ -1224,7 +1225,7 @@
                                                 <constraints>
                                                     <constraint firstItem="uZW-P4-pQa" firstAttribute="leading" secondItem="pdG-11-mR2" secondAttribute="leading" id="7qN-eW-Rjl"/>
                                                     <constraint firstAttribute="bottom" secondItem="uZW-P4-pQa" secondAttribute="bottom" constant="8" id="9Sw-j0-K8W">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
                                                     <constraint firstAttribute="centerX" secondItem="W0N-zg-EeV" secondAttribute="centerX" id="CDb-7l-cwt"/>
                                                     <constraint firstItem="W0N-zg-EeV" firstAttribute="top" secondItem="pdG-11-mR2" secondAttribute="top" constant="19" id="DWt-tw-TWw">
@@ -1265,8 +1266,12 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parts.png" translatesAutoresizingMaskIntoConstraints="NO" id="HtJ-ch-0lL">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="73" id="2rj-ST-oD6"/>
-                                                            <constraint firstAttribute="height" constant="67" id="MMZ-on-RxK"/>
+                                                            <constraint firstAttribute="width" constant="73" id="2rj-ST-oD6">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="67" id="MMZ-on-RxK">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -1306,10 +1311,10 @@
                                                     <constraint firstItem="fb8-9M-O9j" firstAttribute="leading" secondItem="2pH-oH-Jmw" secondAttribute="leading" id="2c9-nL-ai7"/>
                                                     <constraint firstAttribute="centerX" secondItem="HtJ-ch-0lL" secondAttribute="centerX" id="DOx-zK-MC4"/>
                                                     <constraint firstAttribute="trailing" secondItem="fb8-9M-O9j" secondAttribute="trailing" id="IcB-IG-QRh"/>
-                                                    <constraint firstItem="HtJ-ch-0lL" firstAttribute="top" secondItem="2pH-oH-Jmw" secondAttribute="top" constant="21" id="Mtx-e2-Nd3"/>
                                                     <constraint firstAttribute="bottom" secondItem="fb8-9M-O9j" secondAttribute="bottom" constant="8" id="fME-2b-cMG">
-                                                        <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                                     </constraint>
+                                                    <constraint firstAttribute="centerY" secondItem="HtJ-ch-0lL" secondAttribute="centerY" constant="5.5" id="uYi-92-oeH"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="subviews">
@@ -1317,11 +1322,11 @@
                                                         <exclude reference="fb8-9M-O9j"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <exclude reference="DOx-zK-MC4"/>
+                                                        <exclude reference="uYi-92-oeH"/>
                                                         <exclude reference="2c9-nL-ai7"/>
                                                         <exclude reference="IcB-IG-QRh"/>
                                                         <exclude reference="fME-2b-cMG"/>
-                                                        <exclude reference="DOx-zK-MC4"/>
-                                                        <exclude reference="Mtx-e2-Nd3"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1330,11 +1335,11 @@
                                                         <include reference="fb8-9M-O9j"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <include reference="DOx-zK-MC4"/>
+                                                        <include reference="uYi-92-oeH"/>
                                                         <include reference="2c9-nL-ai7"/>
                                                         <include reference="IcB-IG-QRh"/>
                                                         <include reference="fME-2b-cMG"/>
-                                                        <include reference="DOx-zK-MC4"/>
-                                                        <include reference="Mtx-e2-Nd3"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -1439,7 +1444,8 @@
                                                 <exclude reference="ve5-B8-5Im"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="1" y="164" width="399" height="399"/>
                                             <mask key="subviews">
                                                 <include reference="EQx-Up-VkR"/>
                                                 <include reference="XuE-KM-ZIP"/>
@@ -1527,6 +1533,45 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkI-ZE-tNh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DASHBOARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmz-mp-AYJ">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.396078431372549" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Zmz-mp-AYJ" secondAttribute="centerX" id="MZ6-RN-pfR"/>
+                                    <constraint firstAttribute="height" constant="83" id="XPI-fv-h3m">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
+                                    <constraint firstAttribute="centerY" secondItem="Zmz-mp-AYJ" secondAttribute="centerY" id="y9U-mm-Ze3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Zmz-mp-AYJ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="XPI-fv-h3m"/>
+                                        <exclude reference="MZ6-RN-pfR"/>
+                                        <exclude reference="y9U-mm-Ze3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Zmz-mp-AYJ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="XPI-fv-h3m"/>
+                                        <include reference="MZ6-RN-pfR"/>
+                                        <include reference="y9U-mm-Ze3"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1549,9 +1594,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="vkI-ZE-tNh"/>
                                 <exclude reference="qzB-xN-ggt"/>
                                 <exclude reference="XcZ-0c-2CR"/>
+                                <exclude reference="vkI-ZE-tNh"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="i6g-RG-9qw"/>
@@ -1568,9 +1613,9 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="vkI-ZE-tNh"/>
                                 <include reference="qzB-xN-ggt"/>
                                 <include reference="XcZ-0c-2CR"/>
+                                <include reference="vkI-ZE-tNh"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="i6g-RG-9qw"/>
@@ -1623,8 +1668,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4d6-wZ-ggg">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="wtR-a7-q9h"/>
+                                            <constraint firstAttribute="height" constant="60" id="wtR-a7-q9h">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="150" id="zh0-xJ-P03"/>
                                         </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="About Us" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1632,11 +1681,13 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="wtR-a7-q9h"/>
+                                                <exclude reference="zh0-xJ-P03"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="wtR-a7-q9h"/>
+                                                <include reference="zh0-xJ-P03"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1646,15 +1697,22 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="2ny-ds-v44">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="GmN-vR-vej"/>
+                                            <constraint firstAttribute="width" constant="32" id="GG2-B2-n8Z">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="44" id="GmN-vR-vej">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="GG2-B2-n8Z"/>
                                                 <exclude reference="GmN-vR-vej"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
+                                                <include reference="GG2-B2-n8Z"/>
                                                 <include reference="GmN-vR-vej"/>
                                             </mask>
                                         </variation>
@@ -1667,8 +1725,12 @@
                                     </constraint>
                                     <constraint firstAttribute="centerY" secondItem="2ny-ds-v44" secondAttribute="centerY" constant="-0.5" id="2Ug-db-wyq"/>
                                     <constraint firstAttribute="centerY" secondItem="4d6-wZ-ggg" secondAttribute="centerY" constant="-0.5" id="eKg-Mj-EQ5"/>
-                                    <constraint firstAttribute="height" constant="83" id="gJj-3e-SUU"/>
-                                    <constraint firstItem="2ny-ds-v44" firstAttribute="leading" secondItem="cCI-Du-goN" secondAttribute="leading" id="ls0-0n-XFo"/>
+                                    <constraint firstAttribute="height" constant="83" id="gJj-3e-SUU">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
+                                    <constraint firstItem="2ny-ds-v44" firstAttribute="leading" secondItem="cCI-Du-goN" secondAttribute="leading" id="ls0-0n-XFo">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -1697,26 +1759,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLP-GF-dJR">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="WBp-7n-Cmf"/>
-                                </constraints>
-                                <string key="text">We are proud to represent two international brands closest to the hearts of riders and enthusiasts. We AadiVenoo Motors KTM Baner, invite you to explore the thrill of sports built with heart and ready to Race</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="WBp-7n-Cmf"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="WBp-7n-Cmf"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNY-Ms-fdJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -1950,7 +1992,9 @@ BANER, Pune 411045</string>
                                                 <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="centerY" secondItem="wto-sG-3p8" secondAttribute="centerY" constant="0.5" id="73n-WK-QzE"/>
-                                                    <constraint firstItem="wto-sG-3p8" firstAttribute="leading" secondItem="bdQ-TZ-XzJ" secondAttribute="leading" constant="14" id="BEq-ug-p9T"/>
+                                                    <constraint firstItem="wto-sG-3p8" firstAttribute="leading" secondItem="bdQ-TZ-XzJ" secondAttribute="leading" constant="14" id="BEq-ug-p9T">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="trailing" secondItem="BNL-he-yAX" secondAttribute="trailing" constant="105" id="Hfd-aO-nbu">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                                                     </constraint>
@@ -2286,7 +2330,9 @@ BANER, Pune 411045</string>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="ubp-80-wQd" firstAttribute="leading" secondItem="TW2-98-q22" secondAttribute="leading" constant="8" id="CVL-an-fY7"/>
+                                                    <constraint firstItem="ubp-80-wQd" firstAttribute="leading" secondItem="TW2-98-q22" secondAttribute="leading" constant="8" id="CVL-an-fY7">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                                                    </constraint>
                                                     <constraint firstItem="Z1U-Sv-KqD" firstAttribute="leading" secondItem="TW2-98-q22" secondAttribute="leading" constant="87" id="be5-gW-3pw"/>
                                                     <constraint firstAttribute="centerY" secondItem="ubp-80-wQd" secondAttribute="centerY" constant="4" id="gWr-Ql-Giw">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -2440,6 +2486,26 @@ BANER, Pune 411045</string>
                                     </mask>
                                 </variation>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLP-GF-dJR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="WBp-7n-Cmf"/>
+                                </constraints>
+                                <string key="text">We are proud to represent two international brands closest to the hearts of riders and enthusiasts. We AadiVenoo Motors KTM Baner, invite you to explore the thrill of sports built with heart and ready to Race</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WBp-7n-Cmf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="WBp-7n-Cmf"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -2458,15 +2524,17 @@ BANER, Pune 411045</string>
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="hNY-Ms-fdJ" firstAttribute="leading" secondItem="Tm7-Ql-tsK" secondAttribute="leadingMargin" constant="-16" id="eco-3T-EK5"/>
-                            <constraint firstItem="vLP-GF-dJR" firstAttribute="leading" secondItem="Tm7-Ql-tsK" secondAttribute="leadingMargin" constant="-11" id="gmH-lA-LXO"/>
+                            <constraint firstItem="vLP-GF-dJR" firstAttribute="leading" secondItem="Tm7-Ql-tsK" secondAttribute="leadingMargin" constant="-11" id="gmH-lA-LXO">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="cCI-Du-goN" secondAttribute="trailing" constant="-16" id="l8c-Z4-dei"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hNY-Ms-fdJ" secondAttribute="trailing" constant="-16" id="sxw-bX-Yag"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="cCI-Du-goN"/>
-                                <exclude reference="vLP-GF-dJR"/>
                                 <exclude reference="hNY-Ms-fdJ"/>
+                                <exclude reference="vLP-GF-dJR"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2N8-lJ-JkX"/>
@@ -2484,8 +2552,8 @@ BANER, Pune 411045</string>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="cCI-Du-goN"/>
-                                <include reference="vLP-GF-dJR"/>
                                 <include reference="hNY-Ms-fdJ"/>
+                                <include reference="vLP-GF-dJR"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2N8-lJ-JkX"/>
@@ -2525,11 +2593,14 @@ BANER, Pune 411045</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWW-hF-uNB">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="4yJ-8K-ng3"/>
+                                            <constraint firstAttribute="height" constant="60" id="4yJ-8K-ng3">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                             <constraint firstAttribute="width" constant="131" id="YNd-Gi-mFt">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="142"/>
                                             </constraint>
                                         </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="#ktmbaner" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2554,8 +2625,12 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="pAG-S0-13K">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Gm7-aI-oF5"/>
-                                            <constraint firstAttribute="width" constant="32" id="dXz-uo-SB2"/>
+                                            <constraint firstAttribute="height" constant="44" id="Gm7-aI-oF5">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="32" id="dXz-uo-SB2">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -2574,9 +2649,13 @@ BANER, Pune 411045</string>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="HWW-hF-uNB" secondAttribute="centerY" constant="-0.5" id="9CE-IY-GIX"/>
-                                    <constraint firstAttribute="height" constant="83" id="Gxb-fw-8PP"/>
+                                    <constraint firstAttribute="height" constant="83" id="Gxb-fw-8PP">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
                                     <constraint firstItem="HWW-hF-uNB" firstAttribute="leading" secondItem="wMA-c4-y6J" secondAttribute="leading" constant="25" id="XWE-9X-k8k"/>
-                                    <constraint firstItem="pAG-S0-13K" firstAttribute="leading" secondItem="wMA-c4-y6J" secondAttribute="leading" id="ait-mi-Bae"/>
+                                    <constraint firstItem="pAG-S0-13K" firstAttribute="leading" secondItem="wMA-c4-y6J" secondAttribute="leading" id="ait-mi-Bae">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="pAG-S0-13K" secondAttribute="centerY" constant="-0.5" id="p5p-ra-hQ9"/>
                                 </constraints>
                                 <variation key="default">
@@ -2682,10 +2761,13 @@ BANER, Pune 411045</string>
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="142" id="F01-aa-2cx"/>
-                                            <constraint firstAttribute="height" constant="60" id="b0x-he-tHw"/>
+                                            <constraint firstAttribute="height" constant="60" id="b0x-he-tHw">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
-                                        <state key="normal" title="Accounts" image="ic_launcher.png">
+                                        <state key="normal" title="Account" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -2709,8 +2791,12 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-5m-rUs">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="Lwd-ke-hlf"/>
-                                            <constraint firstAttribute="height" constant="44" id="Xuu-Ws-L7y"/>
+                                            <constraint firstAttribute="width" constant="32" id="Lwd-ke-hlf">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="44" id="Xuu-Ws-L7y">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -2755,8 +2841,12 @@ BANER, Pune 411045</string>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Lso-gY-iuN" secondAttribute="trailing" id="7nV-tq-MMs"/>
-                                    <constraint firstAttribute="height" constant="83" id="YU6-yU-kZk"/>
-                                    <constraint firstItem="wQv-5m-rUs" firstAttribute="leading" secondItem="QDG-1j-KW6" secondAttribute="leading" id="bdN-IO-uQw"/>
+                                    <constraint firstAttribute="height" constant="83" id="YU6-yU-kZk">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
+                                    <constraint firstItem="wQv-5m-rUs" firstAttribute="leading" secondItem="QDG-1j-KW6" secondAttribute="leading" id="bdN-IO-uQw">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="D7B-um-beh" secondAttribute="centerY" constant="-0.5" id="igV-e6-Efx"/>
                                     <constraint firstAttribute="centerY" secondItem="Lso-gY-iuN" secondAttribute="centerY" id="nR8-va-sET"/>
                                     <constraint firstAttribute="centerY" secondItem="wQv-5m-rUs" secondAttribute="centerY" constant="-0.5" id="rkX-EB-omY"/>
@@ -2795,28 +2885,6 @@ BANER, Pune 411045</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-cV-5UB">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="SUp-d5-MNu"/>
-                                    <constraint firstAttribute="height" constant="26" id="bdL-Kj-mJV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="SUp-d5-MNu"/>
-                                        <exclude reference="bdL-Kj-mJV"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="SUp-d5-MNu"/>
-                                        <include reference="bdL-Kj-mJV"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rov-bd-wQn">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -3025,6 +3093,28 @@ BANER, Pune 411045</string>
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-cV-5UB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="SUp-d5-MNu"/>
+                                    <constraint firstAttribute="height" constant="26" id="bdL-Kj-mJV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SUp-d5-MNu"/>
+                                        <exclude reference="bdL-Kj-mJV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SUp-d5-MNu"/>
+                                        <include reference="bdL-Kj-mJV"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3061,7 +3151,6 @@ BANER, Pune 411045</string>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QDG-1j-KW6"/>
-                                <exclude reference="a5z-cV-5UB"/>
                                 <exclude reference="rov-bd-wQn"/>
                                 <exclude reference="gNu-JE-K5C"/>
                                 <exclude reference="qbO-c2-Hxf"/>
@@ -3072,6 +3161,7 @@ BANER, Pune 411045</string>
                                 <exclude reference="vL9-Fy-OVP"/>
                                 <exclude reference="AE9-cp-FYK"/>
                                 <exclude reference="rtg-ql-20O"/>
+                                <exclude reference="a5z-cV-5UB"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Z4N-cj-KhW"/>
@@ -3108,7 +3198,6 @@ BANER, Pune 411045</string>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="QDG-1j-KW6"/>
-                                <include reference="a5z-cV-5UB"/>
                                 <include reference="rov-bd-wQn"/>
                                 <include reference="gNu-JE-K5C"/>
                                 <include reference="qbO-c2-Hxf"/>
@@ -3119,6 +3208,7 @@ BANER, Pune 411045</string>
                                 <include reference="vL9-Fy-OVP"/>
                                 <include reference="AE9-cp-FYK"/>
                                 <include reference="rtg-ql-20O"/>
+                                <include reference="a5z-cV-5UB"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Z4N-cj-KhW"/>
@@ -3184,8 +3274,11 @@ BANER, Pune 411045</string>
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="159" id="Ef2-RH-FWc"/>
-                                            <constraint firstAttribute="height" constant="60" id="hXN-Mp-rsU"/>
+                                            <constraint firstAttribute="height" constant="60" id="hXN-Mp-rsU">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Appointment" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3211,8 +3304,12 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="aRi-pv-2z6">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="2PP-1c-Oco"/>
-                                            <constraint firstAttribute="height" constant="44" id="Lxw-8R-4Cy"/>
+                                            <constraint firstAttribute="width" constant="32" id="2PP-1c-Oco">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="44" id="Lxw-8R-4Cy">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -3230,11 +3327,15 @@ BANER, Pune 411045</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="TzT-39-AIo"/>
+                                    <constraint firstAttribute="height" constant="83" id="TzT-39-AIo">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="aRi-pv-2z6" secondAttribute="centerY" constant="-0.5" id="UZf-mk-7zK"/>
                                     <constraint firstAttribute="centerY" secondItem="S1J-6u-Tk7" secondAttribute="centerY" constant="-0.5" id="XJZ-FU-JPc"/>
                                     <constraint firstItem="S1J-6u-Tk7" firstAttribute="leading" secondItem="0DJ-2M-lQy" secondAttribute="leading" constant="25" id="aBq-aU-XP2"/>
-                                    <constraint firstItem="aRi-pv-2z6" firstAttribute="leading" secondItem="0DJ-2M-lQy" secondAttribute="leading" id="rRD-sK-SGg"/>
+                                    <constraint firstItem="aRi-pv-2z6" firstAttribute="leading" secondItem="0DJ-2M-lQy" secondAttribute="leading" id="rRD-sK-SGg">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -3480,6 +3581,7 @@ BANER, Pune 411045</string>
                         <viewControllerLayoutGuide type="bottom" id="kmi-cy-H33"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5QJ-yo-Dc3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssn-1O-DSV">
@@ -3489,8 +3591,11 @@ BANER, Pune 411045</string>
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="189" id="2sI-iA-02X"/>
-                                            <constraint firstAttribute="height" constant="57" id="kbM-ud-Ule"/>
+                                            <constraint firstAttribute="height" constant="57" id="kbM-ud-Ule">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Bike Details" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3517,8 +3622,12 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="eSo-s6-ULJ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="W60-k1-eeP"/>
-                                            <constraint firstAttribute="width" constant="32" id="WvZ-AP-3dN"/>
+                                            <constraint firstAttribute="height" constant="44" id="W60-k1-eeP">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="32" id="WvZ-AP-3dN">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -3537,10 +3646,14 @@ BANER, Pune 411045</string>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="eSo-s6-ULJ" secondAttribute="centerY" constant="-0.5" id="4gc-HU-5bz"/>
-                                    <constraint firstAttribute="height" constant="83" id="BKY-W6-G74"/>
+                                    <constraint firstAttribute="height" constant="83" id="BKY-W6-G74">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="vao-hn-bzf" secondAttribute="centerY" constant="1" id="HCX-xp-6HC"/>
                                     <constraint firstItem="vao-hn-bzf" firstAttribute="leading" secondItem="ssn-1O-DSV" secondAttribute="leading" constant="25" id="S2v-aa-cvv"/>
-                                    <constraint firstItem="eSo-s6-ULJ" firstAttribute="leading" secondItem="ssn-1O-DSV" secondAttribute="leading" id="pVs-kF-Mrq"/>
+                                    <constraint firstItem="eSo-s6-ULJ" firstAttribute="leading" secondItem="ssn-1O-DSV" secondAttribute="leading" id="pVs-kF-Mrq">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -3549,10 +3662,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="BKY-W6-G74"/>
-                                        <exclude reference="4gc-HU-5bz"/>
-                                        <exclude reference="pVs-kF-Mrq"/>
                                         <exclude reference="HCX-xp-6HC"/>
                                         <exclude reference="S2v-aa-cvv"/>
+                                        <exclude reference="4gc-HU-5bz"/>
+                                        <exclude reference="pVs-kF-Mrq"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -3562,10 +3675,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="BKY-W6-G74"/>
-                                        <include reference="4gc-HU-5bz"/>
-                                        <include reference="pVs-kF-Mrq"/>
                                         <include reference="HCX-xp-6HC"/>
                                         <include reference="S2v-aa-cvv"/>
+                                        <include reference="4gc-HU-5bz"/>
+                                        <include reference="pVs-kF-Mrq"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -3672,6 +3785,9 @@ BANER, Pune 411045</string>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="U3v-1d-gxR"/>
+                                                <exclude reference="Y8T-bJ-kpH"/>
+                                                <exclude reference="fBP-w8-Lqd"/>
+                                                <exclude reference="i8K-h5-r2K"/>
                                                 <exclude reference="7oq-i9-ijZ"/>
                                                 <exclude reference="Wcb-qt-SjE"/>
                                                 <exclude reference="ls0-KL-ec9"/>
@@ -3681,9 +3797,6 @@ BANER, Pune 411045</string>
                                                 <exclude reference="NIq-40-22J"/>
                                                 <exclude reference="f2W-wP-1fn"/>
                                                 <exclude reference="oKh-cw-qFO"/>
-                                                <exclude reference="Y8T-bJ-kpH"/>
-                                                <exclude reference="fBP-w8-Lqd"/>
-                                                <exclude reference="i8K-h5-r2K"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -3694,6 +3807,9 @@ BANER, Pune 411045</string>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="U3v-1d-gxR"/>
+                                                <include reference="Y8T-bJ-kpH"/>
+                                                <include reference="fBP-w8-Lqd"/>
+                                                <include reference="i8K-h5-r2K"/>
                                                 <include reference="7oq-i9-ijZ"/>
                                                 <include reference="Wcb-qt-SjE"/>
                                                 <include reference="ls0-KL-ec9"/>
@@ -3703,9 +3819,6 @@ BANER, Pune 411045</string>
                                                 <include reference="NIq-40-22J"/>
                                                 <include reference="f2W-wP-1fn"/>
                                                 <include reference="oKh-cw-qFO"/>
-                                                <include reference="Y8T-bJ-kpH"/>
-                                                <include reference="fBP-w8-Lqd"/>
-                                                <include reference="i8K-h5-r2K"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -3741,6 +3854,10 @@ BANER, Pune 411045</string>
                                         <exclude reference="grk-Wd-iHu"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="9hl-8D-tS0"/>
+                                        <exclude reference="Nxh-Na-DqU"/>
+                                        <exclude reference="bqY-Bs-dOI"/>
+                                        <exclude reference="cZP-51-0gw"/>
                                         <exclude reference="Me4-pi-8e7"/>
                                         <exclude reference="fV2-fe-mIq"/>
                                         <exclude reference="wA5-gz-6aC"/>
@@ -3748,10 +3865,6 @@ BANER, Pune 411045</string>
                                         <exclude reference="KqV-C5-XIK"/>
                                         <exclude reference="N6J-wd-ypk"/>
                                         <exclude reference="rYh-Xs-COk"/>
-                                        <exclude reference="9hl-8D-tS0"/>
-                                        <exclude reference="Nxh-Na-DqU"/>
-                                        <exclude reference="bqY-Bs-dOI"/>
-                                        <exclude reference="cZP-51-0gw"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -3761,6 +3874,10 @@ BANER, Pune 411045</string>
                                         <include reference="grk-Wd-iHu"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="9hl-8D-tS0"/>
+                                        <include reference="Nxh-Na-DqU"/>
+                                        <include reference="bqY-Bs-dOI"/>
+                                        <include reference="cZP-51-0gw"/>
                                         <include reference="Me4-pi-8e7"/>
                                         <include reference="fV2-fe-mIq"/>
                                         <include reference="wA5-gz-6aC"/>
@@ -3768,10 +3885,6 @@ BANER, Pune 411045</string>
                                         <include reference="KqV-C5-XIK"/>
                                         <include reference="N6J-wd-ypk"/>
                                         <include reference="rYh-Xs-COk"/>
-                                        <include reference="9hl-8D-tS0"/>
-                                        <include reference="Nxh-Na-DqU"/>
-                                        <include reference="bqY-Bs-dOI"/>
-                                        <include reference="cZP-51-0gw"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -3792,13 +3905,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="CtR-y5-lng"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Vcw-ZP-3Ej"/>
-                                <exclude reference="ZMK-oE-T8N"/>
-                                <exclude reference="wBq-qb-ivM"/>
+                                <exclude reference="aro-bF-GkL"/>
                                 <exclude reference="B0J-Cd-kyn"/>
                                 <exclude reference="slN-ll-K9A"/>
                                 <exclude reference="xDv-Vo-qkM"/>
-                                <exclude reference="aro-bF-GkL"/>
+                                <exclude reference="Vcw-ZP-3Ej"/>
+                                <exclude reference="ZMK-oE-T8N"/>
+                                <exclude reference="wBq-qb-ivM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -3807,13 +3920,13 @@ BANER, Pune 411045</string>
                                 <include reference="CtR-y5-lng"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Vcw-ZP-3Ej"/>
-                                <include reference="ZMK-oE-T8N"/>
-                                <include reference="wBq-qb-ivM"/>
+                                <include reference="aro-bF-GkL"/>
                                 <include reference="B0J-Cd-kyn"/>
                                 <include reference="slN-ll-K9A"/>
                                 <include reference="xDv-Vo-qkM"/>
-                                <include reference="aro-bF-GkL"/>
+                                <include reference="Vcw-ZP-3Ej"/>
+                                <include reference="ZMK-oE-T8N"/>
+                                <include reference="wBq-qb-ivM"/>
                             </mask>
                         </variation>
                     </view>
@@ -3837,6 +3950,7 @@ BANER, Pune 411045</string>
                         <viewControllerLayoutGuide type="bottom" id="SAp-c3-pmQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7ud-fW-xbL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-gy-XBD">
@@ -3846,8 +3960,11 @@ BANER, Pune 411045</string>
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="189" id="Egw-W4-zKX"/>
-                                            <constraint firstAttribute="height" constant="57" id="eD1-f3-gDO"/>
+                                            <constraint firstAttribute="height" constant="57" id="eD1-f3-gDO">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="View PDF" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3875,8 +3992,12 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zsy-GP-Xnm">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="1Sk-Uz-Wn5"/>
-                                            <constraint firstAttribute="height" constant="44" id="3xw-aw-lK3"/>
+                                            <constraint firstAttribute="width" constant="32" id="1Sk-Uz-Wn5">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="44" id="3xw-aw-lK3">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -3894,9 +4015,13 @@ BANER, Pune 411045</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Zsy-GP-Xnm" firstAttribute="leading" secondItem="OIB-gy-XBD" secondAttribute="leading" id="8dw-lc-1ZC"/>
+                                    <constraint firstItem="Zsy-GP-Xnm" firstAttribute="leading" secondItem="OIB-gy-XBD" secondAttribute="leading" id="8dw-lc-1ZC">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="Vdd-uT-dFD" secondAttribute="centerY" constant="1" id="WpO-Zf-0Jq"/>
-                                    <constraint firstAttribute="height" constant="83" id="XET-zr-VAp"/>
+                                    <constraint firstAttribute="height" constant="83" id="XET-zr-VAp">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="65"/>
+                                    </constraint>
                                     <constraint firstItem="Vdd-uT-dFD" firstAttribute="leading" secondItem="OIB-gy-XBD" secondAttribute="leading" constant="25" id="oOt-kH-zX8"/>
                                     <constraint firstAttribute="centerY" secondItem="Zsy-GP-Xnm" secondAttribute="centerY" constant="-0.5" id="sA3-o0-t1i"/>
                                 </constraints>
@@ -3907,10 +4032,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="XET-zr-VAp"/>
-                                        <exclude reference="8dw-lc-1ZC"/>
-                                        <exclude reference="sA3-o0-t1i"/>
                                         <exclude reference="WpO-Zf-0Jq"/>
                                         <exclude reference="oOt-kH-zX8"/>
+                                        <exclude reference="8dw-lc-1ZC"/>
+                                        <exclude reference="sA3-o0-t1i"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -3920,10 +4045,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="XET-zr-VAp"/>
-                                        <include reference="8dw-lc-1ZC"/>
-                                        <include reference="sA3-o0-t1i"/>
                                         <include reference="WpO-Zf-0Jq"/>
                                         <include reference="oOt-kH-zX8"/>
+                                        <include reference="8dw-lc-1ZC"/>
+                                        <include reference="sA3-o0-t1i"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -3948,13 +4073,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="a6R-wk-RpC"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Vsp-YL-mCs"/>
-                                <exclude reference="do0-8R-IZY"/>
-                                <exclude reference="tcp-Kk-Rka"/>
+                                <exclude reference="rwh-hI-A7x"/>
                                 <exclude reference="CXL-lA-Nbb"/>
                                 <exclude reference="XIq-Xk-ZGT"/>
                                 <exclude reference="Z5O-mp-ljG"/>
-                                <exclude reference="rwh-hI-A7x"/>
+                                <exclude reference="Vsp-YL-mCs"/>
+                                <exclude reference="do0-8R-IZY"/>
+                                <exclude reference="tcp-Kk-Rka"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -3963,13 +4088,13 @@ BANER, Pune 411045</string>
                                 <include reference="a6R-wk-RpC"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Vsp-YL-mCs"/>
-                                <include reference="do0-8R-IZY"/>
-                                <include reference="tcp-Kk-Rka"/>
+                                <include reference="rwh-hI-A7x"/>
                                 <include reference="CXL-lA-Nbb"/>
                                 <include reference="XIq-Xk-ZGT"/>
                                 <include reference="Z5O-mp-ljG"/>
-                                <include reference="rwh-hI-A7x"/>
+                                <include reference="Vsp-YL-mCs"/>
+                                <include reference="do0-8R-IZY"/>
+                                <include reference="tcp-Kk-Rka"/>
                             </mask>
                         </variation>
                     </view>
@@ -4008,15 +4133,15 @@ BANER, Pune 411045</string>
         <image name="address.png" width="72" height="72"/>
         <image name="appointments.png" width="128" height="128"/>
         <image name="back_white.png" width="32" height="32"/>
-        <image name="bike.png" width="48" height="48"/>
+        <image name="bike.png" width="128" height="128"/>
         <image name="call.png" width="72" height="72"/>
         <image name="helmet.png" width="128" height="128"/>
-        <image name="ic_launcher.png" width="55" height="55"/>
+        <image name="ic_launcher.png" width="45" height="45"/>
         <image name="instagram.png" width="128" height="128"/>
         <image name="ktm_logo.png" width="173" height="53"/>
         <image name="logo.png" width="350" height="350"/>
-        <image name="parts.png" width="48" height="48"/>
-        <image name="service.png" width="48" height="48"/>
-        <image name="showroom.png" width="48" height="48"/>
+        <image name="parts.png" width="128" height="128"/>
+        <image name="service.png" width="128" height="128"/>
+        <image name="showroom.png" width="128" height="128"/>
     </resources>
 </document>
