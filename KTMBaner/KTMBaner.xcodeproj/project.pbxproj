@@ -58,6 +58,7 @@
 		6335FA3F1A08779600655BFA /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6335FA241A08779600655BFA /* ServerController.m */; };
 		6335FA411A087BA400655BFA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA401A087BA400655BFA /* CFNetwork.framework */; };
 		6335FA431A087C8E00655BFA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA421A087C8E00655BFA /* libz.dylib */; };
+		6338DF781A1BA84900269197 /* BookVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338DF771A1BA84900269197 /* BookVehicleViewController.m */; };
 		6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */; };
 		6342640E1A17302D00EA34F8 /* PdfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640D1A17302D00EA34F8 /* PdfViewController.m */; };
 		634264111A173D0800EA34F8 /* TechSpecsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634264101A173D0800EA34F8 /* TechSpecsContainerView.m */; };
@@ -203,6 +204,8 @@
 		6335FA241A08779600655BFA /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
 		6335FA401A087BA400655BFA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6335FA421A087C8E00655BFA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6338DF761A1BA84900269197 /* BookVehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookVehicleViewController.h; sourceTree = "<group>"; };
+		6338DF771A1BA84900269197 /* BookVehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookVehicleViewController.m; sourceTree = "<group>"; };
 		634264091A171B3F00EA34F8 /* BikeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetailsViewController.h; sourceTree = "<group>"; };
 		6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetailsViewController.m; sourceTree = "<group>"; };
 		6342640C1A17302D00EA34F8 /* PdfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfViewController.h; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */,
 				6342640C1A17302D00EA34F8 /* PdfViewController.h */,
 				6342640D1A17302D00EA34F8 /* PdfViewController.m */,
+				6338DF761A1BA84900269197 /* BookVehicleViewController.h */,
+				6338DF771A1BA84900269197 /* BookVehicleViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -832,6 +837,7 @@
 				6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */,
 				6335FA3F1A08779600655BFA /* ServerController.m in Sources */,
 				6335FA371A08779600655BFA /* SBJsonStreamWriter.m in Sources */,
+				6338DF781A1BA84900269197 /* BookVehicleViewController.m in Sources */,
 				6335FA291A08779600655BFA /* ASIDownloadCache.m in Sources */,
 				6359F80F1A12752800135CBE /* AppointmentViewController.m in Sources */,
 				6342644F1A177C0100EA34F8 /* CollapsableTableView.m in Sources */,
@@ -995,7 +1001,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a436b987-e454-4b50-9f32-26013c5a2ab3";
+				PROVISIONING_PROFILE = "94184214-e938-4650-a7fa-be2836cd8684";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

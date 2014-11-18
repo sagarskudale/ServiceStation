@@ -8,6 +8,7 @@
 
 #import "BikeDetailsViewController.h"
 #import "PdfViewController.h"
+#import "BookVehicleViewController.h"
 #import "Constants.h"
 #import "Utils.h"
 #import "TechSpecsContainerView.h"
@@ -65,7 +66,9 @@
 }
 
 - (IBAction)testRideButton:(id)sender {
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    BookVehicleViewController *bookVehicleVC = [storyboard instantiateViewControllerWithIdentifier:@"BookVehicleViewController"];
+    [self.navigationController pushViewController:bookVehicleVC animated:YES];
 }
 
 - (IBAction)actionGetQuotationButton:(id)sender {
