@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString * strEmailID;
 @property (nonatomic, strong) NSString * strBirtDate;
 @property (nonatomic, strong) NSString * strPhoneNumber;
-
+@property (nonatomic, strong) NSString * strAdderess;
 - (NSString *)description;
 
 @end

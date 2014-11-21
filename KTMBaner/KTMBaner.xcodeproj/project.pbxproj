@@ -25,6 +25,12 @@
 		632BD0931A069A2700ADBBED /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632BD0901A069A2700ADBBED /* DashBoardViewController.m */; };
 		632FD1171A0DFA14006D8887 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632FD1151A0DFA14006D8887 /* SignUp.storyboard */; };
 		632FD11A1A0DFB65006D8887 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FD1191A0DFB65006D8887 /* SignUpViewController.m */; };
+		632FD24F1A1FA5F900831186 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FD24E1A1FA5F800831186 /* RadioButton.m */; };
+		632FD2551A1FA63B00831186 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 632FD2511A1FA63B00831186 /* checked.png */; };
+		632FD2561A1FA63B00831186 /* checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 632FD2521A1FA63B00831186 /* checked@2x.png */; };
+		632FD2571A1FA63B00831186 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 632FD2531A1FA63B00831186 /* unchecked.png */; };
+		632FD2581A1FA63B00831186 /* unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 632FD2541A1FA63B00831186 /* unchecked@2x.png */; };
+		632FD25B1A1FAA2300831186 /* AdderessSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 632FD25A1A1FAA2300831186 /* AdderessSelectionView.m */; };
 		6333303F1A09C78500ED45E1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333303E1A09C78500ED45E1 /* Utils.m */; };
 		6335A23E1A0B1CA600C2CB7C /* address.png in Resources */ = {isa = PBXBuildFile; fileRef = 6335A23B1A0B1CA600C2CB7C /* address.png */; };
 		6335A23F1A0B1CA600C2CB7C /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 6335A23C1A0B1CA600C2CB7C /* call.png */; };
@@ -59,6 +65,7 @@
 		6335FA411A087BA400655BFA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA401A087BA400655BFA /* CFNetwork.framework */; };
 		6335FA431A087C8E00655BFA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA421A087C8E00655BFA /* libz.dylib */; };
 		6338DF781A1BA84900269197 /* BookVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338DF771A1BA84900269197 /* BookVehicleViewController.m */; };
+		6338DF7B1A1BB21D00269197 /* SelectTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338DF7A1A1BB21D00269197 /* SelectTimeView.m */; };
 		6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */; };
 		6342640E1A17302D00EA34F8 /* PdfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640D1A17302D00EA34F8 /* PdfViewController.m */; };
 		634264111A173D0800EA34F8 /* TechSpecsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634264101A173D0800EA34F8 /* TechSpecsContainerView.m */; };
@@ -139,6 +146,14 @@
 		632FD1161A0DFA14006D8887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignUp.storyboard; sourceTree = "<group>"; };
 		632FD1181A0DFB65006D8887 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		632FD1191A0DFB65006D8887 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		632FD24D1A1FA5F800831186 /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
+		632FD24E1A1FA5F800831186 /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		632FD2511A1FA63B00831186 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		632FD2521A1FA63B00831186 /* checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked@2x.png"; sourceTree = "<group>"; };
+		632FD2531A1FA63B00831186 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		632FD2541A1FA63B00831186 /* unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked@2x.png"; sourceTree = "<group>"; };
+		632FD2591A1FAA2300831186 /* AdderessSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdderessSelectionView.h; sourceTree = "<group>"; };
+		632FD25A1A1FAA2300831186 /* AdderessSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdderessSelectionView.m; sourceTree = "<group>"; };
 		6333303D1A09C78500ED45E1 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		6333303E1A09C78500ED45E1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		6335A23B1A0B1CA600C2CB7C /* address.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address.png; sourceTree = "<group>"; };
@@ -206,6 +221,8 @@
 		6335FA421A087C8E00655BFA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6338DF761A1BA84900269197 /* BookVehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookVehicleViewController.h; sourceTree = "<group>"; };
 		6338DF771A1BA84900269197 /* BookVehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookVehicleViewController.m; sourceTree = "<group>"; };
+		6338DF791A1BB21D00269197 /* SelectTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTimeView.h; sourceTree = "<group>"; };
+		6338DF7A1A1BB21D00269197 /* SelectTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTimeView.m; sourceTree = "<group>"; };
 		634264091A171B3F00EA34F8 /* BikeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetailsViewController.h; sourceTree = "<group>"; };
 		6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetailsViewController.m; sourceTree = "<group>"; };
 		6342640C1A17302D00EA34F8 /* PdfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfViewController.h; sourceTree = "<group>"; };
@@ -375,9 +392,30 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		632FD24C1A1FA5F800831186 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				632FD24D1A1FA5F800831186 /* RadioButton.h */,
+				632FD24E1A1FA5F800831186 /* RadioButton.m */,
+			);
+			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		632FD2501A1FA63B00831186 /* radioButtons */ = {
+			isa = PBXGroup;
+			children = (
+				632FD2511A1FA63B00831186 /* checked.png */,
+				632FD2521A1FA63B00831186 /* checked@2x.png */,
+				632FD2531A1FA63B00831186 /* unchecked.png */,
+				632FD2541A1FA63B00831186 /* unchecked@2x.png */,
+			);
+			path = radioButtons;
+			sourceTree = "<group>";
+		};
 		6335F9DD1A08779600655BFA /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				632FD24C1A1FA5F800831186 /* RadioButton */,
 				6335F9DE1A08779600655BFA /* ActivityAlertView.h */,
 				6335F9DF1A08779600655BFA /* ActivityAlertView.m */,
 				639DEC701A0E41C500B89BDC /* DatePickerView.h */,
@@ -393,6 +431,10 @@
 				6342645F1A17840F00EA34F8 /* TechSpecsContainerView.xib */,
 				636E50F01A18E99200C71BC8 /* LoadingPlaceHolderView.h */,
 				636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */,
+				6338DF791A1BB21D00269197 /* SelectTimeView.h */,
+				6338DF7A1A1BB21D00269197 /* SelectTimeView.m */,
+				632FD2591A1FAA2300831186 /* AdderessSelectionView.h */,
+				632FD25A1A1FAA2300831186 /* AdderessSelectionView.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -664,6 +706,7 @@
 		63C9A9E01A01579300FE2B62 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				632FD2501A1FA63B00831186 /* radioButtons */,
 				639DEC6C1A0E3A5000B89BDC /* AppIcon57x57.png */,
 				639DEC6D1A0E3A5000B89BDC /* AppIcon57x57@2x.png */,
 				639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */,
@@ -772,10 +815,12 @@
 				632BD0821A06998E00ADBBED /* helmet.png in Resources */,
 				63C9A9C51A0156BF00FE2B62 /* Main.storyboard in Resources */,
 				634264571A177C0100EA34F8 /* CollapsableTableViewHeaderViewGrouped.xib in Resources */,
+				632FD2581A1FA63B00831186 /* unchecked@2x.png in Resources */,
 				632FD1171A0DFA14006D8887 /* SignUp.storyboard in Resources */,
 				6342645B1A177C0100EA34F8 /* plaintableheader.png in Resources */,
 				632BD0851A06998E00ADBBED /* parts.png in Resources */,
 				63C9A9E41A0158B400FE2B62 /* logo.png in Resources */,
+				632FD2561A1FA63B00831186 /* checked@2x.png in Resources */,
 				639DEC6E1A0E3A5000B89BDC /* AppIcon57x57.png in Resources */,
 				639DEC691A0E390300B89BDC /* AppIcon60x60@2x.png in Resources */,
 				6335A2421A0B1F2500C2CB7C /* back_white.png in Resources */,
@@ -792,6 +837,7 @@
 				6335A23E1A0B1CA600C2CB7C /* address.png in Resources */,
 				632BD0801A06998E00ADBBED /* appointments.png in Resources */,
 				639DEC6F1A0E3A5000B89BDC /* AppIcon57x57@2x.png in Resources */,
+				632FD2571A1FA63B00831186 /* unchecked.png in Resources */,
 				63C9A9E31A0158B400FE2B62 /* ktm_logo.png in Resources */,
 				639DEC671A0E38C400B89BDC /* AppIcon60x60.png in Resources */,
 				6335A2401A0B1CA600C2CB7C /* ic_launcher.png in Resources */,
@@ -802,6 +848,7 @@
 				634264561A177C0100EA34F8 /* CollapsableTableViewFooterViewPlain_iOS7.xib in Resources */,
 				632BD07F1A06998E00ADBBED /* aboutus.png in Resources */,
 				632BD0861A06998E00ADBBED /* service.png in Resources */,
+				632FD2551A1FA63B00831186 /* checked.png in Resources */,
 				636E50F41A18EC2B00C71BC8 /* no_records.png in Resources */,
 				634264601A17840F00EA34F8 /* TechSpecsContainerView.xib in Resources */,
 			);
@@ -838,8 +885,10 @@
 				6335FA3F1A08779600655BFA /* ServerController.m in Sources */,
 				6335FA371A08779600655BFA /* SBJsonStreamWriter.m in Sources */,
 				6338DF781A1BA84900269197 /* BookVehicleViewController.m in Sources */,
+				632FD25B1A1FAA2300831186 /* AdderessSelectionView.m in Sources */,
 				6335FA291A08779600655BFA /* ASIDownloadCache.m in Sources */,
 				6359F80F1A12752800135CBE /* AppointmentViewController.m in Sources */,
+				632FD24F1A1FA5F900831186 /* RadioButton.m in Sources */,
 				6342644F1A177C0100EA34F8 /* CollapsableTableView.m in Sources */,
 				6382DE511A15177D00BE182F /* ShowroomViewController.m in Sources */,
 				6335FA3E1A08779600655BFA /* Reachability.m in Sources */,
@@ -856,6 +905,7 @@
 				6335FA281A08779600655BFA /* ASIDataDecompressor.m in Sources */,
 				632BD0921A069A2700ADBBED /* main.m in Sources */,
 				634264141A17413900EA34F8 /* TechSpecsScrollView.m in Sources */,
+				6338DF7B1A1BB21D00269197 /* SelectTimeView.m in Sources */,
 				6335FA2D1A08779600655BFA /* ASINetworkQueue.m in Sources */,
 				6382DE571A15215F00BE182F /* BikeDetail.m in Sources */,
 				6335FA261A08779600655BFA /* ASIAuthenticationDialog.m in Sources */,

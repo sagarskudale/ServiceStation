@@ -22,7 +22,7 @@
     self.strEmailID = [decoder decodeObjectForKey:@"emailid"];
     self.strBirtDate = [decoder decodeObjectForKey:@"birthdate"];
     self.strPhoneNumber = [decoder decodeObjectForKey:@"phonenumber"];
-    
+    self.strAdderess = [decoder decodeObjectForKey:@"address"];
     return self;
 }
 
@@ -31,6 +31,7 @@
     [encoder encodeObject:self.strEmailID forKey:@"emailid"];
     [encoder encodeObject:self.strBirtDate forKey:@"birthdate"];
     [encoder encodeObject:self.strPhoneNumber forKey:@"phonenumber"];
+    [encoder encodeObject:self.strAdderess forKey:@"address"];
 }
 
 - (NSString *)description {
@@ -48,6 +49,7 @@
     accountInfo.strEmailID = [self.strEmailID copy];
     accountInfo.strBirtDate = [self.strBirtDate copy];
     accountInfo.strPhoneNumber = [self.strPhoneNumber copy];
+    accountInfo.strAdderess = [self.strAdderess copy];
     return accountInfo;
 }
 @end

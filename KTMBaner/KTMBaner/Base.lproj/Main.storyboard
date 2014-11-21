@@ -4118,6 +4118,7 @@ BANER, Pune 411045</string>
                         <viewControllerLayoutGuide type="bottom" id="lDT-4g-2vd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bsG-iT-Gvo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXp-Rl-qoQ">
@@ -4200,10 +4201,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="c4c-Ea-W96"/>
-                                        <exclude reference="Q9z-JK-HRf"/>
-                                        <exclude reference="Yox-uI-q4f"/>
                                         <exclude reference="G3H-Iv-gNi"/>
                                         <exclude reference="bY4-3G-UOw"/>
+                                        <exclude reference="Q9z-JK-HRf"/>
+                                        <exclude reference="Yox-uI-q4f"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -4213,10 +4214,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="c4c-Ea-W96"/>
-                                        <include reference="Q9z-JK-HRf"/>
-                                        <include reference="Yox-uI-q4f"/>
                                         <include reference="G3H-Iv-gNi"/>
                                         <include reference="bY4-3G-UOw"/>
+                                        <include reference="Q9z-JK-HRf"/>
+                                        <include reference="Yox-uI-q4f"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -4355,6 +4356,9 @@ BANER, Pune 411045</string>
                                                         <include reference="yhC-fB-WzN"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="actionTodayButton:" destination="K2q-d1-SrH" eventType="touchUpInside" id="WRV-sk-3EV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dke-zI-xrn">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -4377,6 +4381,9 @@ BANER, Pune 411045</string>
                                                         <include reference="aHg-W3-iDf"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="actionTommorowButton:" destination="K2q-d1-SrH" eventType="touchUpInside" id="lXc-p0-rCh"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq5-Ck-u4C">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -4424,15 +4431,15 @@ BANER, Pune 411045</string>
                                                 <exclude reference="Xq5-Ck-u4C"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="MBW-67-h57"/>
-                                                <exclude reference="Uvf-zM-16G"/>
-                                                <exclude reference="ZGt-ab-Kji"/>
-                                                <exclude reference="iHq-S6-ZVT"/>
                                                 <exclude reference="28J-bw-YtU"/>
                                                 <exclude reference="NC4-bY-XJY"/>
                                                 <exclude reference="OJL-mG-FaS"/>
                                                 <exclude reference="aM7-fZ-Ywl"/>
                                                 <exclude reference="h50-cX-oQu"/>
+                                                <exclude reference="MBW-67-h57"/>
+                                                <exclude reference="Uvf-zM-16G"/>
+                                                <exclude reference="ZGt-ab-Kji"/>
+                                                <exclude reference="iHq-S6-ZVT"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -4442,15 +4449,15 @@ BANER, Pune 411045</string>
                                                 <include reference="Xq5-Ck-u4C"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="MBW-67-h57"/>
-                                                <include reference="Uvf-zM-16G"/>
-                                                <include reference="ZGt-ab-Kji"/>
-                                                <include reference="iHq-S6-ZVT"/>
                                                 <include reference="28J-bw-YtU"/>
                                                 <include reference="NC4-bY-XJY"/>
                                                 <include reference="OJL-mG-FaS"/>
                                                 <include reference="aM7-fZ-Ywl"/>
                                                 <include reference="h50-cX-oQu"/>
+                                                <include reference="MBW-67-h57"/>
+                                                <include reference="Uvf-zM-16G"/>
+                                                <include reference="ZGt-ab-Kji"/>
+                                                <include reference="iHq-S6-ZVT"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -4475,15 +4482,15 @@ BANER, Pune 411045</string>
                                         <exclude reference="Obf-kn-8ZO"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="1AX-hg-VSP"/>
+                                        <exclude reference="6na-cp-mDZ"/>
+                                        <exclude reference="tY9-zJ-QZA"/>
+                                        <exclude reference="wzx-5d-1dA"/>
                                         <exclude reference="3pt-Nc-N6F"/>
                                         <exclude reference="MFD-cg-KZw"/>
                                         <exclude reference="OKg-c0-ave"/>
                                         <exclude reference="rPY-Tk-KnK"/>
                                         <exclude reference="tIq-Eb-SQD"/>
-                                        <exclude reference="1AX-hg-VSP"/>
-                                        <exclude reference="6na-cp-mDZ"/>
-                                        <exclude reference="tY9-zJ-QZA"/>
-                                        <exclude reference="wzx-5d-1dA"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -4492,15 +4499,15 @@ BANER, Pune 411045</string>
                                         <include reference="Obf-kn-8ZO"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="1AX-hg-VSP"/>
+                                        <include reference="6na-cp-mDZ"/>
+                                        <include reference="tY9-zJ-QZA"/>
+                                        <include reference="wzx-5d-1dA"/>
                                         <include reference="3pt-Nc-N6F"/>
                                         <include reference="MFD-cg-KZw"/>
                                         <include reference="OKg-c0-ave"/>
                                         <include reference="rPY-Tk-KnK"/>
                                         <include reference="tIq-Eb-SQD"/>
-                                        <include reference="1AX-hg-VSP"/>
-                                        <include reference="6na-cp-mDZ"/>
-                                        <include reference="tY9-zJ-QZA"/>
-                                        <include reference="wzx-5d-1dA"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -4521,13 +4528,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="XVx-My-3GI"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="G2S-LG-jyq"/>
                                 <exclude reference="7Ux-D2-2cu"/>
                                 <exclude reference="M3s-3L-h8z"/>
                                 <exclude reference="onS-Dd-JCc"/>
                                 <exclude reference="7t2-on-2yo"/>
                                 <exclude reference="C3o-8v-LDG"/>
                                 <exclude reference="Tl5-8A-nsG"/>
-                                <exclude reference="G2S-LG-jyq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -4536,13 +4543,13 @@ BANER, Pune 411045</string>
                                 <include reference="XVx-My-3GI"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="G2S-LG-jyq"/>
                                 <include reference="7Ux-D2-2cu"/>
                                 <include reference="M3s-3L-h8z"/>
                                 <include reference="onS-Dd-JCc"/>
                                 <include reference="7t2-on-2yo"/>
                                 <include reference="C3o-8v-LDG"/>
                                 <include reference="Tl5-8A-nsG"/>
-                                <include reference="G2S-LG-jyq"/>
                             </mask>
                         </variation>
                     </view>
@@ -4550,6 +4557,7 @@ BANER, Pune 411045</string>
                     <connections>
                         <outlet property="buttonToday" destination="kmd-ru-La0" id="Jjm-8m-fre"/>
                         <outlet property="buttonTommorrow" destination="dke-zI-xrn" id="t8P-ud-6BC"/>
+                        <outlet property="datesView" destination="Obf-kn-8ZO" id="1Ry-S3-LFA"/>
                         <outlet property="labelDate" destination="Xq5-Ck-u4C" id="Crv-W4-g60"/>
                     </connections>
                 </viewController>

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServerController.h"
 
-@interface BookVehicleViewController : UIViewController
-
+@interface BookVehicleViewController : UIViewController<ServiceControlerDelegate>
+@property (nonatomic, strong) NSString * vehicleID;
 @end
