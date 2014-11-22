@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface AccountInformation : NSObject <NSCoding, NSCopying>
-
+@property (nonatomic, strong) NSString * strUserID;
 @property (nonatomic, strong) NSString * strName;
 @property (nonatomic, strong) NSString * strEmailID;
 @property (nonatomic, strong) NSString * strBirtDate;

@@ -9,13 +9,22 @@
 #import "BookVehicleViewController.h"
 #import "Constants.h"
 #import "SelectTimeView.h"
+#import "Utils.h"
 
 #define TAG_SELECT_DATE 300
+
+typedef enum {
+    kCurrentServiceTypeNone,
+    kCurrentServiceGetSchedule,
+    kCurrentServiceBookTestRide
+}CurrentServiceType;
 
 @interface BookVehicleViewController (){
     NSArray * scheduleArray;
     NSString *currentDate;
     NSUInteger currentIndex;
+    NSString *selectedAddress;
+    CurrentServiceType currServiceType;
 }
 @property (weak, nonatomic) IBOutlet UIButton *buttonToday;
 @property (weak, nonatomic) IBOutlet UIButton *buttonTommorrow;
@@ -41,10 +50,11 @@
     
     [dictionary setObject:dateString forKey:@"date"];
     [dictionary setObject:self.vehicleID forKey:@"vehicleid"];
-    
+    selectedAddress = @"Service Station";
     self.labelDate.text = dateString;
     currentDate = nil;
     self.buttonToday.hidden = YES;
+    currServiceType = kCurrentServiceGetSchedule;
     [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_BOOKING_SHEDULE_MERCHANT_VEHICLE withData:dictionary withDelegate:self];
 }
 
@@ -91,8 +101,12 @@
 {
     DebugLog(@"");
     if ([[[dicData objectForKey:@"Response"] objectForKey:@"Status"] isEqualToString:@"success"]) {
-        scheduleArray = [[dicData objectForKey:@"Data"] objectForKey:@"Records"];
-        [self displayDateAndLoadTimes];
+        if (currServiceType == kCurrentServiceGetSchedule) {
+            scheduleArray = [[dicData objectForKey:@"Data"] objectForKey:@"Records"];
+            [self displayDateAndLoadTimes];
+        }else if (currServiceType == kCurrentServiceBookTestRide) {
+            [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Booking Successful!!" withDelegate:self];
+        }
     }
 }
 
@@ -104,9 +118,38 @@
 }
 
 - (IBAction)actionChooseAddress:(id)sender {
+    DebugLog(@"");
+    AdderessSelectionView *addressSelection = [[AdderessSelectionView alloc] initWithFrame:self.view.frame withUserAddress:self.userAddress];
+    addressSelection.delegate = self;
+    [self.view addSubview:addressSelection];
 }
 
 - (IBAction)actionBook:(id)sender {
+    
+   DebugLog(@"");
+    NSString *selectedTime;
+    SelectTimeView *selectTimeView = (SelectTimeView *) [self.datesView viewWithTag:TAG_SELECT_DATE];
+    if (selectTimeView != nil) {
+        selectedTime = [selectTimeView getSelectedTime];
+        
+    }
+    
+    if (selectedTime == nil || [selectedTime isEqualToString:@""]) {
+        [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Please select time" withDelegate:nil];
+        return;
+    }
+    
+    NSMutableDictionary *dataDictionary = [[NSMutableDictionary alloc] initWithCapacity:1];
+    [dataDictionary setObject:@"2" forKey:@"type"];
+    [dataDictionary setObject:currentDate forKey:@"bookingDate"];
+    [dataDictionary setObject:selectedTime forKey:@"bookingTime"];
+    [dataDictionary setObject:self.userID forKey:@"userId"];
+    [dataDictionary setObject:self.vehicleID forKey:@"vehicleId"];
+    [dataDictionary setObject:selectedAddress forKey:@"address"];
+    
+    currServiceType = kCurrentServiceBookTestRide;
+    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVER_MAKE_BOOKING withData:dataDictionary withDelegate:self];
+    
 }
 
 - (IBAction)actionTodayButton:(id)sender {
@@ -130,6 +173,21 @@
     [self displayTimes:[currentDic objectForKey:@"AvailableSlots"]];
 }
 
+#pragma mark-
+#pragma mark- Delegate Methods
+#pragma mark-
+
+- (void) onAddressSelected:(NSString *) selectedAdd
+{
+    DebugLog(@"");
+    selectedAddress = selectedAdd;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    DebugLog(@"");
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark-
 #pragma mark- Status Bar
 #pragma mark-

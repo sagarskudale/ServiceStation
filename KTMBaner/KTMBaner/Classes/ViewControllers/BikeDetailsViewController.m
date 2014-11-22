@@ -9,6 +9,9 @@
 #import "BikeDetailsViewController.h"
 #import "PdfViewController.h"
 #import "BookVehicleViewController.h"
+#import "ArchiveManager.h"
+#import "AllUserData.h"
+#import "AccountInformation.h"
 #import "Constants.h"
 #import "Utils.h"
 #import "TechSpecsContainerView.h"
@@ -69,6 +72,13 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     BookVehicleViewController *bookVehicleVC = [storyboard instantiateViewControllerWithIdentifier:@"BookVehicleViewController"];
     bookVehicleVC.vehicleID = [NSString stringWithFormat:@"%d",(int)self.bikeDetails.bikeID];
+    
+    AllUserData *userData = [ArchiveManager getUserData];
+    AccountInformation *accountInfo = userData.accountInformation;
+    
+    
+    bookVehicleVC.userID = accountInfo.strUserID;
+    bookVehicleVC.userAddress = accountInfo.strAdderess;
     [self.navigationController pushViewController:bookVehicleVC animated:YES];
 }
 

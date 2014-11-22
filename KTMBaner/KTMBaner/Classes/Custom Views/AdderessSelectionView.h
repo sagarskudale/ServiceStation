@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdderessSelectionView : UIView
+@protocol AddressSelectionViewDelegate <NSObject>
+
+- (void) onAddressSelected:(NSString *) selectedAdd;
+
+@end
+
+@interface AdderessSelectionView : UIView<UITextViewDelegate>
+
+@property (nonatomic, unsafe_unretained) id <AddressSelectionViewDelegate> delegate;
 
 - (id) initWithFrame:(CGRect)frame withUserAddress:(NSString *) userAdderess;
 @end

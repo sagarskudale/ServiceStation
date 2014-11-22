@@ -14,6 +14,7 @@
 #define SERVICE_NAME_GET_SHEDULE @"Booking/GetSchedule?"
 #define SERVICE_MERCHANT_VEHICAL @"Vehicle/GetMerchantVehicels"
 #define SERVICE_BOOKING_SHEDULE_MERCHANT_VEHICLE @"Booking/GetScheduleByMerchantVehicle?"
+#define SERVER_MAKE_BOOKING @"Booking/MakeBooking?"
 /*
  * This class handles all server requests and responses.
  */

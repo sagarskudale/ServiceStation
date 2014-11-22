@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KTMBaner/Classes/ViewControllers/BookVehicleViewController.m"
-            timestampString = "438279219.396788"
+            timestampString = "438351674.717855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-displayTimes:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KTMBaner/Classes/ViewControllers/BikeDetailsViewController.m"
-            timestampString = "438110393.295321"
+            timestampString = "438351674.717855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-testRideButton:"
             landmarkType = "5">
          </BreakpointContent>
@@ -121,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KTMBaner/Classes/ViewControllers/LoginViewController.m"
-            timestampString = "438282028.73253"
+            filePath = "KTMBaner/Classes/ViewControllers/BookVehicleViewController.m"
+            timestampString = "438351674.717855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-saveUserData:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-onDataFetchComplete:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

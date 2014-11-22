@@ -234,6 +234,7 @@
     accountInformation.strEmailID = (NSString *) [userData objectForKey:@"Email"];
     accountInformation.strPhoneNumber = (NSString *) [userData objectForKey:@"MobileNumber"];
     accountInformation.strAdderess = (NSString *) [userData objectForKey:@"AddressLine1"];
+    accountInformation.strUserID = (NSString *) [userData objectForKey:@"UserId"];
     
     NSString *birtDate = (NSString *) [userData objectForKey:@"Birthdate"];
     NSString *date = [[birtDate componentsSeparatedByString:@"T"] objectAtIndex:0];
