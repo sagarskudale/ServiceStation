@@ -13,6 +13,7 @@
 #import "AccountDetailsViewController.h"
 #import "AppointmentViewController.h"
 #import "ShowroomViewController.h"
+#import "CostViewController.h"
 
 @interface DashBoardViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelPoints;
@@ -91,7 +92,7 @@
 
 - (void) addTapGesturesOnCostView
 {
-    
+    [self addTapGestureOnView:viewCost withAction:@selector(onCostViewTapped)];
 }
 
 - (void) addTapGesturesOnUserView
@@ -123,6 +124,14 @@
 #pragma mark-
 #pragma mark- Action Handling
 #pragma mark-
+
+- (void) onCostViewTapped
+{
+    DebugLog(@"");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    CostViewController *costVC = [storyboard instantiateViewControllerWithIdentifier:@"CostViewController"];
+    [self.navigationController pushViewController:costVC animated:YES];
+}
 
 - (void) onShowRoomViewTapped
 {

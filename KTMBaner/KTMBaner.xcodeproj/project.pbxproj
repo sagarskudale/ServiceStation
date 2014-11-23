@@ -94,6 +94,7 @@
 		6382DE511A15177D00BE182F /* ShowroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE501A15177D00BE182F /* ShowroomViewController.m */; };
 		6382DE541A151AAF00BE182F /* BikeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE531A151AAF00BE182F /* BikeDetailView.m */; };
 		6382DE571A15215F00BE182F /* BikeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE561A15215F00BE182F /* BikeDetail.m */; };
+		6388E45D1A20E8DA00800D18 /* CostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6388E45C1A20E8DA00800D18 /* CostViewController.m */; };
 		639DEC671A0E38C400B89BDC /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DEC661A0E38C400B89BDC /* AppIcon60x60.png */; };
 		639DEC691A0E390300B89BDC /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DEC681A0E390300B89BDC /* AppIcon60x60@2x.png */; };
 		639DEC6B1A0E395000B89BDC /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */; };
@@ -270,6 +271,8 @@
 		6382DE531A151AAF00BE182F /* BikeDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetailView.m; sourceTree = "<group>"; };
 		6382DE551A15215F00BE182F /* BikeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetail.h; sourceTree = "<group>"; };
 		6382DE561A15215F00BE182F /* BikeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetail.m; sourceTree = "<group>"; };
+		6388E45B1A20E8DA00800D18 /* CostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostViewController.h; sourceTree = "<group>"; };
+		6388E45C1A20E8DA00800D18 /* CostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostViewController.m; sourceTree = "<group>"; };
 		639DEC661A0E38C400B89BDC /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
 		639DEC681A0E390300B89BDC /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
 		639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
@@ -388,6 +391,8 @@
 				6342640D1A17302D00EA34F8 /* PdfViewController.m */,
 				6338DF761A1BA84900269197 /* BookVehicleViewController.h */,
 				6338DF771A1BA84900269197 /* BookVehicleViewController.m */,
+				6388E45B1A20E8DA00800D18 /* CostViewController.h */,
+				6388E45C1A20E8DA00800D18 /* CostViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -915,6 +920,7 @@
 				6335FA391A08779600655BFA /* SBJsonStreamWriterState.m in Sources */,
 				6327A6C41A0F28CC00855813 /* AccountDetailsViewController.m in Sources */,
 				6335FA361A08779600655BFA /* SBJsonStreamParserState.m in Sources */,
+				6388E45D1A20E8DA00800D18 /* CostViewController.m in Sources */,
 				6335FA2A1A08779600655BFA /* ASIFormDataRequest.m in Sources */,
 				635EEFFC1A111CA000203873 /* ArchiveManager.m in Sources */,
 				6335FA311A08779600655BFA /* NSObject+SBJson.m in Sources */,
