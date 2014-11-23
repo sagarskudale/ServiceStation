@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dax-Dg-Lgt">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -3431,8 +3432,7 @@ BANER, Pune 411045</string>
                                                             <exclude reference="GAo-X7-wOd"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="167" y="17" width="135" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="00x-V6-YdG"/>
                                                             <include reference="GAo-X7-wOd"/>
@@ -3454,8 +3454,7 @@ BANER, Pune 411045</string>
                                                             <exclude reference="ydK-Kt-DiC"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="167" y="56" width="135" height="20"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="LBA-R4-Gaq"/>
                                                             <include reference="ydK-Kt-DiC"/>
@@ -3954,6 +3953,10 @@ BANER, Pune 411045</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6R-wk-RpC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-gy-XBD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -4053,10 +4056,6 @@ BANER, Pune 411045</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6R-wk-RpC">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -4070,8 +4069,8 @@ BANER, Pune 411045</string>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="OIB-gy-XBD"/>
                                 <exclude reference="a6R-wk-RpC"/>
+                                <exclude reference="OIB-gy-XBD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="rwh-hI-A7x"/>
@@ -4085,8 +4084,8 @@ BANER, Pune 411045</string>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="OIB-gy-XBD"/>
                                 <include reference="a6R-wk-RpC"/>
+                                <include reference="OIB-gy-XBD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="rwh-hI-A7x"/>
@@ -4126,8 +4125,8 @@ BANER, Pune 411045</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUm-QM-dEv">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="GqA-rF-ZjP"/>
-                                            <constraint firstAttribute="width" constant="189" id="fvC-Bp-fW2"/>
+                                            <constraint firstAttribute="width" constant="189" id="JJc-tu-d2l"/>
+                                            <constraint firstAttribute="height" constant="50" id="N4t-M3-Xyg"/>
                                         </constraints>
                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
@@ -4136,14 +4135,14 @@ BANER, Pune 411045</string>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="GqA-rF-ZjP"/>
-                                                <exclude reference="fvC-Bp-fW2"/>
+                                                <exclude reference="JJc-tu-d2l"/>
+                                                <exclude reference="N4t-M3-Xyg"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="GqA-rF-ZjP"/>
-                                                <include reference="fvC-Bp-fW2"/>
+                                                <include reference="JJc-tu-d2l"/>
+                                                <include reference="N4t-M3-Xyg"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -4158,40 +4157,30 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="FMg-SS-5FM">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="A0Q-0c-rqM"/>
-                                            <constraint firstAttribute="width" constant="32" id="FcY-AB-iLU">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
-                                            </constraint>
-                                            <constraint firstAttribute="height" constant="44" id="a9a-h4-1Tu">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="26"/>
-                                            </constraint>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="hQW-zQ-6Nc"/>
+                                            <constraint firstAttribute="width" constant="30" id="059-TY-396"/>
+                                            <constraint firstAttribute="height" constant="26" id="Dao-ro-G4R"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="A0Q-0c-rqM"/>
-                                                <exclude reference="FcY-AB-iLU"/>
-                                                <exclude reference="a9a-h4-1Tu"/>
-                                                <exclude reference="hQW-zQ-6Nc"/>
+                                                <exclude reference="059-TY-396"/>
+                                                <exclude reference="Dao-ro-G4R"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="A0Q-0c-rqM"/>
-                                                <include reference="FcY-AB-iLU"/>
-                                                <include reference="a9a-h4-1Tu"/>
-                                                <include reference="hQW-zQ-6Nc"/>
+                                                <include reference="059-TY-396"/>
+                                                <include reference="Dao-ro-G4R"/>
                                             </mask>
                                         </variation>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="uUm-QM-dEv" firstAttribute="leading" secondItem="SXp-Rl-qoQ" secondAttribute="leading" constant="25" id="G3H-Iv-gNi"/>
-                                    <constraint firstAttribute="centerY" secondItem="FMg-SS-5FM" secondAttribute="centerY" id="Q9z-JK-HRf"/>
-                                    <constraint firstItem="FMg-SS-5FM" firstAttribute="leading" secondItem="SXp-Rl-qoQ" secondAttribute="leading" constant="3" id="Yox-uI-q4f"/>
-                                    <constraint firstAttribute="centerY" secondItem="uUm-QM-dEv" secondAttribute="centerY" id="bY4-3G-UOw"/>
-                                    <constraint firstAttribute="height" constant="65" id="c4c-Ea-W96"/>
+                                    <constraint firstAttribute="height" constant="65" id="Ax2-Ie-iQt"/>
+                                    <constraint firstAttribute="centerY" secondItem="FMg-SS-5FM" secondAttribute="centerY" id="CVK-X9-Jcy"/>
+                                    <constraint firstItem="uUm-QM-dEv" firstAttribute="leading" secondItem="SXp-Rl-qoQ" secondAttribute="leading" constant="25" id="ITK-wL-FFE"/>
+                                    <constraint firstAttribute="centerY" secondItem="uUm-QM-dEv" secondAttribute="centerY" constant="-0.5" id="P6q-hq-esZ"/>
+                                    <constraint firstItem="FMg-SS-5FM" firstAttribute="leading" secondItem="SXp-Rl-qoQ" secondAttribute="leading" constant="3" id="emO-3I-f5s"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -4199,11 +4188,11 @@ BANER, Pune 411045</string>
                                         <exclude reference="FMg-SS-5FM"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="c4c-Ea-W96"/>
-                                        <exclude reference="G3H-Iv-gNi"/>
-                                        <exclude reference="bY4-3G-UOw"/>
-                                        <exclude reference="Q9z-JK-HRf"/>
-                                        <exclude reference="Yox-uI-q4f"/>
+                                        <exclude reference="Ax2-Ie-iQt"/>
+                                        <exclude reference="CVK-X9-Jcy"/>
+                                        <exclude reference="emO-3I-f5s"/>
+                                        <exclude reference="ITK-wL-FFE"/>
+                                        <exclude reference="P6q-hq-esZ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -4212,11 +4201,11 @@ BANER, Pune 411045</string>
                                         <include reference="FMg-SS-5FM"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="c4c-Ea-W96"/>
-                                        <include reference="G3H-Iv-gNi"/>
-                                        <include reference="bY4-3G-UOw"/>
-                                        <include reference="Q9z-JK-HRf"/>
-                                        <include reference="Yox-uI-q4f"/>
+                                        <include reference="Ax2-Ie-iQt"/>
+                                        <include reference="CVK-X9-Jcy"/>
+                                        <include reference="emO-3I-f5s"/>
+                                        <include reference="ITK-wL-FFE"/>
+                                        <include reference="P6q-hq-esZ"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -4230,7 +4219,7 @@ BANER, Pune 411045</string>
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="51" id="wam-ii-joa"/>
+                                                    <constraint firstAttribute="height" constant="51" id="9Bj-CT-wTA"/>
                                                 </constraints>
                                                 <state key="normal" title="Choose address">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -4238,12 +4227,12 @@ BANER, Pune 411045</string>
                                                 </state>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="wam-ii-joa"/>
+                                                        <exclude reference="9Bj-CT-wTA"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
-                                                        <include reference="wam-ii-joa"/>
+                                                        <include reference="9Bj-CT-wTA"/>
                                                     </mask>
                                                 </variation>
                                                 <connections>
@@ -4254,7 +4243,7 @@ BANER, Pune 411045</string>
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="51" id="pay-lc-EhK"/>
+                                                    <constraint firstAttribute="height" constant="51" id="cNg-h0-H4o"/>
                                                 </constraints>
                                                 <state key="normal" title="Book">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4262,12 +4251,12 @@ BANER, Pune 411045</string>
                                                 </state>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="pay-lc-EhK"/>
+                                                        <exclude reference="cNg-h0-H4o"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
-                                                        <include reference="pay-lc-EhK"/>
+                                                        <include reference="cNg-h0-H4o"/>
                                                     </mask>
                                                 </variation>
                                                 <connections>
@@ -4277,26 +4266,12 @@ BANER, Pune 411045</string>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="aTS-4T-M6q" firstAttribute="leading" secondItem="ESQ-Dv-Pwr" secondAttribute="leading" constant="16" id="4U0-jI-HT0">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
-                                            </constraint>
-                                            <constraint firstAttribute="centerX" secondItem="3bh-xd-P4N" secondAttribute="centerX" id="Chg-Cx-eIc"/>
-                                            <constraint firstItem="aTS-4T-M6q" firstAttribute="top" secondItem="3bh-xd-P4N" secondAttribute="bottom" constant="29" id="DHS-om-1cI">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
-                                            </constraint>
-                                            <constraint firstAttribute="centerX" secondItem="aTS-4T-M6q" secondAttribute="centerX" id="Ovx-Mr-sZ2"/>
-                                            <constraint firstAttribute="trailing" secondItem="aTS-4T-M6q" secondAttribute="trailing" constant="16" id="aPv-XU-phn">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
-                                            </constraint>
-                                            <constraint firstAttribute="trailing" secondItem="3bh-xd-P4N" secondAttribute="trailing" constant="16" id="f7q-gk-jWx">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
-                                            </constraint>
-                                            <constraint firstItem="3bh-xd-P4N" firstAttribute="top" secondItem="ESQ-Dv-Pwr" secondAttribute="top" constant="68" id="kGx-QU-tgR">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
-                                            </constraint>
-                                            <constraint firstItem="3bh-xd-P4N" firstAttribute="leading" secondItem="ESQ-Dv-Pwr" secondAttribute="leading" constant="16" id="sVy-eY-x6O">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
-                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="3bh-xd-P4N" secondAttribute="trailing" constant="5" id="AWR-IP-eio"/>
+                                            <constraint firstAttribute="trailing" secondItem="aTS-4T-M6q" secondAttribute="trailing" constant="5" id="BKe-Gf-rtS"/>
+                                            <constraint firstItem="aTS-4T-M6q" firstAttribute="leading" secondItem="ESQ-Dv-Pwr" secondAttribute="leading" constant="5" id="Cbq-PQ-U8O"/>
+                                            <constraint firstItem="aTS-4T-M6q" firstAttribute="top" secondItem="3bh-xd-P4N" secondAttribute="bottom" constant="25" id="JOA-jX-jJI"/>
+                                            <constraint firstItem="3bh-xd-P4N" firstAttribute="top" secondItem="ESQ-Dv-Pwr" secondAttribute="top" constant="50" id="dSf-MO-g4x"/>
+                                            <constraint firstItem="3bh-xd-P4N" firstAttribute="leading" secondItem="ESQ-Dv-Pwr" secondAttribute="leading" constant="5" id="k6T-as-IPj"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
@@ -4304,14 +4279,12 @@ BANER, Pune 411045</string>
                                                 <exclude reference="aTS-4T-M6q"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="Chg-Cx-eIc"/>
-                                                <exclude reference="f7q-gk-jWx"/>
-                                                <exclude reference="kGx-QU-tgR"/>
-                                                <exclude reference="sVy-eY-x6O"/>
-                                                <exclude reference="4U0-jI-HT0"/>
-                                                <exclude reference="DHS-om-1cI"/>
-                                                <exclude reference="Ovx-Mr-sZ2"/>
-                                                <exclude reference="aPv-XU-phn"/>
+                                                <exclude reference="AWR-IP-eio"/>
+                                                <exclude reference="dSf-MO-g4x"/>
+                                                <exclude reference="k6T-as-IPj"/>
+                                                <exclude reference="BKe-Gf-rtS"/>
+                                                <exclude reference="Cbq-PQ-U8O"/>
+                                                <exclude reference="JOA-jX-jJI"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -4320,14 +4293,12 @@ BANER, Pune 411045</string>
                                                 <include reference="aTS-4T-M6q"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="Chg-Cx-eIc"/>
-                                                <include reference="f7q-gk-jWx"/>
-                                                <include reference="kGx-QU-tgR"/>
-                                                <include reference="sVy-eY-x6O"/>
-                                                <include reference="4U0-jI-HT0"/>
-                                                <include reference="DHS-om-1cI"/>
-                                                <include reference="Ovx-Mr-sZ2"/>
-                                                <include reference="aPv-XU-phn"/>
+                                                <include reference="AWR-IP-eio"/>
+                                                <include reference="dSf-MO-g4x"/>
+                                                <include reference="k6T-as-IPj"/>
+                                                <include reference="BKe-Gf-rtS"/>
+                                                <include reference="Cbq-PQ-U8O"/>
+                                                <include reference="JOA-jX-jJI"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -4430,15 +4401,15 @@ BANER, Pune 411045</string>
                                                 <exclude reference="Xq5-Ck-u4C"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="MBW-67-h57"/>
+                                                <exclude reference="Uvf-zM-16G"/>
+                                                <exclude reference="ZGt-ab-Kji"/>
+                                                <exclude reference="iHq-S6-ZVT"/>
                                                 <exclude reference="28J-bw-YtU"/>
                                                 <exclude reference="NC4-bY-XJY"/>
                                                 <exclude reference="OJL-mG-FaS"/>
                                                 <exclude reference="aM7-fZ-Ywl"/>
                                                 <exclude reference="h50-cX-oQu"/>
-                                                <exclude reference="MBW-67-h57"/>
-                                                <exclude reference="Uvf-zM-16G"/>
-                                                <exclude reference="ZGt-ab-Kji"/>
-                                                <exclude reference="iHq-S6-ZVT"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -4448,32 +4419,30 @@ BANER, Pune 411045</string>
                                                 <include reference="Xq5-Ck-u4C"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <include reference="MBW-67-h57"/>
+                                                <include reference="Uvf-zM-16G"/>
+                                                <include reference="ZGt-ab-Kji"/>
+                                                <include reference="iHq-S6-ZVT"/>
                                                 <include reference="28J-bw-YtU"/>
                                                 <include reference="NC4-bY-XJY"/>
                                                 <include reference="OJL-mG-FaS"/>
                                                 <include reference="aM7-fZ-Ywl"/>
                                                 <include reference="h50-cX-oQu"/>
-                                                <include reference="MBW-67-h57"/>
-                                                <include reference="Uvf-zM-16G"/>
-                                                <include reference="ZGt-ab-Kji"/>
-                                                <include reference="iHq-S6-ZVT"/>
                                             </mask>
                                         </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="ESQ-Dv-Pwr" firstAttribute="leading" secondItem="XVx-My-3GI" secondAttribute="leading" id="1AX-hg-VSP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Obf-kn-8ZO" secondAttribute="trailing" id="3pt-Nc-N6F"/>
-                                    <constraint firstAttribute="bottom" secondItem="ESQ-Dv-Pwr" secondAttribute="bottom" id="6na-cp-mDZ"/>
-                                    <constraint firstItem="Obf-kn-8ZO" firstAttribute="width" secondItem="ESQ-Dv-Pwr" secondAttribute="width" id="MFD-cg-KZw"/>
-                                    <constraint firstItem="Obf-kn-8ZO" firstAttribute="top" secondItem="XVx-My-3GI" secondAttribute="top" id="OKg-c0-ave"/>
-                                    <constraint firstItem="Obf-kn-8ZO" firstAttribute="leading" secondItem="XVx-My-3GI" secondAttribute="leading" id="rPY-Tk-KnK"/>
-                                    <constraint firstItem="Obf-kn-8ZO" firstAttribute="height" secondItem="ESQ-Dv-Pwr" secondAttribute="height" id="tIq-Eb-SQD"/>
-                                    <constraint firstAttribute="trailing" secondItem="ESQ-Dv-Pwr" secondAttribute="trailing" id="tY9-zJ-QZA"/>
-                                    <constraint firstItem="ESQ-Dv-Pwr" firstAttribute="top" secondItem="Obf-kn-8ZO" secondAttribute="bottom" constant="184" id="wzx-5d-1dA">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                                    </constraint>
+                                    <constraint firstItem="Obf-kn-8ZO" firstAttribute="leading" secondItem="XVx-My-3GI" secondAttribute="leading" id="3Q1-vy-Brh"/>
+                                    <constraint firstItem="ESQ-Dv-Pwr" firstAttribute="leading" secondItem="XVx-My-3GI" secondAttribute="leading" id="K6p-K0-iCA"/>
+                                    <constraint firstItem="ESQ-Dv-Pwr" firstAttribute="width" secondItem="Obf-kn-8ZO" secondAttribute="width" id="PVR-Ry-4ke"/>
+                                    <constraint firstItem="Obf-kn-8ZO" firstAttribute="top" secondItem="XVx-My-3GI" secondAttribute="top" id="bXr-nC-Blx"/>
+                                    <constraint firstItem="ESQ-Dv-Pwr" firstAttribute="height" secondItem="Obf-kn-8ZO" secondAttribute="height" id="cV0-WN-u9E"/>
+                                    <constraint firstAttribute="trailing" secondItem="ESQ-Dv-Pwr" secondAttribute="trailing" id="fb0-aK-ZY0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Obf-kn-8ZO" secondAttribute="trailing" id="hwt-TI-D4p"/>
+                                    <constraint firstItem="ESQ-Dv-Pwr" firstAttribute="top" secondItem="Obf-kn-8ZO" secondAttribute="bottom" id="jhy-nH-qIW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ESQ-Dv-Pwr" secondAttribute="bottom" id="yoF-47-9eh"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -4481,15 +4450,15 @@ BANER, Pune 411045</string>
                                         <exclude reference="Obf-kn-8ZO"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="1AX-hg-VSP"/>
-                                        <exclude reference="6na-cp-mDZ"/>
-                                        <exclude reference="tY9-zJ-QZA"/>
-                                        <exclude reference="wzx-5d-1dA"/>
-                                        <exclude reference="3pt-Nc-N6F"/>
-                                        <exclude reference="MFD-cg-KZw"/>
-                                        <exclude reference="OKg-c0-ave"/>
-                                        <exclude reference="rPY-Tk-KnK"/>
-                                        <exclude reference="tIq-Eb-SQD"/>
+                                        <exclude reference="3Q1-vy-Brh"/>
+                                        <exclude reference="bXr-nC-Blx"/>
+                                        <exclude reference="hwt-TI-D4p"/>
+                                        <exclude reference="K6p-K0-iCA"/>
+                                        <exclude reference="PVR-Ry-4ke"/>
+                                        <exclude reference="cV0-WN-u9E"/>
+                                        <exclude reference="fb0-aK-ZY0"/>
+                                        <exclude reference="jhy-nH-qIW"/>
+                                        <exclude reference="yoF-47-9eh"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -4498,28 +4467,28 @@ BANER, Pune 411045</string>
                                         <include reference="Obf-kn-8ZO"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="1AX-hg-VSP"/>
-                                        <include reference="6na-cp-mDZ"/>
-                                        <include reference="tY9-zJ-QZA"/>
-                                        <include reference="wzx-5d-1dA"/>
-                                        <include reference="3pt-Nc-N6F"/>
-                                        <include reference="MFD-cg-KZw"/>
-                                        <include reference="OKg-c0-ave"/>
-                                        <include reference="rPY-Tk-KnK"/>
-                                        <include reference="tIq-Eb-SQD"/>
+                                        <include reference="3Q1-vy-Brh"/>
+                                        <include reference="bXr-nC-Blx"/>
+                                        <include reference="hwt-TI-D4p"/>
+                                        <include reference="K6p-K0-iCA"/>
+                                        <include reference="PVR-Ry-4ke"/>
+                                        <include reference="cV0-WN-u9E"/>
+                                        <include reference="fb0-aK-ZY0"/>
+                                        <include reference="jhy-nH-qIW"/>
+                                        <include reference="yoF-47-9eh"/>
                                     </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SXp-Rl-qoQ" firstAttribute="top" secondItem="bsG-iT-Gvo" secondAttribute="topMargin" id="7Ux-D2-2cu"/>
-                            <constraint firstItem="XVx-My-3GI" firstAttribute="top" secondItem="SXp-Rl-qoQ" secondAttribute="bottom" id="7t2-on-2yo"/>
-                            <constraint firstItem="XVx-My-3GI" firstAttribute="leading" secondItem="bsG-iT-Gvo" secondAttribute="leadingMargin" constant="-16" id="C3o-8v-LDG"/>
-                            <constraint firstItem="lDT-4g-2vd" firstAttribute="top" secondItem="XVx-My-3GI" secondAttribute="bottom" id="G2S-LG-jyq"/>
-                            <constraint firstItem="SXp-Rl-qoQ" firstAttribute="leading" secondItem="bsG-iT-Gvo" secondAttribute="leadingMargin" constant="-16" id="M3s-3L-h8z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XVx-My-3GI" secondAttribute="trailing" constant="-16" id="Tl5-8A-nsG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SXp-Rl-qoQ" secondAttribute="trailing" constant="-16" id="onS-Dd-JCc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XVx-My-3GI" secondAttribute="trailing" constant="-16" id="3t6-Hu-BKG"/>
+                            <constraint firstItem="XVx-My-3GI" firstAttribute="leading" secondItem="bsG-iT-Gvo" secondAttribute="leadingMargin" constant="-16" id="9mx-OT-nw0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SXp-Rl-qoQ" secondAttribute="trailing" constant="-16" id="MmL-qN-deP"/>
+                            <constraint firstItem="SXp-Rl-qoQ" firstAttribute="top" secondItem="bG9-Hv-IK9" secondAttribute="bottom" id="Up7-jl-XDg"/>
+                            <constraint firstItem="SXp-Rl-qoQ" firstAttribute="leading" secondItem="bsG-iT-Gvo" secondAttribute="leadingMargin" constant="-16" id="khU-F8-65A"/>
+                            <constraint firstItem="lDT-4g-2vd" firstAttribute="top" secondItem="XVx-My-3GI" secondAttribute="bottom" id="lTA-xR-vK6"/>
+                            <constraint firstItem="XVx-My-3GI" firstAttribute="top" secondItem="SXp-Rl-qoQ" secondAttribute="bottom" id="lzn-j8-iqx"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -4527,13 +4496,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="XVx-My-3GI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="G2S-LG-jyq"/>
-                                <exclude reference="7Ux-D2-2cu"/>
-                                <exclude reference="M3s-3L-h8z"/>
-                                <exclude reference="onS-Dd-JCc"/>
-                                <exclude reference="7t2-on-2yo"/>
-                                <exclude reference="C3o-8v-LDG"/>
-                                <exclude reference="Tl5-8A-nsG"/>
+                                <exclude reference="MmL-qN-deP"/>
+                                <exclude reference="Up7-jl-XDg"/>
+                                <exclude reference="khU-F8-65A"/>
+                                <exclude reference="3t6-Hu-BKG"/>
+                                <exclude reference="9mx-OT-nw0"/>
+                                <exclude reference="lzn-j8-iqx"/>
+                                <exclude reference="lTA-xR-vK6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -4542,13 +4511,13 @@ BANER, Pune 411045</string>
                                 <include reference="XVx-My-3GI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="G2S-LG-jyq"/>
-                                <include reference="7Ux-D2-2cu"/>
-                                <include reference="M3s-3L-h8z"/>
-                                <include reference="onS-Dd-JCc"/>
-                                <include reference="7t2-on-2yo"/>
-                                <include reference="C3o-8v-LDG"/>
-                                <include reference="Tl5-8A-nsG"/>
+                                <include reference="MmL-qN-deP"/>
+                                <include reference="Up7-jl-XDg"/>
+                                <include reference="khU-F8-65A"/>
+                                <include reference="3t6-Hu-BKG"/>
+                                <include reference="9mx-OT-nw0"/>
+                                <include reference="lzn-j8-iqx"/>
+                                <include reference="lTA-xR-vK6"/>
                             </mask>
                         </variation>
                     </view>
@@ -4582,8 +4551,8 @@ BANER, Pune 411045</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuY-7j-AHB">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="208" id="933-EB-iPE"/>
-                                            <constraint firstAttribute="height" constant="49" id="XRn-6m-2N7"/>
+                                            <constraint firstAttribute="width" constant="208" id="U2b-ic-gpO"/>
+                                            <constraint firstAttribute="height" constant="49" id="nvy-wX-fQV"/>
                                         </constraints>
                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
@@ -4592,14 +4561,14 @@ BANER, Pune 411045</string>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="933-EB-iPE"/>
-                                                <exclude reference="XRn-6m-2N7"/>
+                                                <exclude reference="U2b-ic-gpO"/>
+                                                <exclude reference="nvy-wX-fQV"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="933-EB-iPE"/>
-                                                <include reference="XRn-6m-2N7"/>
+                                                <include reference="U2b-ic-gpO"/>
+                                                <include reference="nvy-wX-fQV"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -4615,30 +4584,30 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-er-eaF">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="O0p-s2-yaV"/>
-                                            <constraint firstAttribute="height" constant="26" id="fQS-1s-SUi"/>
+                                            <constraint firstAttribute="width" constant="30" id="GOH-y4-yn0"/>
+                                            <constraint firstAttribute="height" constant="26" id="T1u-Hm-8In"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="O0p-s2-yaV"/>
-                                                <exclude reference="fQS-1s-SUi"/>
+                                                <exclude reference="GOH-y4-yn0"/>
+                                                <exclude reference="T1u-Hm-8In"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="O0p-s2-yaV"/>
-                                                <include reference="fQS-1s-SUi"/>
+                                                <include reference="GOH-y4-yn0"/>
+                                                <include reference="T1u-Hm-8In"/>
                                             </mask>
                                         </variation>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="SuY-7j-AHB" secondAttribute="centerY" id="2ov-Qx-3CA"/>
-                                    <constraint firstItem="cH5-er-eaF" firstAttribute="leading" secondItem="5rh-nB-74M" secondAttribute="leading" constant="3" id="hWj-7g-jtj"/>
-                                    <constraint firstAttribute="height" constant="65" id="jWW-P1-sq0"/>
-                                    <constraint firstItem="SuY-7j-AHB" firstAttribute="leading" secondItem="5rh-nB-74M" secondAttribute="leading" constant="25" id="mSE-2D-r1n"/>
-                                    <constraint firstAttribute="centerY" secondItem="cH5-er-eaF" secondAttribute="centerY" constant="-0.5" id="zsF-so-vP3"/>
+                                    <constraint firstAttribute="height" constant="65" id="1UL-37-imy"/>
+                                    <constraint firstAttribute="centerY" secondItem="cH5-er-eaF" secondAttribute="centerY" id="7S4-RY-1Ju"/>
+                                    <constraint firstAttribute="centerY" secondItem="SuY-7j-AHB" secondAttribute="centerY" id="7w4-SS-uEx"/>
+                                    <constraint firstItem="SuY-7j-AHB" firstAttribute="leading" secondItem="5rh-nB-74M" secondAttribute="leading" constant="25" id="IoE-BW-o9w"/>
+                                    <constraint firstItem="cH5-er-eaF" firstAttribute="leading" secondItem="5rh-nB-74M" secondAttribute="leading" constant="3" id="YFY-oj-raY"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -4646,11 +4615,11 @@ BANER, Pune 411045</string>
                                         <exclude reference="cH5-er-eaF"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="jWW-P1-sq0"/>
-                                        <exclude reference="2ov-Qx-3CA"/>
-                                        <exclude reference="mSE-2D-r1n"/>
-                                        <exclude reference="hWj-7g-jtj"/>
-                                        <exclude reference="zsF-so-vP3"/>
+                                        <exclude reference="1UL-37-imy"/>
+                                        <exclude reference="7S4-RY-1Ju"/>
+                                        <exclude reference="YFY-oj-raY"/>
+                                        <exclude reference="7w4-SS-uEx"/>
+                                        <exclude reference="IoE-BW-o9w"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -4659,11 +4628,11 @@ BANER, Pune 411045</string>
                                         <include reference="cH5-er-eaF"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="jWW-P1-sq0"/>
-                                        <include reference="2ov-Qx-3CA"/>
-                                        <include reference="mSE-2D-r1n"/>
-                                        <include reference="hWj-7g-jtj"/>
-                                        <include reference="zsF-so-vP3"/>
+                                        <include reference="1UL-37-imy"/>
+                                        <include reference="7S4-RY-1Ju"/>
+                                        <include reference="YFY-oj-raY"/>
+                                        <include reference="7w4-SS-uEx"/>
+                                        <include reference="IoE-BW-o9w"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -4673,13 +4642,13 @@ BANER, Pune 411045</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="V9N-Gm-dXy" firstAttribute="top" secondItem="Ndh-hz-Okr" secondAttribute="bottom" id="2yl-SE-GEJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ndh-hz-Okr" secondAttribute="trailing" constant="-16" id="9iA-No-Rk2"/>
-                            <constraint firstItem="Ndh-hz-Okr" firstAttribute="top" secondItem="5rh-nB-74M" secondAttribute="bottom" id="RbI-YJ-1G2"/>
-                            <constraint firstItem="Ndh-hz-Okr" firstAttribute="leading" secondItem="3sR-MA-Xzf" secondAttribute="leadingMargin" constant="-16" id="dmA-2U-rWN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5rh-nB-74M" secondAttribute="trailing" constant="-16" id="oza-Ec-VcP"/>
-                            <constraint firstItem="5rh-nB-74M" firstAttribute="leading" secondItem="3sR-MA-Xzf" secondAttribute="leadingMargin" constant="-16" id="qOp-de-524"/>
-                            <constraint firstItem="5rh-nB-74M" firstAttribute="top" secondItem="3sR-MA-Xzf" secondAttribute="topMargin" id="tYi-TG-X7Z"/>
+                            <constraint firstItem="Ndh-hz-Okr" firstAttribute="leading" secondItem="3sR-MA-Xzf" secondAttribute="leadingMargin" constant="-16" id="0b4-jP-K0L"/>
+                            <constraint firstItem="Ndh-hz-Okr" firstAttribute="top" secondItem="5rh-nB-74M" secondAttribute="bottom" id="8hv-1w-yga"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5rh-nB-74M" secondAttribute="trailing" constant="-16" id="BFs-ET-yOL"/>
+                            <constraint firstItem="5rh-nB-74M" firstAttribute="top" secondItem="ZhU-Dw-0b4" secondAttribute="bottom" id="aQx-NY-t4N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ndh-hz-Okr" secondAttribute="trailing" constant="-16" id="j7h-Jy-wkk"/>
+                            <constraint firstItem="V9N-Gm-dXy" firstAttribute="top" secondItem="Ndh-hz-Okr" secondAttribute="bottom" id="qnN-0V-ane"/>
+                            <constraint firstItem="5rh-nB-74M" firstAttribute="leading" secondItem="3sR-MA-Xzf" secondAttribute="leadingMargin" constant="-16" id="zPa-7x-wy2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -4687,13 +4656,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="Ndh-hz-Okr"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2yl-SE-GEJ"/>
-                                <exclude reference="9iA-No-Rk2"/>
-                                <exclude reference="RbI-YJ-1G2"/>
-                                <exclude reference="dmA-2U-rWN"/>
-                                <exclude reference="oza-Ec-VcP"/>
-                                <exclude reference="qOp-de-524"/>
-                                <exclude reference="tYi-TG-X7Z"/>
+                                <exclude reference="BFs-ET-yOL"/>
+                                <exclude reference="aQx-NY-t4N"/>
+                                <exclude reference="zPa-7x-wy2"/>
+                                <exclude reference="0b4-jP-K0L"/>
+                                <exclude reference="8hv-1w-yga"/>
+                                <exclude reference="j7h-Jy-wkk"/>
+                                <exclude reference="qnN-0V-ane"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -4702,13 +4671,13 @@ BANER, Pune 411045</string>
                                 <include reference="Ndh-hz-Okr"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2yl-SE-GEJ"/>
-                                <include reference="9iA-No-Rk2"/>
-                                <include reference="RbI-YJ-1G2"/>
-                                <include reference="dmA-2U-rWN"/>
-                                <include reference="oza-Ec-VcP"/>
-                                <include reference="qOp-de-524"/>
-                                <include reference="tYi-TG-X7Z"/>
+                                <include reference="BFs-ET-yOL"/>
+                                <include reference="aQx-NY-t4N"/>
+                                <include reference="zPa-7x-wy2"/>
+                                <include reference="0b4-jP-K0L"/>
+                                <include reference="8hv-1w-yga"/>
+                                <include reference="j7h-Jy-wkk"/>
+                                <include reference="qnN-0V-ane"/>
                             </mask>
                         </variation>
                     </view>
@@ -4720,6 +4689,295 @@ BANER, Pune 411045</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGY-cf-AN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8137.5" y="278.25"/>
+        </scene>
+        <!--Detail Cost View Controller-->
+        <scene sceneID="ryK-gv-Sep">
+            <objects>
+                <viewController storyboardIdentifier="DetailCostViewController" id="K0U-kp-uIl" customClass="DetailCostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fm6-RL-zEy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dkp-8y-YMt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AQQ-bF-Q4f">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6n-2M-w3V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtl-zp-NGc">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="Pjs-kA-S8p"/>
+                                            <constraint firstAttribute="width" constant="208" id="j9c-9W-1QW"/>
+                                        </constraints>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="Part Price" image="ic_launcher.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Pjs-kA-S8p"/>
+                                                <exclude reference="j9c-9W-1QW"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Pjs-kA-S8p"/>
+                                                <include reference="j9c-9W-1QW"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="actionBackButton:" destination="AHw-gG-5fP" eventType="touchUpInside" id="7O8-uS-q5n"/>
+                                            <action selector="actionBackButton:" destination="K0U-kp-uIl" eventType="touchUpInside" id="Fhv-lh-NMH"/>
+                                            <action selector="actionBackButton:" destination="dOj-Ff-mFn" eventType="touchUpInside" id="IPv-I6-zzr"/>
+                                            <action selector="actionBackButton:" destination="K2q-d1-SrH" eventType="touchUpInside" id="JB4-mG-vCB"/>
+                                            <action selector="actionBackButton:" destination="hEI-ts-isl" eventType="touchUpInside" id="V1j-vX-sdb"/>
+                                            <action selector="actionBackButton:" destination="X8Y-j2-Wp5" eventType="touchUpInside" id="yJy-Ql-lKH"/>
+                                            <action selector="actionBackButtonPressed:" destination="83A-3X-oet" eventType="touchUpInside" id="i6g-A9-zgg"/>
+                                            <action selector="onBackButton:" destination="SRG-WS-zR2" eventType="touchUpInside" id="k0f-wL-dz8"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="FIp-Hm-LAK">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="GuC-bj-5bU"/>
+                                            <constraint firstAttribute="height" constant="26" id="ZoO-5c-x9d"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="GuC-bj-5bU"/>
+                                                <exclude reference="ZoO-5c-x9d"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="GuC-bj-5bU"/>
+                                                <include reference="ZoO-5c-x9d"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="1Wn-mk-wl1"/>
+                                    <constraint firstItem="mtl-zp-NGc" firstAttribute="leading" secondItem="K6n-2M-w3V" secondAttribute="leading" constant="25" id="Lu3-3M-T4L"/>
+                                    <constraint firstAttribute="centerY" secondItem="mtl-zp-NGc" secondAttribute="centerY" id="O8X-Ib-0R2"/>
+                                    <constraint firstAttribute="centerY" secondItem="FIp-Hm-LAK" secondAttribute="centerY" id="Qo1-qX-E0q"/>
+                                    <constraint firstItem="FIp-Hm-LAK" firstAttribute="leading" secondItem="K6n-2M-w3V" secondAttribute="leading" constant="3" id="bCA-6C-ZdI"/>
+                                    <constraint firstItem="mtl-zp-NGc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K6n-2M-w3V" secondAttribute="leading" constant="25" id="r24-K9-wTy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="mtl-zp-NGc"/>
+                                        <exclude reference="FIp-Hm-LAK"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="1Wn-mk-wl1"/>
+                                        <exclude reference="Qo1-qX-E0q"/>
+                                        <exclude reference="bCA-6C-ZdI"/>
+                                        <exclude reference="Lu3-3M-T4L"/>
+                                        <exclude reference="O8X-Ib-0R2"/>
+                                        <exclude reference="r24-K9-wTy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="mtl-zp-NGc"/>
+                                        <include reference="FIp-Hm-LAK"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="1Wn-mk-wl1"/>
+                                        <include reference="Qo1-qX-E0q"/>
+                                        <include reference="bCA-6C-ZdI"/>
+                                        <include reference="Lu3-3M-T4L"/>
+                                        <include reference="O8X-Ib-0R2"/>
+                                        <include reference="r24-K9-wTy"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4xG-Gs-aMN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CostTableViewCell" rowHeight="72" id="ps3-2g-eg3" customClass="CostTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ps3-2g-eg3" id="wGm-ZX-qUQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price :1234rs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s6-vg-atf">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="92" id="Ebf-TJ-t9m"/>
+                                                        <constraint firstAttribute="height" constant="30" id="NhY-kr-nMR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Ebf-TJ-t9m"/>
+                                                            <exclude reference="NhY-kr-nMR"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="Ebf-TJ-t9m"/>
+                                                            <include reference="NhY-kr-nMR"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part Code : jgo 129489000 ok" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-FW-lod">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="wrC-nr-3WX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="wrC-nr-3WX"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="wrC-nr-3WX"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsx-34-NRW">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="6xe-fv-gcP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="6xe-fv-gcP"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="6xe-fv-gcP"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xsx-34-NRW" firstAttribute="top" secondItem="wGm-ZX-qUQ" secondAttribute="topMargin" constant="-5" id="I1S-qw-94x"/>
+                                                <constraint firstItem="2s6-vg-atf" firstAttribute="leading" secondItem="vB8-FW-lod" secondAttribute="trailing" constant="8" id="KIP-aP-f0B"/>
+                                                <constraint firstItem="vB8-FW-lod" firstAttribute="leading" secondItem="wGm-ZX-qUQ" secondAttribute="leadingMargin" id="YhX-Ya-m3i">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                </constraint>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2s6-vg-atf" secondAttribute="trailing" constant="-8" id="k0A-xc-6gJ"/>
+                                                <constraint firstItem="2s6-vg-atf" firstAttribute="top" secondItem="xsx-34-NRW" secondAttribute="bottom" constant="4" id="kOs-T3-OST"/>
+                                                <constraint firstItem="xsx-34-NRW" firstAttribute="trailing" secondItem="wGm-ZX-qUQ" secondAttribute="trailingMargin" id="oc8-DG-U4S"/>
+                                                <constraint firstItem="xsx-34-NRW" firstAttribute="leading" secondItem="wGm-ZX-qUQ" secondAttribute="leadingMargin" id="qLO-9s-Hru">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                </constraint>
+                                                <constraint firstItem="vB8-FW-lod" firstAttribute="top" secondItem="xsx-34-NRW" secondAttribute="bottom" constant="4" id="y9H-eD-2Tq"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="2s6-vg-atf"/>
+                                                    <exclude reference="vB8-FW-lod"/>
+                                                    <exclude reference="xsx-34-NRW"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="I1S-qw-94x"/>
+                                                    <exclude reference="oc8-DG-U4S"/>
+                                                    <exclude reference="qLO-9s-Hru"/>
+                                                    <exclude reference="YhX-Ya-m3i"/>
+                                                    <exclude reference="y9H-eD-2Tq"/>
+                                                    <exclude reference="KIP-aP-f0B"/>
+                                                    <exclude reference="k0A-xc-6gJ"/>
+                                                    <exclude reference="kOs-T3-OST"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="2s6-vg-atf"/>
+                                                    <include reference="vB8-FW-lod"/>
+                                                    <include reference="xsx-34-NRW"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="I1S-qw-94x"/>
+                                                    <include reference="oc8-DG-U4S"/>
+                                                    <include reference="qLO-9s-Hru"/>
+                                                    <include reference="YhX-Ya-m3i"/>
+                                                    <include reference="y9H-eD-2Tq"/>
+                                                    <include reference="KIP-aP-f0B"/>
+                                                    <include reference="k0A-xc-6gJ"/>
+                                                    <include reference="kOs-T3-OST"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="discriptionLabel" destination="vB8-FW-lod" id="ZPs-9p-BIt"/>
+                                            <outlet property="priceLabel" destination="2s6-vg-atf" id="jYX-N8-oZ6"/>
+                                            <outlet property="titleLabel" destination="xsx-34-NRW" id="QkF-2j-2hq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="K0U-kp-uIl" id="zgW-DT-Hil"/>
+                                    <outlet property="delegate" destination="K0U-kp-uIl" id="0vr-dp-Jsr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4xG-Gs-aMN" firstAttribute="top" secondItem="K6n-2M-w3V" secondAttribute="bottom" constant="2" id="3nI-DN-iZH"/>
+                            <constraint firstItem="K6n-2M-w3V" firstAttribute="leading" secondItem="AQQ-bF-Q4f" secondAttribute="leadingMargin" constant="-16" id="JcR-3z-yht"/>
+                            <constraint firstItem="K6n-2M-w3V" firstAttribute="top" secondItem="fm6-RL-zEy" secondAttribute="bottom" id="K68-cb-4dw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K6n-2M-w3V" secondAttribute="trailing" constant="-16" id="MfS-GJ-gtc"/>
+                            <constraint firstItem="Dkp-8y-YMt" firstAttribute="top" secondItem="4xG-Gs-aMN" secondAttribute="bottom" id="N3D-K1-4eA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4xG-Gs-aMN" secondAttribute="trailing" constant="-16" id="QLU-5x-3i9"/>
+                            <constraint firstItem="4xG-Gs-aMN" firstAttribute="leading" secondItem="AQQ-bF-Q4f" secondAttribute="leadingMargin" constant="-16" id="fFB-GR-x9s"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="K6n-2M-w3V"/>
+                                <exclude reference="4xG-Gs-aMN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JcR-3z-yht"/>
+                                <exclude reference="K68-cb-4dw"/>
+                                <exclude reference="MfS-GJ-gtc"/>
+                                <exclude reference="3nI-DN-iZH"/>
+                                <exclude reference="QLU-5x-3i9"/>
+                                <exclude reference="fFB-GR-x9s"/>
+                                <exclude reference="N3D-K1-4eA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="K6n-2M-w3V"/>
+                                <include reference="4xG-Gs-aMN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JcR-3z-yht"/>
+                                <include reference="K68-cb-4dw"/>
+                                <include reference="MfS-GJ-gtc"/>
+                                <include reference="3nI-DN-iZH"/>
+                                <include reference="QLU-5x-3i9"/>
+                                <include reference="fFB-GR-x9s"/>
+                                <include reference="N3D-K1-4eA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="costTabelView" destination="4xG-Gs-aMN" id="GZI-qe-UrB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKY-KT-w9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8809.5" y="278.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOM-Hw-XXm">

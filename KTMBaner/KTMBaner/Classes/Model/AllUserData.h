@@ -13,5 +13,5 @@
 
 @property (nonatomic, strong) AccountInformation * accountInformation;
 @property (nonatomic, strong) NSArray *allBikeInformation;
-
+@property (nonatomic, strong) NSDictionary *allPartsInfo;
 @end

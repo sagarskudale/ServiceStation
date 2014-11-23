@@ -66,6 +66,9 @@
 		6335FA431A087C8E00655BFA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6335FA421A087C8E00655BFA /* libz.dylib */; };
 		6338DF781A1BA84900269197 /* BookVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338DF771A1BA84900269197 /* BookVehicleViewController.m */; };
 		6338DF7B1A1BB21D00269197 /* SelectTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6338DF7A1A1BB21D00269197 /* SelectTimeView.m */; };
+		633A88B01A21E04100859353 /* CostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 633A88AF1A21E04100859353 /* CostTableViewCell.m */; };
+		633A88B31A21E1A800859353 /* DetailCostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 633A88B21A21E1A800859353 /* DetailCostViewController.m */; };
+		633A88B61A22014800859353 /* PartCostDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 633A88B51A22014800859353 /* PartCostDetails.m */; };
 		6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */; };
 		6342640E1A17302D00EA34F8 /* PdfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640D1A17302D00EA34F8 /* PdfViewController.m */; };
 		634264111A173D0800EA34F8 /* TechSpecsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634264101A173D0800EA34F8 /* TechSpecsContainerView.m */; };
@@ -224,6 +227,12 @@
 		6338DF771A1BA84900269197 /* BookVehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookVehicleViewController.m; sourceTree = "<group>"; };
 		6338DF791A1BB21D00269197 /* SelectTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTimeView.h; sourceTree = "<group>"; };
 		6338DF7A1A1BB21D00269197 /* SelectTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTimeView.m; sourceTree = "<group>"; };
+		633A88AE1A21E04100859353 /* CostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostTableViewCell.h; sourceTree = "<group>"; };
+		633A88AF1A21E04100859353 /* CostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostTableViewCell.m; sourceTree = "<group>"; };
+		633A88B11A21E1A800859353 /* DetailCostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCostViewController.h; sourceTree = "<group>"; };
+		633A88B21A21E1A800859353 /* DetailCostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCostViewController.m; sourceTree = "<group>"; };
+		633A88B41A22014800859353 /* PartCostDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartCostDetails.h; sourceTree = "<group>"; };
+		633A88B51A22014800859353 /* PartCostDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartCostDetails.m; sourceTree = "<group>"; };
 		634264091A171B3F00EA34F8 /* BikeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetailsViewController.h; sourceTree = "<group>"; };
 		6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetailsViewController.m; sourceTree = "<group>"; };
 		6342640C1A17302D00EA34F8 /* PdfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfViewController.h; sourceTree = "<group>"; };
@@ -326,6 +335,8 @@
 				635EEFFE1A111ED000203873 /* AllUserData.m */,
 				6382DE551A15215F00BE182F /* BikeDetail.h */,
 				6382DE561A15215F00BE182F /* BikeDetail.m */,
+				633A88B41A22014800859353 /* PartCostDetails.h */,
+				633A88B51A22014800859353 /* PartCostDetails.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,6 +404,8 @@
 				6338DF771A1BA84900269197 /* BookVehicleViewController.m */,
 				6388E45B1A20E8DA00800D18 /* CostViewController.h */,
 				6388E45C1A20E8DA00800D18 /* CostViewController.m */,
+				633A88B11A21E1A800859353 /* DetailCostViewController.h */,
+				633A88B21A21E1A800859353 /* DetailCostViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -440,6 +453,8 @@
 				6338DF7A1A1BB21D00269197 /* SelectTimeView.m */,
 				632FD2591A1FAA2300831186 /* AdderessSelectionView.h */,
 				632FD25A1A1FAA2300831186 /* AdderessSelectionView.m */,
+				633A88AE1A21E04100859353 /* CostTableViewCell.h */,
+				633A88AF1A21E04100859353 /* CostTableViewCell.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -892,6 +907,7 @@
 				6338DF781A1BA84900269197 /* BookVehicleViewController.m in Sources */,
 				632FD25B1A1FAA2300831186 /* AdderessSelectionView.m in Sources */,
 				6335FA291A08779600655BFA /* ASIDownloadCache.m in Sources */,
+				633A88B61A22014800859353 /* PartCostDetails.m in Sources */,
 				6359F80F1A12752800135CBE /* AppointmentViewController.m in Sources */,
 				632FD24F1A1FA5F900831186 /* RadioButton.m in Sources */,
 				6342644F1A177C0100EA34F8 /* CollapsableTableView.m in Sources */,
@@ -905,7 +921,9 @@
 				6342640E1A17302D00EA34F8 /* PdfViewController.m in Sources */,
 				639EAC9A1A07EEE3002F9CE6 /* SplashScreenViewController.m in Sources */,
 				6335FA2B1A08779600655BFA /* ASIHTTPRequest.m in Sources */,
+				633A88B01A21E04100859353 /* CostTableViewCell.m in Sources */,
 				6335FA251A08779600655BFA /* ActivityAlertView.m in Sources */,
+				633A88B31A21E1A800859353 /* DetailCostViewController.m in Sources */,
 				6333303F1A09C78500ED45E1 /* Utils.m in Sources */,
 				6335FA281A08779600655BFA /* ASIDataDecompressor.m in Sources */,
 				632BD0921A069A2700ADBBED /* main.m in Sources */,

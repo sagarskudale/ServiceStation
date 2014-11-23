@@ -15,6 +15,8 @@
 #define SERVICE_MERCHANT_VEHICAL @"Vehicle/GetMerchantVehicels"
 #define SERVICE_BOOKING_SHEDULE_MERCHANT_VEHICLE @"Booking/GetScheduleByMerchantVehicle?"
 #define SERVER_MAKE_BOOKING @"Booking/MakeBooking?"
+#define SERVER_GET_ALL_PARTS @"PartType/GetAllPartType"
+#define SERVER_GET_PARTS_VEHICLE @"PartType/GetPartTypeByVehicle?"
 /*
  * This class handles all server requests and responses.
  */

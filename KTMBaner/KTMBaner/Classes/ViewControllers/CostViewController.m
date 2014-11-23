@@ -11,6 +11,7 @@
 #import "AllUserData.h"
 #import "BikeDetail.h"
 #import "Constants.h"
+#import "DetailCostViewController.h"
 
 @interface CostViewController (){
     NSArray * allBikeData;
@@ -80,7 +81,26 @@
 - (void) actionButtonClicked:(id) sender
 {
     DebugLog(@"");
-    
+    NSString *vehicalID = @"";
+    UIButton *button = (UIButton *) sender;
+    if (button != nil) {
+        if ([button.titleLabel.text isEqualToString:@"All Parts"]) {
+            vehicalID = @"All Parts";
+        }else{
+            
+            for (BikeDetail *bikeDetail in allBikeData) {
+                if ([bikeDetail.bikeName isEqualToString:button.titleLabel.text]) {
+                    vehicalID = [NSString stringWithFormat:@"%d",(int)[bikeDetail bikeID]];
+                    break;
+                }
+            }
+            
+        }
+    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DetailCostViewController *detailCostVC = [storyboard instantiateViewControllerWithIdentifier:@"DetailCostViewController"];
+    detailCostVC.vehicleID = vehicalID;
+    [self.navigationController pushViewController:detailCostVC animated:YES];
 }
 - (void) saveAndLoadData:(NSArray *) data
 {
