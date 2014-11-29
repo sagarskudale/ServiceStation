@@ -51,6 +51,11 @@
     self.vehicleTypeId = [[bikeInfo objectForKey:@"VehicleTypeId"] integerValue];
     self.year = [[bikeInfo objectForKey:@"Year"] integerValue];
     
+    id noteStringValue = [bikeInfo objectForKey:@"Notes"];
+    if(noteStringValue == [NSNull null]){
+        return;
+    }
+    
     NSString *notesString =[bikeInfo objectForKey:@"Notes"];
     [self parseNotesString:notesString];
 }

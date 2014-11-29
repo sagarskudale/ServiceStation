@@ -15,6 +15,7 @@
 #import "ShowroomViewController.h"
 #import "ServiceRecordsViewController.h"
 #import "CostViewController.h"
+#import "BikeViewController.h"
 
 @interface DashBoardViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelPoints;
@@ -83,7 +84,7 @@
 
 - (void) addTapGesturesOnBikeView
 {
-    
+    [self addTapGestureOnView:viewBike withAction:@selector(onBikeViewTapped)];
 }
 
 - (void) addTapGesturesOnPointsView
@@ -125,6 +126,14 @@
 #pragma mark-
 #pragma mark- Action Handling
 #pragma mark-
+- (void) onBikeViewTapped
+{
+    DebugLog(@"");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    BikeViewController *bikeVC = [storyboard instantiateViewControllerWithIdentifier:@"BikeViewController"];
+    [self.navigationController pushViewController:bikeVC animated:YES];
+}
+
 - (void) onServiceRecordViewTapped
 {
     DebugLog(@"");

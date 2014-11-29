@@ -93,6 +93,8 @@
 		635EEFFC1A111CA000203873 /* ArchiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 635EEFFB1A111CA000203873 /* ArchiveManager.m */; };
 		635EEFFF1A111ED000203873 /* AllUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 635EEFFE1A111ED000203873 /* AllUserData.m */; };
 		635FE90A1A2A10B500915C41 /* ServiceRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FE9091A2A10B500915C41 /* ServiceRecordsViewController.m */; };
+		635FE90D1A2A2FF700915C41 /* BikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FE90C1A2A2FF700915C41 /* BikeViewController.m */; };
+		635FE9101A2A3A9300915C41 /* BikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FE90F1A2A3A9300915C41 /* BikeTableViewCell.m */; };
 		636E50F21A18E99200C71BC8 /* LoadingPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */; };
 		636E50F41A18EC2B00C71BC8 /* no_records.png in Resources */ = {isa = PBXBuildFile; fileRef = 636E50F31A18EC2B00C71BC8 /* no_records.png */; };
 		6382DE511A15177D00BE182F /* ShowroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE501A15177D00BE182F /* ShowroomViewController.m */; };
@@ -274,6 +276,10 @@
 		635EEFFE1A111ED000203873 /* AllUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUserData.m; sourceTree = "<group>"; };
 		635FE9081A2A10B500915C41 /* ServiceRecordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRecordsViewController.h; sourceTree = "<group>"; };
 		635FE9091A2A10B500915C41 /* ServiceRecordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRecordsViewController.m; sourceTree = "<group>"; };
+		635FE90B1A2A2FF700915C41 /* BikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeViewController.h; sourceTree = "<group>"; };
+		635FE90C1A2A2FF700915C41 /* BikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeViewController.m; sourceTree = "<group>"; };
+		635FE90E1A2A3A9300915C41 /* BikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeTableViewCell.h; sourceTree = "<group>"; };
+		635FE90F1A2A3A9300915C41 /* BikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeTableViewCell.m; sourceTree = "<group>"; };
 		636E50F01A18E99200C71BC8 /* LoadingPlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPlaceHolderView.h; sourceTree = "<group>"; };
 		636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPlaceHolderView.m; sourceTree = "<group>"; };
 		636E50F31A18EC2B00C71BC8 /* no_records.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_records.png; sourceTree = "<group>"; };
@@ -411,6 +417,8 @@
 				633A88B21A21E1A800859353 /* DetailCostViewController.m */,
 				635FE9081A2A10B500915C41 /* ServiceRecordsViewController.h */,
 				635FE9091A2A10B500915C41 /* ServiceRecordsViewController.m */,
+				635FE90B1A2A2FF700915C41 /* BikeViewController.h */,
+				635FE90C1A2A2FF700915C41 /* BikeViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -460,6 +468,8 @@
 				632FD25A1A1FAA2300831186 /* AdderessSelectionView.m */,
 				633A88AE1A21E04100859353 /* CostTableViewCell.h */,
 				633A88AF1A21E04100859353 /* CostTableViewCell.m */,
+				635FE90E1A2A3A9300915C41 /* BikeTableViewCell.h */,
+				635FE90F1A2A3A9300915C41 /* BikeTableViewCell.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -926,6 +936,7 @@
 				6335FA3A1A08779600655BFA /* SBJsonTokeniser.m in Sources */,
 				6335FA271A08779600655BFA /* ASIDataCompressor.m in Sources */,
 				6342640E1A17302D00EA34F8 /* PdfViewController.m in Sources */,
+				635FE9101A2A3A9300915C41 /* BikeTableViewCell.m in Sources */,
 				639EAC9A1A07EEE3002F9CE6 /* SplashScreenViewController.m in Sources */,
 				6335FA2B1A08779600655BFA /* ASIHTTPRequest.m in Sources */,
 				633A88B01A21E04100859353 /* CostTableViewCell.m in Sources */,
@@ -938,6 +949,7 @@
 				6338DF7B1A1BB21D00269197 /* SelectTimeView.m in Sources */,
 				6335FA2D1A08779600655BFA /* ASINetworkQueue.m in Sources */,
 				6382DE571A15215F00BE182F /* BikeDetail.m in Sources */,
+				635FE90D1A2A2FF700915C41 /* BikeViewController.m in Sources */,
 				6335FA261A08779600655BFA /* ASIAuthenticationDialog.m in Sources */,
 				6327A6C11A0F1AE300855813 /* KtmInstagramViewController.m in Sources */,
 				639DEC721A0E41C500B89BDC /* DatePickerView.m in Sources */,
