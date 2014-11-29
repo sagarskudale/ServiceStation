@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setStatusBarHidden];
     AllUserData *userData = [ArchiveManager getUserData];
     NSMutableDictionary *partsInfoDic = [[userData allPartsInfo] mutableCopy];
     if (partsInfoDic != nil) {
@@ -116,5 +116,25 @@
 - (IBAction)actionBackButton:(id)sender {
     DebugLog(@"");
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark-
+#pragma mark- Status Bar
+#pragma mark-
+
+- (void) setStatusBarHidden
+{
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        // iOS 7
+        [self prefersStatusBarHidden];
+        [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
+    } else {
+        // iOS 6
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    }
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 @end

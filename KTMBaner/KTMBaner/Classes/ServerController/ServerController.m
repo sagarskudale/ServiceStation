@@ -201,7 +201,7 @@ static ServerController *sharedInstance = nil;
                                       JSONObjectWithData:[request responseData]
                                       options:kNilOptions
                                       error:nil];
-        NSLog(@"%@",[responseDict debugDescription]);
+        NSLog(@"API URL : %@  Response : %@",request.url,[responseDict debugDescription]);
         [self.delegate onDataFetchComplete:responseDict];
     }
 }

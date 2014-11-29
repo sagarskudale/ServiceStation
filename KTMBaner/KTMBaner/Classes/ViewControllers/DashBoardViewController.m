@@ -13,6 +13,7 @@
 #import "AccountDetailsViewController.h"
 #import "AppointmentViewController.h"
 #import "ShowroomViewController.h"
+#import "ServiceRecordsViewController.h"
 #import "CostViewController.h"
 
 @interface DashBoardViewController ()
@@ -102,7 +103,7 @@
 
 - (void) addTapGesturesOnServiceView
 {
-    
+    [self addTapGestureOnView:viewService withAction:@selector(onServiceRecordViewTapped)];
 }
 
 - (void) addTapGesturesOnInstaramView
@@ -124,6 +125,13 @@
 #pragma mark-
 #pragma mark- Action Handling
 #pragma mark-
+- (void) onServiceRecordViewTapped
+{
+    DebugLog(@"");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    ServiceRecordsViewController *serviceRecordVC = [storyboard instantiateViewControllerWithIdentifier:@"ServiceRecordsViewController"];
+    [self.navigationController pushViewController:serviceRecordVC animated:YES];
+}
 
 - (void) onCostViewTapped
 {
