@@ -23,6 +23,7 @@
     self.allBikeInformation = [decoder decodeObjectForKey:@"AllBikeInformation"];
     self.allPartsInfo = [decoder decodeObjectForKey:@"allPartInfo"];
     self.usersBikesArray = [decoder decodeObjectForKey:@"UsersBikesArray"];
+    self.serviceRecordArray = [decoder decodeObjectForKey:@"serviceRecordArray"];
     return self;
 }
 
@@ -31,6 +32,7 @@
     [encoder encodeObject:self.allBikeInformation forKey:@"AllBikeInformation"];
     [encoder encodeObject:self.allPartsInfo forKey:@"allPartInfo"];
     [encoder encodeObject:self.usersBikesArray forKey:@"UsersBikesArray"];
+    [encoder encodeObject:self.serviceRecordArray forKey:@"serviceRecordArray"];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -39,6 +41,7 @@
     allUserData.allBikeInformation = [self.allBikeInformation copy];
     allUserData.allPartsInfo = [self.allPartsInfo copy];
     allUserData.usersBikesArray = [self.usersBikesArray copy];
+    allUserData.serviceRecordArray = [self.serviceRecordArray copy];
     return allUserData;
 }
 

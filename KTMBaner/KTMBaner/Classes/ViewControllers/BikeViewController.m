@@ -12,6 +12,7 @@
 #import "ArchiveManager.h"
 #import "Constants.h"
 #import "BikeDetail.h"
+#import "Utils.h"
 
 @interface BikeViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *bikeTable;
@@ -27,6 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setStatusBarHidden];
+    
+    
+    self.bikeTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.bikeTable.bounces = NO;
     
     AllUserData *userData = [ArchiveManager getUserData];
     bikesArray = [[userData usersBikesArray] mutableCopy];
@@ -64,8 +69,7 @@
         [allBikes addObject:bikeDetail];
     }
     bikesArray = allBikes;
-    
-//    self.bikeTable.frame = CGRectMake(self.bikeTable.frame.origin.x, self.bikeTable.frame.origin.y, self.bikeTable.frame.size.width, 70);
+
     
     [self.bikeTable reloadData];
     
@@ -90,6 +94,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"BikeTableViewCell"];
     }
     
+    
     BikeDetail *bikeDetail = [bikesArray objectAtIndex:indexPath.row];
     
     cell.bikeNumber.text = bikeDetail.licensePlateNumber;
@@ -98,6 +103,14 @@
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DebugLog(@"");
+    BikeDetail * bikeDetail = [bikesArray objectAtIndex:indexPath.row];
+    [Utils displayAlerViewWithTitle:@"Servicing" withMessage:@"Do you want to take an appointment for servicing of this vehicle." withDelegate:nil];
+    
+}
 #pragma mark-
 #pragma mark- Server Controller Delegates
 #pragma mark-

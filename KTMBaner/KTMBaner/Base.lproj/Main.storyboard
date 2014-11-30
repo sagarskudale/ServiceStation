@@ -4989,6 +4989,7 @@ BANER, Pune 411045</string>
                         <viewControllerLayoutGuide type="bottom" id="2Q7-T8-2sD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vzT-Px-0Ed">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9W-c5-Wvs">
@@ -5064,10 +5065,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="x10-6r-vac"/>
-                                        <exclude reference="3XC-2h-Ww9"/>
-                                        <exclude reference="6CH-TD-HtA"/>
                                         <exclude reference="dpu-Vf-vyL"/>
                                         <exclude reference="z6S-Pa-FKr"/>
+                                        <exclude reference="3XC-2h-Ww9"/>
+                                        <exclude reference="6CH-TD-HtA"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -5077,66 +5078,198 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="x10-6r-vac"/>
-                                        <include reference="3XC-2h-Ww9"/>
-                                        <include reference="6CH-TD-HtA"/>
                                         <include reference="dpu-Vf-vyL"/>
                                         <include reference="z6S-Pa-FKr"/>
+                                        <include reference="3XC-2h-Ww9"/>
+                                        <include reference="6CH-TD-HtA"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttn-tU-vIf">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Mi-X3-Ni7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceRecordTableViewCell" rowHeight="60" id="O1S-5u-D7o" customClass="ServiceRecordTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O1S-5u-D7o" id="XPT-3d-SyL">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoE-89-2ax">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="123" id="1uL-vT-ond"/>
+                                                        <constraint firstAttribute="height" constant="30" id="nXF-PD-Mzy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="1uL-vT-ond"/>
+                                                            <exclude reference="nXF-PD-Mzy"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="1uL-vT-ond"/>
+                                                            <include reference="nXF-PD-Mzy"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KMS 123" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-Ej-9bz">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="ygi-ii-Nhn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="ygi-ii-Nhn"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="ygi-ii-Nhn"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike Number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMd-wP-lrG">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="und-Nm-Mfs">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="und-Nm-Mfs"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="und-Nm-Mfs"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QyW-Ej-9bz" firstAttribute="top" secondItem="AMd-wP-lrG" secondAttribute="bottom" constant="4" id="8Y2-EU-Xwm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zoE-89-2ax" secondAttribute="trailing" constant="-8" id="SPv-ZV-C1i"/>
+                                                <constraint firstItem="AMd-wP-lrG" firstAttribute="top" secondItem="XPT-3d-SyL" secondAttribute="topMargin" constant="-5" id="WGn-aa-J32"/>
+                                                <constraint firstItem="zoE-89-2ax" firstAttribute="leading" secondItem="QyW-Ej-9bz" secondAttribute="trailing" constant="8" id="gGt-h8-p6h"/>
+                                                <constraint firstItem="AMd-wP-lrG" firstAttribute="leading" secondItem="XPT-3d-SyL" secondAttribute="leadingMargin" id="ivg-z3-MYY">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                </constraint>
+                                                <constraint firstItem="QyW-Ej-9bz" firstAttribute="leading" secondItem="XPT-3d-SyL" secondAttribute="leadingMargin" id="l7S-pc-ayZ">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                </constraint>
+                                                <constraint firstItem="zoE-89-2ax" firstAttribute="top" secondItem="AMd-wP-lrG" secondAttribute="bottom" constant="4" id="swQ-FN-xID"/>
+                                                <constraint firstItem="AMd-wP-lrG" firstAttribute="trailing" secondItem="XPT-3d-SyL" secondAttribute="trailingMargin" id="v1Z-1H-VY8"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="zoE-89-2ax"/>
+                                                    <exclude reference="QyW-Ej-9bz"/>
+                                                    <exclude reference="AMd-wP-lrG"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="gGt-h8-p6h"/>
+                                                    <exclude reference="SPv-ZV-C1i"/>
+                                                    <exclude reference="swQ-FN-xID"/>
+                                                    <exclude reference="l7S-pc-ayZ"/>
+                                                    <exclude reference="8Y2-EU-Xwm"/>
+                                                    <exclude reference="WGn-aa-J32"/>
+                                                    <exclude reference="v1Z-1H-VY8"/>
+                                                    <exclude reference="ivg-z3-MYY"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="zoE-89-2ax"/>
+                                                    <include reference="QyW-Ej-9bz"/>
+                                                    <include reference="AMd-wP-lrG"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="gGt-h8-p6h"/>
+                                                    <include reference="SPv-ZV-C1i"/>
+                                                    <include reference="swQ-FN-xID"/>
+                                                    <include reference="l7S-pc-ayZ"/>
+                                                    <include reference="8Y2-EU-Xwm"/>
+                                                    <include reference="WGn-aa-J32"/>
+                                                    <include reference="v1Z-1H-VY8"/>
+                                                    <include reference="ivg-z3-MYY"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="bikeNumber" destination="AMd-wP-lrG" id="3wZ-pZ-TIH"/>
+                                            <outlet property="date" destination="zoE-89-2ax" id="Wf3-hk-KVw"/>
+                                            <outlet property="kms" destination="QyW-Ej-9bz" id="F4j-NA-buk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="odu-bc-Bc0" id="L2n-bW-dnM"/>
+                                    <outlet property="delegate" destination="odu-bc-Bc0" id="yQW-Cd-dLD"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ttn-tU-vIf" firstAttribute="leading" secondItem="vzT-Px-0Ed" secondAttribute="leadingMargin" constant="-16" id="9r4-uS-Hk0"/>
                             <constraint firstItem="o9W-c5-Wvs" firstAttribute="top" secondItem="vzT-Px-0Ed" secondAttribute="topMargin" id="HYO-cH-eFh"/>
-                            <constraint firstItem="2Q7-T8-2sD" firstAttribute="top" secondItem="ttn-tU-vIf" secondAttribute="bottom" id="RX8-kp-C5b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ttn-tU-vIf" secondAttribute="trailing" constant="-16" id="hJ6-EJ-6Gz"/>
-                            <constraint firstItem="ttn-tU-vIf" firstAttribute="top" secondItem="o9W-c5-Wvs" secondAttribute="bottom" id="rQN-d8-Fm3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Mi-X3-Ni7" secondAttribute="trailing" constant="-16" id="Hw5-ek-gNS"/>
+                            <constraint firstItem="2Q7-T8-2sD" firstAttribute="top" secondItem="9Mi-X3-Ni7" secondAttribute="bottom" id="NH8-gP-WlL"/>
+                            <constraint firstItem="9Mi-X3-Ni7" firstAttribute="leading" secondItem="vzT-Px-0Ed" secondAttribute="leadingMargin" constant="-16" id="Vs5-bV-pjJ"/>
+                            <constraint firstItem="9Mi-X3-Ni7" firstAttribute="top" secondItem="o9W-c5-Wvs" secondAttribute="bottom" id="mf7-cw-QQa"/>
                             <constraint firstItem="o9W-c5-Wvs" firstAttribute="leading" secondItem="vzT-Px-0Ed" secondAttribute="leadingMargin" constant="-16" id="t1Y-ZV-RmS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o9W-c5-Wvs" secondAttribute="trailing" constant="-16" id="vj3-wU-JC5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="o9W-c5-Wvs"/>
-                                <exclude reference="ttn-tU-vIf"/>
+                                <exclude reference="9Mi-X3-Ni7"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="HYO-cH-eFh"/>
                                 <exclude reference="t1Y-ZV-RmS"/>
                                 <exclude reference="vj3-wU-JC5"/>
-                                <exclude reference="9r4-uS-Hk0"/>
-                                <exclude reference="hJ6-EJ-6Gz"/>
-                                <exclude reference="rQN-d8-Fm3"/>
-                                <exclude reference="RX8-kp-C5b"/>
+                                <exclude reference="Hw5-ek-gNS"/>
+                                <exclude reference="Vs5-bV-pjJ"/>
+                                <exclude reference="mf7-cw-QQa"/>
+                                <exclude reference="NH8-gP-WlL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="o9W-c5-Wvs"/>
-                                <include reference="ttn-tU-vIf"/>
+                                <include reference="9Mi-X3-Ni7"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="HYO-cH-eFh"/>
                                 <include reference="t1Y-ZV-RmS"/>
                                 <include reference="vj3-wU-JC5"/>
-                                <include reference="9r4-uS-Hk0"/>
-                                <include reference="hJ6-EJ-6Gz"/>
-                                <include reference="rQN-d8-Fm3"/>
-                                <include reference="RX8-kp-C5b"/>
+                                <include reference="Hw5-ek-gNS"/>
+                                <include reference="Vs5-bV-pjJ"/>
+                                <include reference="mf7-cw-QQa"/>
+                                <include reference="NH8-gP-WlL"/>
                             </mask>
                         </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="scrollview" destination="ttn-tU-vIf" id="abW-m3-CsY"/>
+                        <outlet property="serviceRecordTableView" destination="9Mi-X3-Ni7" id="7OO-0d-lGu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6de-kn-PZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9496.5" y="278.25"/>
+            <point key="canvasLocation" x="9496.5" y="276"/>
         </scene>
         <!--Bike View Controller-->
         <scene sceneID="3Wu-fw-fiP">
@@ -5147,6 +5280,7 @@ BANER, Pune 411045</string>
                         <viewControllerLayoutGuide type="bottom" id="Vwf-Ln-o4A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WVY-WM-xk0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5r-Nv-htX">
@@ -5154,19 +5288,45 @@ BANER, Pune 411045</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8e-wy-OVZ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="3" y="20" width="30" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="c0r-zP-H96"/>
+                                            <constraint firstAttribute="width" constant="30" id="zbe-KR-UF0"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="c0r-zP-H96"/>
+                                                <exclude reference="zbe-KR-UF0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="c0r-zP-H96"/>
+                                                <include reference="zbe-KR-UF0"/>
+                                            </mask>
                                         </variation>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-qZ-krk">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="Lyd-01-sib"/>
+                                            <constraint firstAttribute="width" constant="208" id="g0c-Ok-fZf"/>
+                                        </constraints>
                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Vehicles" image="ic_launcher.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="25" y="8" width="208" height="49"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Lyd-01-sib"/>
+                                                <exclude reference="g0c-Ok-fZf"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Lyd-01-sib"/>
+                                                <include reference="g0c-Ok-fZf"/>
+                                            </mask>
                                         </variation>
                                         <connections>
                                             <action selector="actionBackButton:" destination="uLd-DZ-Enx" eventType="touchUpInside" id="rhe-17-g0W"/>
@@ -5174,17 +5334,37 @@ BANER, Pune 411045</string>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="E8e-wy-OVZ" firstAttribute="leading" secondItem="I5r-Nv-htX" secondAttribute="leading" constant="3" id="6Dk-Xe-ua7"/>
+                                    <constraint firstItem="ndz-qZ-krk" firstAttribute="leading" secondItem="I5r-Nv-htX" secondAttribute="leading" constant="25" id="FS7-IR-V33"/>
+                                    <constraint firstAttribute="centerY" secondItem="ndz-qZ-krk" secondAttribute="centerY" id="y6g-9W-Pqh"/>
+                                    <constraint firstAttribute="height" constant="65" id="ygH-He-Eml"/>
+                                    <constraint firstAttribute="centerY" secondItem="E8e-wy-OVZ" secondAttribute="centerY" id="zgH-KQ-y7T"/>
+                                </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="E8e-wy-OVZ"/>
                                         <exclude reference="ndz-qZ-krk"/>
                                     </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="ygH-He-Eml"/>
+                                        <exclude reference="6Dk-Xe-ua7"/>
+                                        <exclude reference="zgH-KQ-y7T"/>
+                                        <exclude reference="FS7-IR-V33"/>
+                                        <exclude reference="y6g-9W-Pqh"/>
+                                    </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="E8e-wy-OVZ"/>
                                         <include reference="ndz-qZ-krk"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="ygH-He-Eml"/>
+                                        <include reference="6Dk-Xe-ua7"/>
+                                        <include reference="zgH-KQ-y7T"/>
+                                        <include reference="FS7-IR-V33"/>
+                                        <include reference="y6g-9W-Pqh"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -5204,14 +5384,14 @@ BANER, Pune 411045</string>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="104" y="7" width="194" height="26"/>
+                                                        <rect key="frame" x="95" y="7" width="194" height="26"/>
                                                     </variation>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike.png" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-lk-PAY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="sfX-lk-PAY">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="10" width="64" height="47"/>
+                                                        <rect key="frame" x="17" y="9" width="55" height="47"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-dN-ZBO">
@@ -5220,7 +5400,7 @@ BANER, Pune 411045</string>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="104" y="33" width="194" height="26"/>
+                                                        <rect key="frame" x="95" y="33" width="194" height="26"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -5246,9 +5426,6 @@ BANER, Pune 411045</string>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="66" width="400" height="739"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="uLd-DZ-Enx" id="Ig4-zL-zOe"/>
                                     <outlet property="delegate" destination="uLd-DZ-Enx" id="jT1-nN-mRh"/>
@@ -5256,16 +5433,43 @@ BANER, Pune 411045</string>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="9vD-g5-3ta" secondAttribute="bottom" id="3di-9p-aVf"/>
+                            <constraint firstItem="9vD-g5-3ta" firstAttribute="leading" secondItem="WVY-WM-xk0" secondAttribute="leadingMargin" constant="-16" id="A26-cU-di3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9vD-g5-3ta" secondAttribute="trailing" constant="-16" id="B3t-cy-Asd"/>
+                            <constraint firstItem="I5r-Nv-htX" firstAttribute="top" secondItem="0dD-A4-MtC" secondAttribute="bottom" id="XCv-VB-vrj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I5r-Nv-htX" secondAttribute="trailing" constant="-16" id="mPl-1z-iFw"/>
+                            <constraint firstItem="I5r-Nv-htX" firstAttribute="leading" secondItem="WVY-WM-xk0" secondAttribute="leadingMargin" constant="-16" id="mnG-iM-fWY"/>
+                            <constraint firstItem="9vD-g5-3ta" firstAttribute="top" secondItem="I5r-Nv-htX" secondAttribute="bottom" constant="1" id="sXP-s5-IM1"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="I5r-Nv-htX"/>
                                 <exclude reference="9vD-g5-3ta"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="XCv-VB-vrj"/>
+                                <exclude reference="mPl-1z-iFw"/>
+                                <exclude reference="mnG-iM-fWY"/>
+                                <exclude reference="3di-9p-aVf"/>
+                                <exclude reference="A26-cU-di3"/>
+                                <exclude reference="B3t-cy-Asd"/>
+                                <exclude reference="sXP-s5-IM1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="I5r-Nv-htX"/>
                                 <include reference="9vD-g5-3ta"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="XCv-VB-vrj"/>
+                                <include reference="mPl-1z-iFw"/>
+                                <include reference="mnG-iM-fWY"/>
+                                <include reference="3di-9p-aVf"/>
+                                <include reference="A26-cU-di3"/>
+                                <include reference="B3t-cy-Asd"/>
+                                <include reference="sXP-s5-IM1"/>
                             </mask>
                         </variation>
                     </view>
@@ -5277,7 +5481,7 @@ BANER, Pune 411045</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb1-dO-zvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10197" y="270.75"/>
+            <point key="canvasLocation" x="10197" y="270"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOM-Hw-XXm">
@@ -5306,6 +5510,7 @@ BANER, Pune 411045</string>
         <image name="appointments.png" width="128" height="128"/>
         <image name="back_white.png" width="32" height="32"/>
         <image name="bike.png" width="128" height="128"/>
+        <image name="bike_black.png" width="72" height="72"/>
         <image name="call.png" width="72" height="72"/>
         <image name="helmet.png" width="128" height="128"/>
         <image name="ic_launcher.png" width="45" height="45"/>

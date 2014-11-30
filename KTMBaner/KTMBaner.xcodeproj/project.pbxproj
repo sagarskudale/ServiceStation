@@ -101,6 +101,9 @@
 		6382DE541A151AAF00BE182F /* BikeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE531A151AAF00BE182F /* BikeDetailView.m */; };
 		6382DE571A15215F00BE182F /* BikeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE561A15215F00BE182F /* BikeDetail.m */; };
 		6388E45D1A20E8DA00800D18 /* CostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6388E45C1A20E8DA00800D18 /* CostViewController.m */; };
+		6394B48C1A2AEDA4002FB0AF /* bike_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6394B48B1A2AEDA4002FB0AF /* bike_black.png */; };
+		6394B48F1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6394B48E1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.m */; };
+		6394B4921A2B1DFE002FB0AF /* ServiceRecordDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6394B4911A2B1DFE002FB0AF /* ServiceRecordDetails.m */; };
 		639DEC671A0E38C400B89BDC /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DEC661A0E38C400B89BDC /* AppIcon60x60.png */; };
 		639DEC691A0E390300B89BDC /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DEC681A0E390300B89BDC /* AppIcon60x60@2x.png */; };
 		639DEC6B1A0E395000B89BDC /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */; };
@@ -291,6 +294,11 @@
 		6382DE561A15215F00BE182F /* BikeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetail.m; sourceTree = "<group>"; };
 		6388E45B1A20E8DA00800D18 /* CostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostViewController.h; sourceTree = "<group>"; };
 		6388E45C1A20E8DA00800D18 /* CostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostViewController.m; sourceTree = "<group>"; };
+		6394B48B1A2AEDA4002FB0AF /* bike_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike_black.png; sourceTree = "<group>"; };
+		6394B48D1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRecordTableViewCell.h; sourceTree = "<group>"; };
+		6394B48E1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRecordTableViewCell.m; sourceTree = "<group>"; };
+		6394B4901A2B1DFE002FB0AF /* ServiceRecordDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRecordDetails.h; sourceTree = "<group>"; };
+		6394B4911A2B1DFE002FB0AF /* ServiceRecordDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRecordDetails.m; sourceTree = "<group>"; };
 		639DEC661A0E38C400B89BDC /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
 		639DEC681A0E390300B89BDC /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
 		639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
@@ -346,6 +354,8 @@
 				6382DE561A15215F00BE182F /* BikeDetail.m */,
 				633A88B41A22014800859353 /* PartCostDetails.h */,
 				633A88B51A22014800859353 /* PartCostDetails.m */,
+				6394B4901A2B1DFE002FB0AF /* ServiceRecordDetails.h */,
+				6394B4911A2B1DFE002FB0AF /* ServiceRecordDetails.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -470,6 +480,8 @@
 				633A88AF1A21E04100859353 /* CostTableViewCell.m */,
 				635FE90E1A2A3A9300915C41 /* BikeTableViewCell.h */,
 				635FE90F1A2A3A9300915C41 /* BikeTableViewCell.m */,
+				6394B48D1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.h */,
+				6394B48E1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.m */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -745,6 +757,7 @@
 				639DEC6C1A0E3A5000B89BDC /* AppIcon57x57.png */,
 				639DEC6D1A0E3A5000B89BDC /* AppIcon57x57@2x.png */,
 				639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */,
+				6394B48B1A2AEDA4002FB0AF /* bike_black.png */,
 				639DEC681A0E390300B89BDC /* AppIcon60x60@2x.png */,
 				639DEC661A0E38C400B89BDC /* AppIcon60x60.png */,
 				6335A23B1A0B1CA600C2CB7C /* address.png */,
@@ -848,6 +861,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6394B48C1A2AEDA4002FB0AF /* bike_black.png in Resources */,
 				632BD0821A06998E00ADBBED /* helmet.png in Resources */,
 				63C9A9C51A0156BF00FE2B62 /* Main.storyboard in Resources */,
 				634264571A177C0100EA34F8 /* CollapsableTableViewHeaderViewGrouped.xib in Resources */,
@@ -916,6 +930,7 @@
 				6335FA2C1A08779600655BFA /* ASIInputStream.m in Sources */,
 				632BD0931A069A2700ADBBED /* DashBoardViewController.m in Sources */,
 				6335FA341A08779600655BFA /* SBJsonStreamParserAccumulator.m in Sources */,
+				6394B48F1A2AF3C9002FB0AF /* ServiceRecordTableViewCell.m in Sources */,
 				6335FA3D1A08779600655BFA /* MBProgressHUD.m in Sources */,
 				6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */,
 				6335FA3F1A08779600655BFA /* ServerController.m in Sources */,
@@ -930,6 +945,7 @@
 				6382DE511A15177D00BE182F /* ShowroomViewController.m in Sources */,
 				6335FA3E1A08779600655BFA /* Reachability.m in Sources */,
 				634264501A177C0100EA34F8 /* CollapsableTableViewFooterViewController.m in Sources */,
+				6394B4921A2B1DFE002FB0AF /* ServiceRecordDetails.m in Sources */,
 				6335FA321A08779600655BFA /* SBJsonParser.m in Sources */,
 				635FE90A1A2A10B500915C41 /* ServiceRecordsViewController.m in Sources */,
 				6335FA3B1A08779600655BFA /* SBJsonUTF8Stream.m in Sources */,

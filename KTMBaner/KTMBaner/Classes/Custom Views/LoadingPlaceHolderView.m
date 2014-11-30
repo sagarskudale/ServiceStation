@@ -50,7 +50,7 @@
     
     UILabel *msgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width - 10, 100)];
     msgLabel.text = [self getMessageToDisplay];
-    msgLabel.numberOfLines = 2;
+    msgLabel.numberOfLines = 3;
     msgLabel.textAlignment = NSTextAlignmentCenter;
     msgLabel.textColor = [UIColor redColor];
     msgLabel.center = CGPointMake(self.frame.size.width / 2, imageView.center.y + imageView.frame.size.height / 2 + 100);
@@ -62,6 +62,9 @@
     DebugLog(@"");
     if(_screenType == kScreenTypeShowroom){
         return @"No records found! \nKeep checking for updates.";
+    }else if (_screenType == kScreenTypeServiceRecords)
+    {
+        return @"No records found!\n Should some service records be added? \n Contact our store manager.";
     }
     return nil;
 }

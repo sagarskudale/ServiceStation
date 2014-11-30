@@ -10,7 +10,8 @@
 
 typedef enum{
     kScreenTypeNone,
-    kScreenTypeShowroom
+    kScreenTypeShowroom,
+    kScreenTypeServiceRecords
 }ScreenType;
 
 @interface LoadingPlaceHolderView : UIView
