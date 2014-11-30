@@ -7,7 +7,6 @@
 //
 
 #import "LoadingPlaceHolderView.h"
-#import "Constants.h"
 
 #define TAG_IMAGE_VIEW 122
 
@@ -51,6 +50,7 @@
     UILabel *msgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width - 10, 100)];
     msgLabel.text = [self getMessageToDisplay];
     msgLabel.numberOfLines = 3;
+    msgLabel.adjustsFontSizeToFitWidth = YES;
     msgLabel.textAlignment = NSTextAlignmentCenter;
     msgLabel.textColor = [UIColor redColor];
     msgLabel.center = CGPointMake(self.frame.size.width / 2, imageView.center.y + imageView.frame.size.height / 2 + 100);
@@ -65,6 +65,8 @@
     }else if (_screenType == kScreenTypeServiceRecords)
     {
         return @"No records found!\n Should some service records be added? \n Contact our store manager.";
+    }else if (_screenType == kScreenTypeUserVehicle){
+        return @"No records found!\n Ask store manager to add vehicles for you.";
     }
     return nil;
 }

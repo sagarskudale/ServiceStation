@@ -48,6 +48,17 @@
     [alert show];
 }
 
++ (void) displayAlerViewWithCancelButtonWithTitle:(NSString *) title withMessage:(NSString *) message withDelegate:(id<UIAlertViewDelegate>) delegate
+{
+    DebugLog(@"");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:message
+                                                   delegate:delegate
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"OK",nil];
+    [alert show];
+}
+
 + (NSString *)getUserDataFilePath {
     NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                            inDomains:NSUserDomainMask];

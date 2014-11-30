@@ -18,6 +18,7 @@
 + (void) setUserID:(NSString *) userID;
 + (BOOL) isNSStringValidEmail:(NSString *) string;
 + (void) displayAlerViewWithTitle:(NSString *) title withMessage:(NSString *) message withDelegate:(id<UIAlertViewDelegate>) delegate;
++ (void) displayAlerViewWithCancelButtonWithTitle:(NSString *) title withMessage:(NSString *) message withDelegate:(id<UIAlertViewDelegate>) delegate;
 + (NSString *)getUserDataFilePath;
 + (void) deleteUserData;
 

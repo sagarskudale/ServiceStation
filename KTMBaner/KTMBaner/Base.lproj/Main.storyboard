@@ -5007,7 +5007,8 @@ BANER, Pune 411045</string>
                                                 <exclude reference="yt9-DM-Xtm"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="3" y="20" width="30" height="26"/>
                                             <mask key="constraints">
                                                 <include reference="1kd-6A-Erq"/>
                                                 <include reference="yt9-DM-Xtm"/>
@@ -5031,7 +5032,8 @@ BANER, Pune 411045</string>
                                                 <exclude reference="csc-Nz-TQ9"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="25" y="8" width="208" height="49"/>
                                             <mask key="constraints">
                                                 <include reference="OEh-IL-9sO"/>
                                                 <include reference="csc-Nz-TQ9"/>
@@ -5052,11 +5054,7 @@ BANER, Pune 411045</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="Sin-P0-zqM" secondAttribute="centerY" id="3XC-2h-Ww9"/>
-                                    <constraint firstItem="Sin-P0-zqM" firstAttribute="leading" secondItem="o9W-c5-Wvs" secondAttribute="leading" constant="3" id="6CH-TD-HtA"/>
-                                    <constraint firstItem="ctc-y8-QuH" firstAttribute="leading" secondItem="o9W-c5-Wvs" secondAttribute="leading" constant="25" id="dpu-Vf-vyL"/>
-                                    <constraint firstAttribute="height" constant="65" id="x10-6r-vac"/>
-                                    <constraint firstAttribute="centerY" secondItem="ctc-y8-QuH" secondAttribute="centerY" id="z6S-Pa-FKr"/>
+                                    <constraint firstAttribute="height" constant="65" id="Pf7-k4-Zad"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -5064,11 +5062,7 @@ BANER, Pune 411045</string>
                                         <exclude reference="ctc-y8-QuH"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="x10-6r-vac"/>
-                                        <exclude reference="dpu-Vf-vyL"/>
-                                        <exclude reference="z6S-Pa-FKr"/>
-                                        <exclude reference="3XC-2h-Ww9"/>
-                                        <exclude reference="6CH-TD-HtA"/>
+                                        <exclude reference="Pf7-k4-Zad"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -5077,11 +5071,7 @@ BANER, Pune 411045</string>
                                         <include reference="ctc-y8-QuH"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="x10-6r-vac"/>
-                                        <include reference="dpu-Vf-vyL"/>
-                                        <include reference="z6S-Pa-FKr"/>
-                                        <include reference="3XC-2h-Ww9"/>
-                                        <include reference="6CH-TD-HtA"/>
+                                        <include reference="Pf7-k4-Zad"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -5160,14 +5150,16 @@ BANER, Pune 411045</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QyW-Ej-9bz" firstAttribute="top" secondItem="AMd-wP-lrG" secondAttribute="bottom" constant="4" id="8Y2-EU-Xwm"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zoE-89-2ax" secondAttribute="trailing" constant="-8" id="SPv-ZV-C1i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zoE-89-2ax" secondAttribute="trailing" constant="-8" id="SPv-ZV-C1i">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                                </constraint>
                                                 <constraint firstItem="AMd-wP-lrG" firstAttribute="top" secondItem="XPT-3d-SyL" secondAttribute="topMargin" constant="-5" id="WGn-aa-J32"/>
                                                 <constraint firstItem="zoE-89-2ax" firstAttribute="leading" secondItem="QyW-Ej-9bz" secondAttribute="trailing" constant="8" id="gGt-h8-p6h"/>
                                                 <constraint firstItem="AMd-wP-lrG" firstAttribute="leading" secondItem="XPT-3d-SyL" secondAttribute="leadingMargin" id="ivg-z3-MYY">
-                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                                                 </constraint>
                                                 <constraint firstItem="QyW-Ej-9bz" firstAttribute="leading" secondItem="XPT-3d-SyL" secondAttribute="leadingMargin" id="l7S-pc-ayZ">
-                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                                                 </constraint>
                                                 <constraint firstItem="zoE-89-2ax" firstAttribute="top" secondItem="AMd-wP-lrG" secondAttribute="bottom" constant="4" id="swQ-FN-xID"/>
                                                 <constraint firstItem="AMd-wP-lrG" firstAttribute="trailing" secondItem="XPT-3d-SyL" secondAttribute="trailingMargin" id="v1Z-1H-VY8"/>
@@ -5223,13 +5215,13 @@ BANER, Pune 411045</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o9W-c5-Wvs" firstAttribute="top" secondItem="vzT-Px-0Ed" secondAttribute="topMargin" id="HYO-cH-eFh"/>
+                            <constraint firstItem="o9W-c5-Wvs" firstAttribute="leading" secondItem="vzT-Px-0Ed" secondAttribute="leadingMargin" constant="-16" id="3hq-XL-beD"/>
+                            <constraint firstItem="9Mi-X3-Ni7" firstAttribute="top" secondItem="o9W-c5-Wvs" secondAttribute="bottom" id="8pc-SN-VfM"/>
+                            <constraint firstItem="o9W-c5-Wvs" firstAttribute="top" secondItem="OST-fq-Twr" secondAttribute="bottom" id="AxQ-6n-YnC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Mi-X3-Ni7" secondAttribute="trailing" constant="-16" id="Hw5-ek-gNS"/>
                             <constraint firstItem="2Q7-T8-2sD" firstAttribute="top" secondItem="9Mi-X3-Ni7" secondAttribute="bottom" id="NH8-gP-WlL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o9W-c5-Wvs" secondAttribute="trailing" constant="-16" id="Ucq-aE-C7Z"/>
                             <constraint firstItem="9Mi-X3-Ni7" firstAttribute="leading" secondItem="vzT-Px-0Ed" secondAttribute="leadingMargin" constant="-16" id="Vs5-bV-pjJ"/>
-                            <constraint firstItem="9Mi-X3-Ni7" firstAttribute="top" secondItem="o9W-c5-Wvs" secondAttribute="bottom" id="mf7-cw-QQa"/>
-                            <constraint firstItem="o9W-c5-Wvs" firstAttribute="leading" secondItem="vzT-Px-0Ed" secondAttribute="leadingMargin" constant="-16" id="t1Y-ZV-RmS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="o9W-c5-Wvs" secondAttribute="trailing" constant="-16" id="vj3-wU-JC5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -5237,12 +5229,12 @@ BANER, Pune 411045</string>
                                 <exclude reference="9Mi-X3-Ni7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="HYO-cH-eFh"/>
-                                <exclude reference="t1Y-ZV-RmS"/>
-                                <exclude reference="vj3-wU-JC5"/>
+                                <exclude reference="3hq-XL-beD"/>
+                                <exclude reference="AxQ-6n-YnC"/>
+                                <exclude reference="Ucq-aE-C7Z"/>
+                                <exclude reference="8pc-SN-VfM"/>
                                 <exclude reference="Hw5-ek-gNS"/>
                                 <exclude reference="Vs5-bV-pjJ"/>
-                                <exclude reference="mf7-cw-QQa"/>
                                 <exclude reference="NH8-gP-WlL"/>
                             </mask>
                         </variation>
@@ -5252,12 +5244,12 @@ BANER, Pune 411045</string>
                                 <include reference="9Mi-X3-Ni7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="HYO-cH-eFh"/>
-                                <include reference="t1Y-ZV-RmS"/>
-                                <include reference="vj3-wU-JC5"/>
+                                <include reference="3hq-XL-beD"/>
+                                <include reference="AxQ-6n-YnC"/>
+                                <include reference="Ucq-aE-C7Z"/>
+                                <include reference="8pc-SN-VfM"/>
                                 <include reference="Hw5-ek-gNS"/>
                                 <include reference="Vs5-bV-pjJ"/>
-                                <include reference="mf7-cw-QQa"/>
                                 <include reference="NH8-gP-WlL"/>
                             </mask>
                         </variation>
@@ -5391,7 +5383,7 @@ BANER, Pune 411045</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="17" y="9" width="55" height="47"/>
+                                                        <rect key="frame" x="17" y="8" width="55" height="52"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-dN-ZBO">
@@ -5419,6 +5411,7 @@ BANER, Pune 411045</string>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="bikeImageView" destination="egu-s0-BmX" id="Atc-vP-NF3"/>
                                             <outlet property="bikeName" destination="ev7-dN-ZBO" id="5o8-Tp-GDX"/>
@@ -5440,7 +5433,9 @@ BANER, Pune 411045</string>
                             <constraint firstItem="I5r-Nv-htX" firstAttribute="top" secondItem="0dD-A4-MtC" secondAttribute="bottom" id="XCv-VB-vrj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I5r-Nv-htX" secondAttribute="trailing" constant="-16" id="mPl-1z-iFw"/>
                             <constraint firstItem="I5r-Nv-htX" firstAttribute="leading" secondItem="WVY-WM-xk0" secondAttribute="leadingMargin" constant="-16" id="mnG-iM-fWY"/>
-                            <constraint firstItem="9vD-g5-3ta" firstAttribute="top" secondItem="I5r-Nv-htX" secondAttribute="bottom" constant="1" id="sXP-s5-IM1"/>
+                            <constraint firstItem="9vD-g5-3ta" firstAttribute="top" secondItem="I5r-Nv-htX" secondAttribute="bottom" constant="1" id="sXP-s5-IM1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -5481,7 +5476,7 @@ BANER, Pune 411045</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb1-dO-zvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10197" y="270"/>
+            <point key="canvasLocation" x="10197" y="268.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOM-Hw-XXm">

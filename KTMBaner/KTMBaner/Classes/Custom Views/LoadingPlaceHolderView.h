@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
-typedef enum{
-    kScreenTypeNone,
-    kScreenTypeShowroom,
-    kScreenTypeServiceRecords
-}ScreenType;
 
 @interface LoadingPlaceHolderView : UIView
 

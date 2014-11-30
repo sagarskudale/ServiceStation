@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "ArchiveManager.h"
 #import "AllUserData.h"
+#import "Utils.h"
 #import "AccountInformation.h"
 #import "BikeDetail.h"
 #import "PdfViewController.h"
@@ -38,14 +39,28 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setStatusBarHidden];
-    
+    self.serviceRecordTableView.bounces = NO;
     self.serviceRecordTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self loadServiceRecords];
+    if ([[ServerController sharedInstance] isNetworkAvailabe]) {
+        [self addPlaceHolderView];
+        [self loadServiceRecords];
+    }else{
+        [self displayStoredRecords];
+    }
+    
+    
 }
-- (void) viewWillAppear:(BOOL)animated
+- (void) displayStoredRecords
 {
     DebugLog(@"");
-    [self addPlaceHolderView];
+     AllUserData *userData = [ArchiveManager getUserData];
+    NSArray *serviceRecords = userData.serviceRecordArray;
+    if (serviceRecords == nil || [serviceRecords count] == 0) {
+        [self addPlaceHolderView];
+    }else{
+        serRecords = serviceRecords;
+        [self.serviceRecordTableView reloadData];
+    }
 }
 - (void) addPlaceHolderView
 {
@@ -195,12 +210,18 @@ typedef enum {
 {
     DebugLog(@"");
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    PdfViewController *pdfVC = [storyboard instantiateViewControllerWithIdentifier:@"PdfViewController"];
+    if ([[ServerController sharedInstance] isNetworkAvailabe]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        PdfViewController *pdfVC = [storyboard instantiateViewControllerWithIdentifier:@"PdfViewController"];
+        
+        ServiceRecordDetails *serviceDetails = [serRecords objectAtIndex:indexPath.row];
+        pdfVC.pdfURL = serviceDetails.pdfURL;
+        [self.navigationController pushViewController:pdfVC animated:YES];
+    }else{
+        [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Network not available..." withDelegate:nil];
+    }
     
-    ServiceRecordDetails *serviceDetails = [serRecords objectAtIndex:indexPath.row];
-    pdfVC.pdfURL = serviceDetails.pdfURL;
-    [self.navigationController pushViewController:pdfVC animated:YES];
+    
     
 }
 

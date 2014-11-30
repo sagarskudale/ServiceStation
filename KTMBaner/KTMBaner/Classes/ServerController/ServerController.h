@@ -38,4 +38,6 @@
 
 -(void)sendGETServiceRequestForService:(NSString *)serviceName withData:(NSDictionary *)dicData withDelegate:(id<ServiceControlerDelegate>) serviceDelegate;
 
+- (BOOL) isNetworkAvailabe;
+
 @end

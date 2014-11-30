@@ -71,6 +71,7 @@
 - (IBAction)testRideButton:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     BookVehicleViewController *bookVehicleVC = [storyboard instantiateViewControllerWithIdentifier:@"BookVehicleViewController"];
+    bookVehicleVC.screenType = kScreenTypeBookTestRideAppointment;
     bookVehicleVC.vehicleID = [NSString stringWithFormat:@"%d",(int)self.bikeDetails.bikeID];
     
     AllUserData *userData = [ArchiveManager getUserData];

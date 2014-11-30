@@ -13,6 +13,10 @@
 #import "Constants.h"
 #import "BikeDetail.h"
 #import "Utils.h"
+#import "LoadingPlaceHolderView.h"
+#import "BookVehicleViewController.h"
+
+#define TAG_PLACEHOLDER 12
 
 @interface BikeViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *bikeTable;
@@ -22,6 +26,7 @@
 @implementation BikeViewController
 {
     NSArray *bikesArray;
+    NSUInteger selectedRowIndex;
 }
 
 - (void)viewDidLoad {
@@ -33,15 +38,42 @@
     self.bikeTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.bikeTable.bounces = NO;
     
-    AllUserData *userData = [ArchiveManager getUserData];
-    bikesArray = [[userData usersBikesArray] mutableCopy];
-    if (bikesArray != nil) {
-        [self.bikeTable reloadData];
+    
+    if ([[ServerController sharedInstance] isNetworkAvailabe]) {
+        NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+        [dataDic setObject:[self getUserID] forKey:@"userId"];
+        [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_GET_USER_BIKES withData:dataDic withDelegate:self];
+        [self addPlaceHolderView];
+    }else{
+        // network not available
+        AllUserData *userData = [ArchiveManager getUserData];
+        bikesArray = [[userData usersBikesArray] mutableCopy];
+        if (bikesArray == nil || [bikesArray count] == 0) {
+            [self addPlaceHolderView];
+        }else{
+            [self.bikeTable reloadData];
+        }
     }
+    
  
-    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
-    [dataDic setObject:[self getUserID] forKey:@"userId"];
-    [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_GET_USER_BIKES withData:dataDic withDelegate:self];
+    
+}
+
+- (void) addPlaceHolderView
+{
+    DebugLog(@"");
+    LoadingPlaceHolderView *placeHolderView = [[LoadingPlaceHolderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 65) andWithScreenType:kScreenTypeUserVehicle];
+    placeHolderView.tag = TAG_PLACEHOLDER;
+    [self.bikeTable addSubview:placeHolderView];
+}
+
+- (void) removePlaceHolderView
+{
+    DebugLog(@"");
+    LoadingPlaceHolderView *placeHolderView  = (LoadingPlaceHolderView *) [self.bikeTable viewWithTag:TAG_PLACEHOLDER];
+    if (placeHolderView != nil) {
+        [placeHolderView removeFromSuperview];
+    }
 }
 
 - (NSString *) getUserID
@@ -61,6 +93,8 @@
 - (void) saveAndLoadData:(NSArray *) data
 {
     DebugLog(@"");
+    [self removePlaceHolderView];
+    
     NSMutableArray *allBikes = [[NSMutableArray alloc] initWithCapacity:1];
     
     for (NSDictionary *bikeInfo in data) {
@@ -107,9 +141,38 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DebugLog(@"");
-    BikeDetail * bikeDetail = [bikesArray objectAtIndex:indexPath.row];
-    [Utils displayAlerViewWithTitle:@"Servicing" withMessage:@"Do you want to take an appointment for servicing of this vehicle." withDelegate:nil];
-    
+    if ([[ServerController sharedInstance] isNetworkAvailabe]) {
+        selectedRowIndex = indexPath.row;
+        [Utils displayAlerViewWithCancelButtonWithTitle:@"Servicing" withMessage:@"Do you want to take an appointment for servicing of this vehicle?" withDelegate:self];
+
+    }else{
+        [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Network not available..." withDelegate:nil];
+    }
+}
+
+#pragma mark-
+#pragma mark- AlertView Delegate
+#pragma mark-
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    DebugLog(@"");
+    // button index 1 : OK  0 : cancel
+    if (buttonIndex == 1 && [alertView.title isEqualToString:@"Servicing"]) {
+         BikeDetail * bikeDetail = [bikesArray objectAtIndex:selectedRowIndex];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        BookVehicleViewController *bookVC = [storyboard instantiateViewControllerWithIdentifier:@"BookVehicleViewController"];
+        
+        AllUserData *userData = [ArchiveManager getUserData];
+        AccountInformation *accountInfo = userData.accountInformation;
+        
+        bookVC.screenType = kScreenTypeBookServicingAppointment;
+        bookVC.userID = accountInfo.strUserID;
+        bookVC.userAddress = accountInfo.strAdderess;
+        bookVC.vehicleID = [NSString stringWithFormat:@"%d",(int)bikeDetail.vehicleTypeId];
+        
+        [self.navigationController pushViewController:bookVC animated:YES];
+    }
 }
 #pragma mark-
 #pragma mark- Server Controller Delegates

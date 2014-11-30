@@ -10,6 +10,6 @@
 #import "ServerController.h"
 
 
-@interface BikeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, ServiceControlerDelegate>
+@interface BikeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, ServiceControlerDelegate,UIAlertViewDelegate>
 
 @end

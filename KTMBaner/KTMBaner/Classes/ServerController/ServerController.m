@@ -211,4 +211,10 @@ static ServerController *sharedInstance = nil;
     [actAlertView hideActivityIndicator];
 }
 
+
+- (BOOL) isNetworkAvailabe
+{
+    DebugLog(@"");
+    return [self isNetworkAvailable];
+}
 @end

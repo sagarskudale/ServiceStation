@@ -22,3 +22,12 @@
 #define SERVICE_URL @"http://ktmbaner.com/api/"
 #define SERVICE_URL_PART @""
 
+typedef enum{
+    kScreenTypeNone,
+    kScreenTypeShowroom,
+    kScreenTypeServiceRecords,
+    kScreenTypeUserVehicle,
+    kScreenTypeBookTestRideAppointment,
+    kScreenTypeBookServicingAppointment
+}ScreenType;
+

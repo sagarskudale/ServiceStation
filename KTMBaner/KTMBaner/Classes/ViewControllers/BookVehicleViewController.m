@@ -7,7 +7,6 @@
 //
 
 #import "BookVehicleViewController.h"
-#import "Constants.h"
 #import "SelectTimeView.h"
 #import "Utils.h"
 
@@ -16,7 +15,8 @@
 typedef enum {
     kCurrentServiceTypeNone,
     kCurrentServiceGetSchedule,
-    kCurrentServiceBookTestRide
+    kCurrentServiceBookTestRide,
+    kCurrentServiceBookServicing
 }CurrentServiceType;
 
 @interface BookVehicleViewController (){
@@ -41,7 +41,7 @@ typedef enum {
     currentIndex = 0;
     
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:1];
-    [dictionary setObject:@"1" forKey:@"type"];
+    
     
     NSDate *currDate = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -55,7 +55,15 @@ typedef enum {
     currentDate = nil;
     self.buttonToday.hidden = YES;
     currServiceType = kCurrentServiceGetSchedule;
-    [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_BOOKING_SHEDULE_MERCHANT_VEHICLE withData:dictionary withDelegate:self];
+    if (self.screenType == kScreenTypeBookTestRideAppointment) {
+        [dictionary setObject:@"1" forKey:@"type"];
+        [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_BOOKING_SHEDULE_MERCHANT_VEHICLE withData:dictionary withDelegate:self];
+    }else if(self.screenType == kScreenTypeBookServicingAppointment){
+        [dictionary setObject:@"2" forKey:@"type"];
+        [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_NAME_GET_SHEDULE withData:dictionary withDelegate:self];
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,7 +112,7 @@ typedef enum {
         if (currServiceType == kCurrentServiceGetSchedule) {
             scheduleArray = [[dicData objectForKey:@"Data"] objectForKey:@"Records"];
             [self displayDateAndLoadTimes];
-        }else if (currServiceType == kCurrentServiceBookTestRide) {
+        }else if (currServiceType == kCurrentServiceBookTestRide || currServiceType == kCurrentServiceBookServicing) {
             [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Booking Successful!!" withDelegate:self];
         }
     }
@@ -140,14 +148,20 @@ typedef enum {
     }
     
     NSMutableDictionary *dataDictionary = [[NSMutableDictionary alloc] initWithCapacity:1];
-    [dataDictionary setObject:@"2" forKey:@"type"];
     [dataDictionary setObject:currentDate forKey:@"bookingDate"];
     [dataDictionary setObject:selectedTime forKey:@"bookingTime"];
     [dataDictionary setObject:self.userID forKey:@"userId"];
     [dataDictionary setObject:self.vehicleID forKey:@"vehicleId"];
     [dataDictionary setObject:selectedAddress forKey:@"address"];
     
-    currServiceType = kCurrentServiceBookTestRide;
+    if(self.screenType == kScreenTypeBookTestRideAppointment){
+        currServiceType = kCurrentServiceBookTestRide;
+        [dataDictionary setObject:@"1" forKey:@"type"];
+    }else if(self.screenType == kScreenTypeBookServicingAppointment){
+        currServiceType = kCurrentServiceBookServicing;
+        [dataDictionary setObject:@"2" forKey:@"type"];
+    }
+    
     [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVER_MAKE_BOOKING withData:dataDictionary withDelegate:self];
     
 }
