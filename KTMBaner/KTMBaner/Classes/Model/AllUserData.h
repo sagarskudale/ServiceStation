@@ -16,4 +16,5 @@
 @property (nonatomic, strong) NSDictionary *allPartsInfo;
 @property (nonatomic, strong) NSArray *usersBikesArray;
 @property (nonatomic, strong) NSArray *serviceRecordArray;
+@property (nonatomic, strong) NSArray *bookingDetailsArray;
 @end

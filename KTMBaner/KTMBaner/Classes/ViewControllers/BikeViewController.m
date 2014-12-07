@@ -168,6 +168,7 @@
         
         bookVC.screenType = kScreenTypeBookServicingAppointment;
         bookVC.userID = accountInfo.strUserID;
+        bookVC.bikeName = bikeDetail.bikeName;
         bookVC.userAddress = accountInfo.strAdderess;
         bookVC.vehicleID = [NSString stringWithFormat:@"%d",(int)bikeDetail.vehicleTypeId];
         

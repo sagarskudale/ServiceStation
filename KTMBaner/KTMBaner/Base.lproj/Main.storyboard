@@ -3363,11 +3363,11 @@ BANER, Pune 411045</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cll-sI-jq2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cll-sI-jq2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppointmentCell" id="Mjv-6m-2CV" customClass="AppointmentTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppointmentCell" rowHeight="68" id="Mjv-6m-2CV" customClass="AppointmentTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mjv-6m-2CV" id="GeE-kB-SGK">
@@ -3376,10 +3376,12 @@ BANER, Pune 411045</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4Y-xp-sH2">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="Z1N-pC-d4a"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Z1N-pC-d4a">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                        </constraint>
                                                         <constraint firstAttribute="width" constant="152" id="qJp-PG-hYF"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -3388,7 +3390,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="qJp-PG-hYF"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="12" width="152" height="20"/>
                                                         <mask key="constraints">
                                                             <include reference="Z1N-pC-d4a"/>
                                                             <include reference="qJp-PG-hYF"/>
@@ -3401,7 +3404,7 @@ BANER, Pune 411045</string>
                                                         <constraint firstAttribute="height" constant="24" id="00a-ri-uin"/>
                                                         <constraint firstAttribute="width" constant="152" id="Kdz-Ky-KfF"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -3423,7 +3426,7 @@ BANER, Pune 411045</string>
                                                         <constraint firstAttribute="height" constant="21" id="00x-V6-YdG"/>
                                                         <constraint firstAttribute="width" constant="135" id="GAo-X7-wOd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -3445,7 +3448,7 @@ BANER, Pune 411045</string>
                                                         <constraint firstAttribute="width" constant="135" id="LBA-R4-Gaq"/>
                                                         <constraint firstAttribute="height" constant="20" id="ydK-Kt-DiC"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -3468,9 +3471,15 @@ BANER, Pune 411045</string>
                                                 <constraint firstItem="V4Y-xp-sH2" firstAttribute="leading" secondItem="GeE-kB-SGK" secondAttribute="leadingMargin" constant="10" id="T4t-sC-H0l"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vav-hN-cgy" secondAttribute="trailing" constant="10" id="WzI-fZ-5Fq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="BU0-Js-Avv" secondAttribute="trailing" constant="10" id="Zuz-Ac-J0d"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="7co-fZ-n6y" secondAttribute="bottom" constant="6" id="evd-MO-QIi"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="BU0-Js-Avv" secondAttribute="bottom" constant="9" id="h8t-jI-APz"/>
-                                                <constraint firstItem="vav-hN-cgy" firstAttribute="top" secondItem="GeE-kB-SGK" secondAttribute="topMargin" constant="9" id="j6r-M3-DNN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7co-fZ-n6y" secondAttribute="bottom" constant="6" id="evd-MO-QIi">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                                </constraint>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BU0-Js-Avv" secondAttribute="bottom" constant="9" id="h8t-jI-APz">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                                </constraint>
+                                                <constraint firstItem="vav-hN-cgy" firstAttribute="top" secondItem="GeE-kB-SGK" secondAttribute="topMargin" constant="9" id="j6r-M3-DNN">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                                                </constraint>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -3517,6 +3526,10 @@ BANER, Pune 411045</string>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SRG-WS-zR2" id="cMK-ac-up6"/>
+                                    <outlet property="delegate" destination="SRG-WS-zR2" id="QFi-Z5-Gub"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3567,7 +3580,7 @@ BANER, Pune 411045</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKR-LI-wQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5403" y="283.5"/>
+            <point key="canvasLocation" x="5403" y="282"/>
         </scene>
         <!--Bike Details View Controller-->
         <scene sceneID="6Lj-IC-kvO">
@@ -5100,7 +5113,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="nXF-PD-Mzy"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="184" y="32" width="123" height="30"/>
                                                         <mask key="constraints">
                                                             <include reference="1uL-vT-ond"/>
                                                             <include reference="nXF-PD-Mzy"/>
@@ -5120,7 +5134,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="ygi-ii-Nhn"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="32" width="158" height="31"/>
                                                         <mask key="constraints">
                                                             <include reference="ygi-ii-Nhn"/>
                                                         </mask>
@@ -5141,7 +5156,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="und-Nm-Mfs"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="3" width="294" height="25"/>
                                                         <mask key="constraints">
                                                             <include reference="und-Nm-Mfs"/>
                                                         </mask>
@@ -5171,14 +5187,14 @@ BANER, Pune 411045</string>
                                                     <exclude reference="AMd-wP-lrG"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="gGt-h8-p6h"/>
-                                                    <exclude reference="SPv-ZV-C1i"/>
-                                                    <exclude reference="swQ-FN-xID"/>
-                                                    <exclude reference="l7S-pc-ayZ"/>
-                                                    <exclude reference="8Y2-EU-Xwm"/>
                                                     <exclude reference="WGn-aa-J32"/>
-                                                    <exclude reference="v1Z-1H-VY8"/>
                                                     <exclude reference="ivg-z3-MYY"/>
+                                                    <exclude reference="v1Z-1H-VY8"/>
+                                                    <exclude reference="8Y2-EU-Xwm"/>
+                                                    <exclude reference="l7S-pc-ayZ"/>
+                                                    <exclude reference="SPv-ZV-C1i"/>
+                                                    <exclude reference="gGt-h8-p6h"/>
+                                                    <exclude reference="swQ-FN-xID"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -5188,14 +5204,14 @@ BANER, Pune 411045</string>
                                                     <include reference="AMd-wP-lrG"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="gGt-h8-p6h"/>
-                                                    <include reference="SPv-ZV-C1i"/>
-                                                    <include reference="swQ-FN-xID"/>
-                                                    <include reference="l7S-pc-ayZ"/>
-                                                    <include reference="8Y2-EU-Xwm"/>
                                                     <include reference="WGn-aa-J32"/>
-                                                    <include reference="v1Z-1H-VY8"/>
                                                     <include reference="ivg-z3-MYY"/>
+                                                    <include reference="v1Z-1H-VY8"/>
+                                                    <include reference="8Y2-EU-Xwm"/>
+                                                    <include reference="l7S-pc-ayZ"/>
+                                                    <include reference="SPv-ZV-C1i"/>
+                                                    <include reference="gGt-h8-p6h"/>
+                                                    <include reference="swQ-FN-xID"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -5229,13 +5245,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="9Mi-X3-Ni7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3hq-XL-beD"/>
-                                <exclude reference="AxQ-6n-YnC"/>
-                                <exclude reference="Ucq-aE-C7Z"/>
+                                <exclude reference="NH8-gP-WlL"/>
                                 <exclude reference="8pc-SN-VfM"/>
                                 <exclude reference="Hw5-ek-gNS"/>
                                 <exclude reference="Vs5-bV-pjJ"/>
-                                <exclude reference="NH8-gP-WlL"/>
+                                <exclude reference="3hq-XL-beD"/>
+                                <exclude reference="AxQ-6n-YnC"/>
+                                <exclude reference="Ucq-aE-C7Z"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -5244,13 +5260,13 @@ BANER, Pune 411045</string>
                                 <include reference="9Mi-X3-Ni7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3hq-XL-beD"/>
-                                <include reference="AxQ-6n-YnC"/>
-                                <include reference="Ucq-aE-C7Z"/>
+                                <include reference="NH8-gP-WlL"/>
                                 <include reference="8pc-SN-VfM"/>
                                 <include reference="Hw5-ek-gNS"/>
                                 <include reference="Vs5-bV-pjJ"/>
-                                <include reference="NH8-gP-WlL"/>
+                                <include reference="3hq-XL-beD"/>
+                                <include reference="AxQ-6n-YnC"/>
+                                <include reference="Ucq-aE-C7Z"/>
                             </mask>
                         </variation>
                     </view>
@@ -5340,10 +5356,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="ygH-He-Eml"/>
-                                        <exclude reference="6Dk-Xe-ua7"/>
-                                        <exclude reference="zgH-KQ-y7T"/>
                                         <exclude reference="FS7-IR-V33"/>
                                         <exclude reference="y6g-9W-Pqh"/>
+                                        <exclude reference="6Dk-Xe-ua7"/>
+                                        <exclude reference="zgH-KQ-y7T"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -5353,10 +5369,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="ygH-He-Eml"/>
-                                        <include reference="6Dk-Xe-ua7"/>
-                                        <include reference="zgH-KQ-y7T"/>
                                         <include reference="FS7-IR-V33"/>
                                         <include reference="y6g-9W-Pqh"/>
+                                        <include reference="6Dk-Xe-ua7"/>
+                                        <include reference="zgH-KQ-y7T"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -5443,13 +5459,13 @@ BANER, Pune 411045</string>
                                 <exclude reference="9vD-g5-3ta"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="XCv-VB-vrj"/>
-                                <exclude reference="mPl-1z-iFw"/>
-                                <exclude reference="mnG-iM-fWY"/>
                                 <exclude reference="3di-9p-aVf"/>
                                 <exclude reference="A26-cU-di3"/>
                                 <exclude reference="B3t-cy-Asd"/>
                                 <exclude reference="sXP-s5-IM1"/>
+                                <exclude reference="XCv-VB-vrj"/>
+                                <exclude reference="mPl-1z-iFw"/>
+                                <exclude reference="mnG-iM-fWY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -5458,13 +5474,13 @@ BANER, Pune 411045</string>
                                 <include reference="9vD-g5-3ta"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="XCv-VB-vrj"/>
-                                <include reference="mPl-1z-iFw"/>
-                                <include reference="mnG-iM-fWY"/>
                                 <include reference="3di-9p-aVf"/>
                                 <include reference="A26-cU-di3"/>
                                 <include reference="B3t-cy-Asd"/>
                                 <include reference="sXP-s5-IM1"/>
+                                <include reference="XCv-VB-vrj"/>
+                                <include reference="mPl-1z-iFw"/>
+                                <include reference="mnG-iM-fWY"/>
                             </mask>
                         </variation>
                     </view>

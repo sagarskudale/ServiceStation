@@ -95,6 +95,7 @@
 		635FE90A1A2A10B500915C41 /* ServiceRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FE9091A2A10B500915C41 /* ServiceRecordsViewController.m */; };
 		635FE90D1A2A2FF700915C41 /* BikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FE90C1A2A2FF700915C41 /* BikeViewController.m */; };
 		635FE9101A2A3A9300915C41 /* BikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635FE90F1A2A3A9300915C41 /* BikeTableViewCell.m */; };
+		636662441A336DCF00C436B9 /* BookingDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 636662431A336DCF00C436B9 /* BookingDetails.m */; };
 		636E50F21A18E99200C71BC8 /* LoadingPlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */; };
 		636E50F41A18EC2B00C71BC8 /* no_records.png in Resources */ = {isa = PBXBuildFile; fileRef = 636E50F31A18EC2B00C71BC8 /* no_records.png */; };
 		6382DE511A15177D00BE182F /* ShowroomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6382DE501A15177D00BE182F /* ShowroomViewController.m */; };
@@ -283,6 +284,8 @@
 		635FE90C1A2A2FF700915C41 /* BikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeViewController.m; sourceTree = "<group>"; };
 		635FE90E1A2A3A9300915C41 /* BikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeTableViewCell.h; sourceTree = "<group>"; };
 		635FE90F1A2A3A9300915C41 /* BikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeTableViewCell.m; sourceTree = "<group>"; };
+		636662421A336DCF00C436B9 /* BookingDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingDetails.h; sourceTree = "<group>"; };
+		636662431A336DCF00C436B9 /* BookingDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingDetails.m; sourceTree = "<group>"; };
 		636E50F01A18E99200C71BC8 /* LoadingPlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPlaceHolderView.h; sourceTree = "<group>"; };
 		636E50F11A18E99200C71BC8 /* LoadingPlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPlaceHolderView.m; sourceTree = "<group>"; };
 		636E50F31A18EC2B00C71BC8 /* no_records.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_records.png; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				633A88B51A22014800859353 /* PartCostDetails.m */,
 				6394B4901A2B1DFE002FB0AF /* ServiceRecordDetails.h */,
 				6394B4911A2B1DFE002FB0AF /* ServiceRecordDetails.m */,
+				636662421A336DCF00C436B9 /* BookingDetails.h */,
+				636662431A336DCF00C436B9 /* BookingDetails.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -947,6 +952,7 @@
 				634264501A177C0100EA34F8 /* CollapsableTableViewFooterViewController.m in Sources */,
 				6394B4921A2B1DFE002FB0AF /* ServiceRecordDetails.m in Sources */,
 				6335FA321A08779600655BFA /* SBJsonParser.m in Sources */,
+				636662441A336DCF00C436B9 /* BookingDetails.m in Sources */,
 				635FE90A1A2A10B500915C41 /* ServiceRecordsViewController.m in Sources */,
 				6335FA3B1A08779600655BFA /* SBJsonUTF8Stream.m in Sources */,
 				6335FA3A1A08779600655BFA /* SBJsonTokeniser.m in Sources */,
@@ -1121,7 +1127,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sagar Kudale (A93P3V9UV3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sagar Kudale (A93P3V9UV3)";
 				INFOPLIST_FILE = KTMBaner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1135,7 +1142,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sagar Kudale (G2RW9NA99N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sagar Kudale (G2RW9NA99N)";
 				INFOPLIST_FILE = KTMBaner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

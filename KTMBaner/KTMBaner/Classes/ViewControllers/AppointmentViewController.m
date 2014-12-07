@@ -7,9 +7,16 @@
 //
 
 #import "AppointmentViewController.h"
+#import "AppointmentTableViewCell.h"
 #import "Constants.h"
+#import "ArchiveManager.h"
+#import "AllUserData.h"
+#import "BookingDetails.h"
 
 @interface AppointmentViewController ()
+{
+    NSArray *bookingDetailsArray;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -20,11 +27,16 @@
     [super viewDidLoad];
     [self setStatusBarHidden];
     
-    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
-    [dataDic setObject:@"2" forKey:@"type"];
-    [dataDic setObject:@"" forKey:@"date"];
+    AllUserData *userData = [ArchiveManager getUserData];
+    bookingDetailsArray = userData.bookingDetailsArray;
     
-    [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_NAME_GET_SHEDULE withData:dataDic withDelegate:self];
+//    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+//    [dataDic setObject:@"2" forKey:@"type"];
+//    [dataDic setObject:@"12-07-2014" forKey:@"bookingDate"];
+//    [dataDic setObject:@"13:00:00" forKey:@"bookingTime"];
+//    [dataDic setObject:@"12" forKey:@"userId"];
+//    
+//    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_BOOKING_STATUS withData:dataDic withDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +48,8 @@
 #pragma mark-
 
 - (IBAction)onBackButton:(id)sender {
+    DebugLog(@"");
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark-
@@ -45,15 +59,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     DebugLog(@"");
-    return 0;
+    return [bookingDetailsArray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DebugLog(@"");
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
+    AppointmentTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"AppointmentCell"];
+    }
     
+    BookingDetails *bookingDetails = [bookingDetailsArray objectAtIndex:indexPath.row];
+    cell.bikeLabel.text = bookingDetails.bikeName;
+    cell.dateLabel.text = bookingDetails.bookingDate;
+    cell.timeLabel.text = bookingDetails.bookingTime;
+    cell.statusLabel.text = bookingDetails.bookingStatus;
     
     return cell;
 }

@@ -72,6 +72,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     BookVehicleViewController *bookVehicleVC = [storyboard instantiateViewControllerWithIdentifier:@"BookVehicleViewController"];
     bookVehicleVC.screenType = kScreenTypeBookTestRideAppointment;
+    bookVehicleVC.bikeName = self.bikeDetails.bikeName;
     bookVehicleVC.vehicleID = [NSString stringWithFormat:@"%d",(int)self.bikeDetails.bikeID];
     
     AllUserData *userData = [ArchiveManager getUserData];

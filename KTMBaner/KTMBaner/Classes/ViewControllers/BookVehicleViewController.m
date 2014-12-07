@@ -8,7 +8,10 @@
 
 #import "BookVehicleViewController.h"
 #import "SelectTimeView.h"
+#import "ArchiveManager.h"
+#import "AllUserData.h"
 #import "Utils.h"
+#import "BookingDetails.h"
 
 #define TAG_SELECT_DATE 300
 
@@ -24,6 +27,7 @@ typedef enum {
     NSString *currentDate;
     NSUInteger currentIndex;
     NSString *selectedAddress;
+    BookingDetails *bookingDetails;
     CurrentServiceType currServiceType;
 }
 @property (weak, nonatomic) IBOutlet UIButton *buttonToday;
@@ -102,6 +106,20 @@ typedef enum {
     }
 }
 
+- (void) addBookingDetails
+{
+    DebugLog(@"");
+    AllUserData *userData = [ArchiveManager getUserData];
+    NSMutableArray *bookingArray = [userData.bookingDetailsArray mutableCopy];
+    if (bookingArray == nil) {
+        bookingArray = [[NSMutableArray alloc] initWithCapacity:1];
+    }
+    [bookingArray addObject:bookingDetails];
+    
+    userData.bookingDetailsArray = bookingArray;
+    
+    [ArchiveManager storeDataToFile:userData];
+}
 #pragma mark-
 #pragma mark- Server Controller Delegate
 #pragma mark-
@@ -109,10 +127,13 @@ typedef enum {
 {
     DebugLog(@"");
     if ([[[dicData objectForKey:@"Response"] objectForKey:@"Status"] isEqualToString:@"success"]) {
+        
+        
         if (currServiceType == kCurrentServiceGetSchedule) {
             scheduleArray = [[dicData objectForKey:@"Data"] objectForKey:@"Records"];
             [self displayDateAndLoadTimes];
         }else if (currServiceType == kCurrentServiceBookTestRide || currServiceType == kCurrentServiceBookServicing) {
+            [self addBookingDetails];
             [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Booking Successful!!" withDelegate:self];
         }
     }
@@ -161,6 +182,12 @@ typedef enum {
         currServiceType = kCurrentServiceBookServicing;
         [dataDictionary setObject:@"2" forKey:@"type"];
     }
+    
+    bookingDetails = [[BookingDetails alloc] init];
+    bookingDetails.bikeName = self.bikeName;
+    bookingDetails.bookingDate = currentDate;
+    bookingDetails.bookingTime = selectedTime;
+    bookingDetails.bookingStatus = @"Pending.";
     
     [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVER_MAKE_BOOKING withData:dataDictionary withDelegate:self];
     

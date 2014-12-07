@@ -161,9 +161,9 @@
 - (void) onAppointmentViewTapped
 {
     DebugLog(@"");
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-//    AppointmentViewController *appointmentVC = [storyboard instantiateViewControllerWithIdentifier:@"AppointmentViewController"];
-//    [self.navigationController pushViewController:appointmentVC animated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    AppointmentViewController *appointmentVC = [storyboard instantiateViewControllerWithIdentifier:@"AppointmentViewController"];
+    [self.navigationController pushViewController:appointmentVC animated:YES];
 }
 
 - (void) onAboutUsViewTapped
