@@ -12,10 +12,12 @@
 #import "ArchiveManager.h"
 #import "AllUserData.h"
 #import "BookingDetails.h"
+#import "AccountInformation.h"
 
 @interface AppointmentViewController ()
 {
     NSArray *bookingDetailsArray;
+    NSUInteger currentIndex;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -30,13 +32,37 @@
     AllUserData *userData = [ArchiveManager getUserData];
     bookingDetailsArray = userData.bookingDetailsArray;
     
-//    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
-//    [dataDic setObject:@"2" forKey:@"type"];
-//    [dataDic setObject:@"12-07-2014" forKey:@"bookingDate"];
-//    [dataDic setObject:@"13:00:00" forKey:@"bookingTime"];
-//    [dataDic setObject:@"12" forKey:@"userId"];
-//    
-//    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_BOOKING_STATUS withData:dataDic withDelegate:self];
+    currentIndex = 0;
+    if ([bookingDetailsArray count] > 0) {
+        [self checkStatusForBookingDetailsAtIndex:currentIndex];
+    }
+    
+}
+
+- (void) checkStatusForBookingDetailsAtIndex:(NSUInteger) index
+{
+    DebugLog(@"");
+    AllUserData *userData = [ArchiveManager getUserData];
+    AccountInformation *userInfo = userData.accountInformation;
+    
+    BookingDetails *currBookingDetails = [bookingDetailsArray objectAtIndex:index];
+    
+//    http://ktmbaner.com/api/Booking/CheckStatus?type=1&bookingDate=14-06-2014&bookingTime=13:00:00&userId=12
+    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+    [dataDic setObject:@"1" forKey:@"type"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *date = [formatter dateFromString:currBookingDetails.bookingDate];
+    [formatter setDateFormat:@"MM-dd-yyyy"];
+    NSString *output = [formatter stringFromDate:date];
+    
+    [dataDic setObject:output forKey:@"bookingDate"];
+    [dataDic setObject:currBookingDetails.bookingTime forKey:@"bookingTime"];
+    [dataDic setObject:userInfo.strUserID forKey:@"userID"];
+    
+    
+    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_BOOKING_STATUS withData:dataDic withDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -113,6 +113,8 @@ static ServerController *sharedInstance = nil;
         return MSG_REGISTERING;
     }else if ([serviceName isEqualToString:SERVICE_MERCHANT_VEHICAL]){
         return MSG_LOADING_MERCANT_BIKES;
+    }else if ([serviceName isEqualToString:SERVICE_BOOKING_STATUS]){
+        return @"Checking status, Please wait.. ";
     }
     
     return MSG_PLEASE_WAIT;

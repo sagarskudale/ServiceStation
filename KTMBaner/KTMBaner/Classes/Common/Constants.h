@@ -11,7 +11,7 @@
 
 #endif
 
-#define DEBUG_MODE 1
+//#define DEBUG_MODE 1
 
 #ifdef DEBUG_MODE
 #define DebugLog( s, ... ) NSLog( @"<%s (%d)> %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

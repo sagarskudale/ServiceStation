@@ -187,7 +187,7 @@ typedef enum {
     bookingDetails.bikeName = self.bikeName;
     bookingDetails.bookingDate = currentDate;
     bookingDetails.bookingTime = selectedTime;
-    bookingDetails.bookingStatus = @"Pending.";
+    bookingDetails.bookingStatus = @"Pending";
     
     [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVER_MAKE_BOOKING withData:dataDictionary withDelegate:self];
     
