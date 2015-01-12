@@ -13,6 +13,7 @@
 @property (nonatomic, assign) NSUInteger kms;
 @property (nonatomic, strong) NSString *pdfURL;
 @property (nonatomic, strong) NSString *date;
+@property (nonatomic, assign) NSUInteger points;
 
 - (id)initWithServiceDetailsDict: (NSDictionary *) serviceDetails;
 

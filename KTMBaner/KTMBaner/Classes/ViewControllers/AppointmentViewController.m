@@ -13,6 +13,9 @@
 #import "AllUserData.h"
 #import "BookingDetails.h"
 #import "AccountInformation.h"
+#import "LoadingPlaceHolderView.h"
+
+#define TAG_PLACEHOLDER 12
 
 @interface AppointmentViewController ()
 {
@@ -35,8 +38,26 @@
     currentIndex = 0;
     if ([bookingDetailsArray count] > 0) {
         [self checkStatusForBookingDetailsAtIndex:currentIndex];
+    }else{
+        self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+        [self addPlaceHolderView];
     }
     
+}
+- (void) removePlaceHolderView
+{
+    DebugLog(@"");
+    LoadingPlaceHolderView *placeHolderView  = (LoadingPlaceHolderView *) [self.tableView viewWithTag:TAG_PLACEHOLDER];
+    if (placeHolderView != nil) {
+        [placeHolderView removeFromSuperview];
+    }
+}
+- (void) addPlaceHolderView
+{
+    DebugLog(@"");
+    LoadingPlaceHolderView *placeHolderView = [[LoadingPlaceHolderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 65) andWithScreenType:kScreenTypeBookServicingAppointment];
+    placeHolderView.tag = TAG_PLACEHOLDER;
+    [self.tableView addSubview:placeHolderView];
 }
 
 - (void) checkStatusForBookingDetailsAtIndex:(NSUInteger) index

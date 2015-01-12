@@ -16,6 +16,9 @@
 #import "ServiceRecordsViewController.h"
 #import "CostViewController.h"
 #import "BikeViewController.h"
+#import "AllUserData.h"
+#import "ServiceRecordDetails.h"
+#import "ArchiveManager.h"
 
 @interface DashBoardViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelPoints;
@@ -43,16 +46,31 @@
     [super viewDidLoad];
     [self setStatusBarHidden];
     [self addTapGesturesOnAllViews];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
     
 }
+
+- (void) viewWillAppear:(BOOL)animated {
+    DebugLog(@"");
+    [self updatePoints];
+}
+
 
 #pragma mark-
 #pragma mark- Initialisation methods
 #pragma mark-
-
+- (void) updatePoints
+{
+    DebugLog(@"");
+    AllUserData *userData = [ArchiveManager getUserData];
+    NSArray *serviceRecord = [userData serviceRecordArray];
+    
+    NSUInteger points = 0;
+    for (ServiceRecordDetails * serviceDetail in  serviceRecord) {
+        points = points + serviceDetail.points;
+    }
+    
+    self.labelPoints.text = [NSString stringWithFormat:@"%d",(int) points];
+}
 - (void) addTapGesturesOnAllViews
 {
     [self addTapGesturesOnAboutUsView];

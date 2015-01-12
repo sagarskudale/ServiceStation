@@ -3390,8 +3390,7 @@ BANER, Pune 411045</string>
                                                             <exclude reference="qJp-PG-hYF"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="18" y="12" width="152" height="20"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="Z1N-pC-d4a"/>
                                                             <include reference="qJp-PG-hYF"/>
@@ -3435,7 +3434,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="GAo-X7-wOd"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="167" y="11" width="135" height="21"/>
                                                         <mask key="constraints">
                                                             <include reference="00x-V6-YdG"/>
                                                             <include reference="GAo-X7-wOd"/>
@@ -3457,7 +3457,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="ydK-Kt-DiC"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="167" y="39" width="135" height="20"/>
                                                         <mask key="constraints">
                                                             <include reference="LBA-R4-Gaq"/>
                                                             <include reference="ydK-Kt-DiC"/>
@@ -4835,7 +4836,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="NhY-kr-nMR"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="228" y="38" width="92" height="30"/>
                                                         <mask key="constraints">
                                                             <include reference="Ebf-TJ-t9m"/>
                                                             <include reference="NhY-kr-nMR"/>
@@ -4855,7 +4857,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="wrC-nr-3WX"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="11" y="38" width="209" height="31"/>
                                                         <mask key="constraints">
                                                             <include reference="wrC-nr-3WX"/>
                                                         </mask>
@@ -4874,7 +4877,8 @@ BANER, Pune 411045</string>
                                                             <exclude reference="6xe-fv-gcP"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="11" y="3" width="301" height="31"/>
                                                         <mask key="constraints">
                                                             <include reference="6xe-fv-gcP"/>
                                                         </mask>
@@ -5011,28 +5015,27 @@ BANER, Pune 411045</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sin-P0-zqM">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="1kd-6A-Erq"/>
-                                            <constraint firstAttribute="height" constant="26" id="yt9-DM-Xtm"/>
+                                            <constraint firstAttribute="width" constant="30" id="1oY-gV-d1e"/>
+                                            <constraint firstAttribute="height" constant="26" id="FEX-2T-nQ7"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="1kd-6A-Erq"/>
-                                                <exclude reference="yt9-DM-Xtm"/>
+                                                <exclude reference="1oY-gV-d1e"/>
+                                                <exclude reference="FEX-2T-nQ7"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="3" y="20" width="30" height="26"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="1kd-6A-Erq"/>
-                                                <include reference="yt9-DM-Xtm"/>
+                                                <include reference="1oY-gV-d1e"/>
+                                                <include reference="FEX-2T-nQ7"/>
                                             </mask>
                                         </variation>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctc-y8-QuH">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="OEh-IL-9sO"/>
-                                            <constraint firstAttribute="width" constant="208" id="csc-Nz-TQ9"/>
+                                            <constraint firstAttribute="width" constant="208" id="Kw6-Zm-0kS"/>
+                                            <constraint firstAttribute="height" constant="49" id="LyQ-Ng-dKT"/>
                                         </constraints>
                                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="2"/>
@@ -5041,15 +5044,14 @@ BANER, Pune 411045</string>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="OEh-IL-9sO"/>
-                                                <exclude reference="csc-Nz-TQ9"/>
+                                                <exclude reference="Kw6-Zm-0kS"/>
+                                                <exclude reference="LyQ-Ng-dKT"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="25" y="8" width="208" height="49"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="OEh-IL-9sO"/>
-                                                <include reference="csc-Nz-TQ9"/>
+                                                <include reference="Kw6-Zm-0kS"/>
+                                                <include reference="LyQ-Ng-dKT"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -5067,7 +5069,11 @@ BANER, Pune 411045</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="ctc-y8-QuH" secondAttribute="centerY" id="53l-Eg-lBh"/>
+                                    <constraint firstItem="Sin-P0-zqM" firstAttribute="leading" secondItem="o9W-c5-Wvs" secondAttribute="leading" constant="3" id="AFZ-EQ-2x6"/>
                                     <constraint firstAttribute="height" constant="65" id="Pf7-k4-Zad"/>
+                                    <constraint firstAttribute="centerY" secondItem="Sin-P0-zqM" secondAttribute="centerY" constant="-0.5" id="cOG-0L-cYJ"/>
+                                    <constraint firstItem="ctc-y8-QuH" firstAttribute="leading" secondItem="o9W-c5-Wvs" secondAttribute="leading" constant="25" id="vQ3-Bg-6SA"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -5076,6 +5082,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Pf7-k4-Zad"/>
+                                        <exclude reference="AFZ-EQ-2x6"/>
+                                        <exclude reference="cOG-0L-cYJ"/>
+                                        <exclude reference="53l-Eg-lBh"/>
+                                        <exclude reference="vQ3-Bg-6SA"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -5085,6 +5095,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Pf7-k4-Zad"/>
+                                        <include reference="AFZ-EQ-2x6"/>
+                                        <include reference="cOG-0L-cYJ"/>
+                                        <include reference="53l-Eg-lBh"/>
+                                        <include reference="vQ3-Bg-6SA"/>
                                     </mask>
                                 </variation>
                             </view>

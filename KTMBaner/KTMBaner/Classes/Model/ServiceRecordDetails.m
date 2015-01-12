@@ -13,6 +13,7 @@
 #define KEY_KMS @"KMS"
 #define KEY_PDFURL @"PdfUrl"
 #define KEY_SERVICING_DATE @"ServiceDate"
+#define KEY_POINTS @"Points"
 
 @implementation ServiceRecordDetails
 
@@ -33,6 +34,7 @@
     self.kms = [[serviceDetails objectForKey:KEY_KMS] integerValue];
     self.pdfURL = [serviceDetails objectForKey:KEY_PDFURL];
     self.date = [serviceDetails objectForKey:KEY_SERVICING_DATE];
+    self.points = [[serviceDetails objectForKey:KEY_POINTS] integerValue];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -46,7 +48,7 @@
     self.kms = [decoder decodeIntegerForKey:KEY_KMS];
     self.pdfURL = [decoder decodeObjectForKey:KEY_PDFURL];
     self.date = [decoder decodeObjectForKey:KEY_SERVICING_DATE];
-    
+    self.points = [decoder decodeIntegerForKey:KEY_POINTS];
     return self;
 }
 
@@ -56,6 +58,7 @@
     [encoder encodeInteger:self.kms forKey:KEY_KMS];
     [encoder encodeObject:self.pdfURL forKey:KEY_PDFURL];
     [encoder encodeObject:self.date forKey:KEY_SERVICING_DATE];
+    [encoder encodeInteger:self.points forKey:KEY_POINTS];
 }
 
 
@@ -68,7 +71,7 @@
     serviceDetails.kms = self.kms;
     serviceDetails.pdfURL = self.pdfURL;
     serviceDetails.date = self.date;
-    
+    serviceDetails.points = self.points;
     return serviceDetails;
 }
 @end

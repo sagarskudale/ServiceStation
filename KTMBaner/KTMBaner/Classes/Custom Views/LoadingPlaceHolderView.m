@@ -67,6 +67,9 @@
         return @"No records found!\n Should some service records be added? \n Contact our store manager.";
     }else if (_screenType == kScreenTypeUserVehicle){
         return @"No records found!\n Ask store manager to add vehicles for you.";
+    }else if (_screenType == kScreenTypeBookServicingAppointment)
+    {
+        return @"No appointments for test rides!";
     }
     return nil;
 }
