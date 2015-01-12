@@ -113,6 +113,10 @@
 		639DEC721A0E41C500B89BDC /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 639DEC711A0E41C500B89BDC /* DatePickerView.m */; };
 		639EAC971A07EC6A002F9CE6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EAC961A07EC6A002F9CE6 /* LoginViewController.m */; };
 		639EAC9A1A07EEE3002F9CE6 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EAC991A07EEE3002F9CE6 /* SplashScreenViewController.m */; };
+		63BF3A221A643C550084B04C /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BF3A201A643C550084B04C /* AppIcon29x29.png */; };
+		63BF3A231A643C550084B04C /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BF3A211A643C550084B04C /* AppIcon29x29@2x.png */; };
+		63BF3A251A643D020084B04C /* icon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BF3A241A643D020084B04C /* icon40x40@2x.png */; };
+		63BF3A271A643D890084B04C /* Default-568h@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BF3A261A643D890084B04C /* Default-568h@2x.png.png */; };
 		63C9A9C51A0156BF00FE2B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9A9C31A0156BF00FE2B62 /* Main.storyboard */; };
 		63C9A9C71A0156BF00FE2B62 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C9A9C61A0156BF00FE2B62 /* Images.xcassets */; };
 		63C9A9CA1A0156BF00FE2B62 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9A9C81A0156BF00FE2B62 /* LaunchScreen.xib */; };
@@ -314,6 +318,10 @@
 		639EAC981A07EEE3002F9CE6 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		639EAC991A07EEE3002F9CE6 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		639EAC9C1A07EF99002F9CE6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		63BF3A201A643C550084B04C /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		63BF3A211A643C550084B04C /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		63BF3A241A643D020084B04C /* icon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon40x40@2x.png"; sourceTree = "<group>"; };
+		63BF3A261A643D890084B04C /* Default-568h@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png.png"; sourceTree = "<group>"; };
 		63C9A9B61A0156BF00FE2B62 /* KTMBaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTMBaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C9A9BA1A0156BF00FE2B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C9A9C41A0156BF00FE2B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -761,6 +769,10 @@
 				632FD2501A1FA63B00831186 /* radioButtons */,
 				639DEC6C1A0E3A5000B89BDC /* AppIcon57x57.png */,
 				639DEC6D1A0E3A5000B89BDC /* AppIcon57x57@2x.png */,
+				63BF3A201A643C550084B04C /* AppIcon29x29.png */,
+				63BF3A211A643C550084B04C /* AppIcon29x29@2x.png */,
+				63BF3A261A643D890084B04C /* Default-568h@2x.png.png */,
+				63BF3A241A643D020084B04C /* icon40x40@2x.png */,
 				639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */,
 				6394B48B1A2AEDA4002FB0AF /* bike_black.png */,
 				639DEC681A0E390300B89BDC /* AppIcon60x60@2x.png */,
@@ -875,6 +887,8 @@
 				6342645B1A177C0100EA34F8 /* plaintableheader.png in Resources */,
 				632BD0851A06998E00ADBBED /* parts.png in Resources */,
 				63C9A9E41A0158B400FE2B62 /* logo.png in Resources */,
+				63BF3A221A643C550084B04C /* AppIcon29x29.png in Resources */,
+				63BF3A231A643C550084B04C /* AppIcon29x29@2x.png in Resources */,
 				632FD2561A1FA63B00831186 /* checked@2x.png in Resources */,
 				639DEC6E1A0E3A5000B89BDC /* AppIcon57x57.png in Resources */,
 				639DEC691A0E390300B89BDC /* AppIcon60x60@2x.png in Resources */,
@@ -883,6 +897,7 @@
 				639DEC6B1A0E395000B89BDC /* AppIcon60x60@3x.png in Resources */,
 				632BD0841A06998E00ADBBED /* number.png in Resources */,
 				63C9A9CA1A0156BF00FE2B62 /* LaunchScreen.xib in Resources */,
+				63BF3A251A643D020084B04C /* icon40x40@2x.png in Resources */,
 				634264551A177C0100EA34F8 /* CollapsableTableViewFooterViewPlain.xib in Resources */,
 				63C9A9C71A0156BF00FE2B62 /* Images.xcassets in Resources */,
 				634264541A177C0100EA34F8 /* CollapsableTableViewFooterViewGrouped_iOS7.xib in Resources */,
@@ -903,6 +918,7 @@
 				634264561A177C0100EA34F8 /* CollapsableTableViewFooterViewPlain_iOS7.xib in Resources */,
 				632BD07F1A06998E00ADBBED /* aboutus.png in Resources */,
 				632BD0861A06998E00ADBBED /* service.png in Resources */,
+				63BF3A271A643D890084B04C /* Default-568h@2x.png.png in Resources */,
 				632FD2551A1FA63B00831186 /* checked.png in Resources */,
 				636E50F41A18EC2B00C71BC8 /* no_records.png in Resources */,
 				634264601A17840F00EA34F8 /* TechSpecsContainerView.xib in Resources */,
@@ -1116,7 +1132,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a27cca5c-952d-40db-9669-7a0aa48a2c5b";
+				PROVISIONING_PROFILE = "da6bafc6-b0f3-41e1-8a0e-a3f3f66f0877";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1148,7 +1164,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a27cca5c-952d-40db-9669-7a0aa48a2c5b";
+				PROVISIONING_PROFILE = "da6bafc6-b0f3-41e1-8a0e-a3f3f66f0877";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
