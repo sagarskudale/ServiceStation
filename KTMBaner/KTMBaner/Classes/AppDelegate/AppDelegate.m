@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "ServiceRecordsViewController.h"
+#import "DashBoardViewController.h"
+#import "BikeViewController.h"
+#import "Constants.h"
+#import "Utils.h"
+#import "ArchiveManager.h"
 
 @interface AppDelegate ()
 
@@ -63,6 +69,27 @@
                           stringByReplacingOccurrencesOfString: @" " withString: @""];
     
     NSLog(@"My token is: %@", devToken);
+    [Utils storeDeviceToken:devToken];
+    if ([self isUserLoggedIn]) {
+        [self registerUserDevice];
+    }
+}
+- (void) registerUserDevice
+{
+    DebugLog(@"");
+    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+    [dataDic setObject:[self getUserID] forKey:@"UserId"];
+    [dataDic setObject:@"2" forKey:@"OSType"];
+    [dataDic setObject:[Utils getDeviceToken] forKey:@"DeviceToken"];
+    
+    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_REGISTER_USER_DEVICE withData:dataDic withDelegate:nil];
+}
+- (NSString *) getUserID
+{
+    DebugLog(@"");
+    AllUserData *allUserData = [ArchiveManager getUserData];
+    AccountInformation *userInfo = [allUserData accountInformation];
+    return userInfo.strUserID;
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
@@ -70,9 +97,67 @@
     NSLog(@"Failed to get token, error: %@", error);
 }
 
+#define MSG_SERVICECREATED @"ServiceCreated"
+#define MSG_SERVICEUPDATED @"ServiceUpdated"
+#define MSG_VEHICLEADDED @"VehicleAdded"
+#define MSG_POINTSADDED @"PointsAdded"
+
 - (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*)userInfo
 {
     NSLog(@"Received notification: %@", userInfo);
+    NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
+    NSString *alertMessage = @"";
+    if(apsInfo!= nil && [apsInfo objectForKey:@"alert"] != NULL)
+    {
+        alertMessage = [apsInfo objectForKey:@"alert"];
+    }
+    
+    if ([alertMessage containsString:MSG_SERVICECREATED]) {
+        [self launchServiceScreen];
+    }else if ([alertMessage containsString:MSG_SERVICEUPDATED]) {
+        [self launchServiceScreen];
+    }else if ([alertMessage containsString:MSG_VEHICLEADDED]) {
+        [self launchVehiclesScreen];
+    }else if ([alertMessage containsString:MSG_POINTSADDED]) {
+        [self launchDashboard];
+    }
+    
 }
 
+- (void) launchDashboard
+{
+    DebugLog(@"");
+    UIViewController * vc = self.window.rootViewController;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DashBoardViewController *dashBoardViewController = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
+    [vc.navigationController pushViewController:dashBoardViewController animated:YES];
+}
+
+- (void) launchServiceScreen
+{
+    DebugLog(@"");
+    UIViewController * vc = self.window.rootViewController;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    ServiceRecordsViewController *serviceRecordVC = [storyboard instantiateViewControllerWithIdentifier:@"ServiceRecordsViewController"];
+    [vc.navigationController pushViewController:serviceRecordVC animated:YES];
+}
+
+- (void) launchVehiclesScreen
+{
+    DebugLog(@"");
+    UIViewController * vc = self.window.rootViewController;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    BikeViewController *bikeVC = [storyboard instantiateViewControllerWithIdentifier:@"BikeViewController"];
+    [vc.navigationController pushViewController:bikeVC animated:YES];
+}
+
+- (BOOL) isUserLoggedIn
+{
+    DebugLog(@"");
+    if ([ArchiveManager getUserData] == nil ) {
+        return NO;
+    }
+    
+    return YES;
+}
 @end

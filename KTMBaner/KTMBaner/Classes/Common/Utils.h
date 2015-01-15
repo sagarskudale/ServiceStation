@@ -11,6 +11,7 @@
 
 
 #define KEY_USERID @"UserId"
+#define KEY_DEVICETOKEN @"DeviceToken"
 
 @interface Utils : NSObject
 
@@ -21,6 +22,8 @@
 + (void) displayAlerViewWithCancelButtonWithTitle:(NSString *) title withMessage:(NSString *) message withDelegate:(id<UIAlertViewDelegate>) delegate;
 + (NSString *)getUserDataFilePath;
 + (void) deleteUserData;
++ (NSString *) getDeviceToken;
++ (void) storeDeviceToken:(NSString *) deviceToken;
 
 + (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock;
 

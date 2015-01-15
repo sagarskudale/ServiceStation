@@ -204,7 +204,9 @@ static ServerController *sharedInstance = nil;
                                       options:kNilOptions
                                       error:nil];
         NSLog(@"API URL : %@  Response : %@",request.url,[responseDict debugDescription]);
-        [self.delegate onDataFetchComplete:responseDict];
+        if (self.delegate != nil) {
+            [self.delegate onDataFetchComplete:responseDict];
+        }
     }
 }
 -(void)onDataFetchFailed:(ASIHTTPRequest *)request{

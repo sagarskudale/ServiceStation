@@ -300,6 +300,23 @@
     [self.navigationController pushViewController:dashBoardViewController animated:YES];
 }
 
+- (void) registerUserDevice
+{
+    DebugLog(@"");
+    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+    [dataDic setObject:[self getUserID] forKey:@"UserId"];
+    [dataDic setObject:@"2" forKey:@"OSType"];
+    [dataDic setObject:[Utils getDeviceToken] forKey:@"DeviceToken"];
+    
+    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_REGISTER_USER_DEVICE withData:dataDic withDelegate:nil];
+}
+- (NSString *) getUserID
+{
+    DebugLog(@"");
+    AllUserData *allUserData = [ArchiveManager getUserData];
+    AccountInformation *userInfo = [allUserData accountInformation];
+    return userInfo.strUserID;
+}
 #pragma mark-
 #pragma mark- Delegate Methods
 #pragma mark-
@@ -311,6 +328,7 @@
     NSString *message = [responseDic objectForKey:@"Message"];
     if ([status isEqualToString:@"success"]) {
         [self saveUserData:dicData];
+        [self registerUserDevice];
         [self launchDashboardScreen];
     }else if([status isEqualToString:@"failure"] && [message isEqualToString:@"useremailalreadyexists"]){
         [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:MSG_USER_ALREADY_EXISTS withDelegate:self];

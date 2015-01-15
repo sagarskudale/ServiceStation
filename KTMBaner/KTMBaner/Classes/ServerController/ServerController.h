@@ -20,6 +20,7 @@
 #define SERVER_GET_PARTS_VEHICLE @"PartType/GetPartTypeByVehicle?"
 #define SERVICE_GET_SERVICE_RECORDS @"ServiceRecord/GetServiceRecordsByUserId?"
 #define SERVICE_GET_USER_BIKES @"Vehicle/GetVehiclesByUserId?"
+#define SERVICE_REGISTER_USER_DEVICE @"UserDeviceInfo/RegisterUserDevice"
 /*
  * This class handles all server requests and responses.
  */

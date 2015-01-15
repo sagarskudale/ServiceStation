@@ -137,6 +137,24 @@
     [self.navigationController pushViewController:forgotPasswordVC animated:YES];
 }
 
+
+- (void) registerUserDevice
+{
+    DebugLog(@"");
+    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+    [dataDic setObject:[self getUserID] forKey:@"UserId"];
+    [dataDic setObject:@"2" forKey:@"OSType"];
+    [dataDic setObject:[Utils getDeviceToken] forKey:@"DeviceToken"];
+    
+    [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_REGISTER_USER_DEVICE withData:dataDic withDelegate:nil];
+}
+- (NSString *) getUserID
+{
+    DebugLog(@"");
+    AllUserData *allUserData = [ArchiveManager getUserData];
+    AccountInformation *userInfo = [allUserData accountInformation];
+    return userInfo.strUserID;
+}
 #pragma mark-
 #pragma mark- Delegate Methods
 #pragma mark-
@@ -149,6 +167,7 @@
     if ([[responseDictionary objectForKey:@"Status"] isEqualToString:@"success"]) {
         NSDictionary *userDitails = [dicData objectForKey:@"Data"];
         [self saveUserData:dicData];
+        [self registerUserDevice];
         [self launchDashboardScreen];
     }else{
         [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Incorrect Usename or Password." withDelegate:nil];

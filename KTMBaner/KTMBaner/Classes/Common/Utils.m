@@ -75,6 +75,19 @@
     
 }
 
++ (NSString *) getDeviceToken
+{
+    DebugLog(@"");
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:KEY_DEVICETOKEN];
+}
++ (void) storeDeviceToken:(NSString *) deviceToken
+{
+    DebugLog(@"");
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:deviceToken forKey:KEY_DEVICETOKEN];
+    [userDefaults synchronize];
+}
 #pragma mark -
 #pragma mark ==============================
 #pragma mark  Image Download
