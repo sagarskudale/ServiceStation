@@ -11,7 +11,7 @@
 #import "Utils.h"
 
 #define SALES_NUMBER @"+912065269999"
-#define SERVICES_NUMBER @"+912065266255"
+#define SERVICES_NUMBER @"+912065262655"
 #define KTM_LINK @"http://www.ktmbaner.com"
 
 @interface AboutUsViewController ()

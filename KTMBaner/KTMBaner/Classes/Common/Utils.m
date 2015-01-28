@@ -79,7 +79,7 @@
 {
     DebugLog(@"");
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-    return [userDefaults objectForKey:KEY_DEVICETOKEN];
+    return @"WEEE@##WEEWEWw232wewe3e223w32";//[userDefaults objectForKey:KEY_DEVICETOKEN];
 }
 + (void) storeDeviceToken:(NSString *) deviceToken
 {

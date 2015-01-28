@@ -133,7 +133,7 @@ static ServerController *sharedInstance = nil;
         actAlertView =[[ActivityAlertView alloc]initWithTitle:nil message:[self getMessageForServiceName:serviceName] delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
         [actAlertView showActivityIndicator];
         
-        if ([serviceName isEqualToString:SERVICE_NAME_AUTHONTICATE] || [serviceName isEqualToString:SERVICE_NAME_REGISTER_USER]) {
+        if ([serviceName isEqualToString:SERVICE_NAME_AUTHONTICATE] || [serviceName isEqualToString:SERVICE_NAME_REGISTER_USER] || [serviceName isEqualToString:SERVICE_REGISTER_USER_DEVICE]) {
             [self sendServerRequestForLoginUserOrRegisterUserWithJsonDataDictionary:dicData withServiceName:serviceName];
         }else{
             

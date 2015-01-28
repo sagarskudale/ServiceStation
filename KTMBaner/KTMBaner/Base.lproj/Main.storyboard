@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dax-Dg-Lgt">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -2151,7 +2150,7 @@ BANER, Pune 411045</string>
                                                                             <constraint firstAttribute="height" constant="35" id="6dr-77-Kfr"/>
                                                                             <constraint firstAttribute="width" constant="148" id="u3h-Oz-Pb5"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="+912065266255">
+                                                                        <state key="normal" title="+912065262655">
                                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <variation key="default">
@@ -5082,10 +5081,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Pf7-k4-Zad"/>
-                                        <exclude reference="AFZ-EQ-2x6"/>
-                                        <exclude reference="cOG-0L-cYJ"/>
                                         <exclude reference="53l-Eg-lBh"/>
                                         <exclude reference="vQ3-Bg-6SA"/>
+                                        <exclude reference="AFZ-EQ-2x6"/>
+                                        <exclude reference="cOG-0L-cYJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -5095,10 +5094,10 @@ BANER, Pune 411045</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Pf7-k4-Zad"/>
-                                        <include reference="AFZ-EQ-2x6"/>
-                                        <include reference="cOG-0L-cYJ"/>
                                         <include reference="53l-Eg-lBh"/>
                                         <include reference="vQ3-Bg-6SA"/>
+                                        <include reference="AFZ-EQ-2x6"/>
+                                        <include reference="cOG-0L-cYJ"/>
                                     </mask>
                                 </variation>
                             </view>
