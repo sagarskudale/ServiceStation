@@ -10,6 +10,7 @@
 #import "DashBoardViewController.h"
 #import "ArchiveManager.h"
 #import "LoginViewController.h"
+#import "PdfViewController.h"
 #import "Constants.h"
 #import "Utils.h"
 
@@ -32,6 +33,8 @@
 - (void) loadNextView
 {
     DebugLog(@"");
+
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     if ([self isUserLoggedIn]) {
         DashBoardViewController *dashBoardViewController = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardViewController"];

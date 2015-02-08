@@ -69,6 +69,7 @@
 		633A88B01A21E04100859353 /* CostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 633A88AF1A21E04100859353 /* CostTableViewCell.m */; };
 		633A88B31A21E1A800859353 /* DetailCostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 633A88B21A21E1A800859353 /* DetailCostViewController.m */; };
 		633A88B61A22014800859353 /* PartCostDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 633A88B51A22014800859353 /* PartCostDetails.m */; };
+		633BC5ED1A8619F900956E95 /* PdfDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 633BC5EC1A8619F900956E95 /* PdfDownloader.m */; };
 		6342640B1A171B3F00EA34F8 /* BikeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */; };
 		6342640E1A17302D00EA34F8 /* PdfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342640D1A17302D00EA34F8 /* PdfViewController.m */; };
 		634264111A173D0800EA34F8 /* TechSpecsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634264101A173D0800EA34F8 /* TechSpecsContainerView.m */; };
@@ -244,6 +245,8 @@
 		633A88B21A21E1A800859353 /* DetailCostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCostViewController.m; sourceTree = "<group>"; };
 		633A88B41A22014800859353 /* PartCostDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartCostDetails.h; sourceTree = "<group>"; };
 		633A88B51A22014800859353 /* PartCostDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartCostDetails.m; sourceTree = "<group>"; };
+		633BC5EB1A8619F900956E95 /* PdfDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfDownloader.h; sourceTree = "<group>"; };
+		633BC5EC1A8619F900956E95 /* PdfDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdfDownloader.m; sourceTree = "<group>"; };
 		634264091A171B3F00EA34F8 /* BikeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDetailsViewController.h; sourceTree = "<group>"; };
 		6342640A1A171B3F00EA34F8 /* BikeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDetailsViewController.m; sourceTree = "<group>"; };
 		6342640C1A17302D00EA34F8 /* PdfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfViewController.h; sourceTree = "<group>"; };
@@ -637,6 +640,8 @@
 			children = (
 				6335FA231A08779600655BFA /* ServerController.h */,
 				6335FA241A08779600655BFA /* ServerController.m */,
+				633BC5EB1A8619F900956E95 /* PdfDownloader.h */,
+				633BC5EC1A8619F900956E95 /* PdfDownloader.m */,
 			);
 			path = ServerController;
 			sourceTree = "<group>";
@@ -948,6 +953,7 @@
 				639EAC971A07EC6A002F9CE6 /* LoginViewController.m in Sources */,
 				6335FA2E1A08779600655BFA /* NSString+MD5Addition.m in Sources */,
 				6359F80C1A1271DB00135CBE /* AppointmentTableViewCell.m in Sources */,
+				633BC5ED1A8619F900956E95 /* PdfDownloader.m in Sources */,
 				6335FA2C1A08779600655BFA /* ASIInputStream.m in Sources */,
 				632BD0931A069A2700ADBBED /* DashBoardViewController.m in Sources */,
 				6335FA341A08779600655BFA /* SBJsonStreamParserAccumulator.m in Sources */,

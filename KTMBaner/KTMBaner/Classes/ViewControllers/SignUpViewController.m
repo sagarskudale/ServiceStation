@@ -127,7 +127,7 @@
         [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Please enter password" withDelegate:nil];
     }else if (![self.confimePasswordTextField.text isEqualToString:self.passwordTextField.text]) {
         [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Password confirmation failed" withDelegate:nil];
-    }else if ([self.selectDateButton.titleLabel.text isEqualToString:@"Select Date"]) {
+    }else if ([self.selectDateButton.titleLabel.text isEqualToString:@"Select Birthdate"]) {
         [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Please select Birthdate." withDelegate:nil];
     }else{
         return YES;
