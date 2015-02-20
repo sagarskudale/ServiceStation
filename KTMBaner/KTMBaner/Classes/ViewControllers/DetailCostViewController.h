@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ServerController.h"
 
-@interface DetailCostViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,ServiceControlerDelegate>
+@interface DetailCostViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,ServiceControlerDelegate,UISearchBarDelegate>
 @property (nonatomic, strong) NSString *vehicleID;
 @end

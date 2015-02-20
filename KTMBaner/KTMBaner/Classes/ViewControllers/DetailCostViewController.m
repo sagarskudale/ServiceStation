@@ -15,9 +15,11 @@
 
 @interface DetailCostViewController () {
     NSArray *partsInfo;
+    NSArray *partsInfoToDisplay;
 }
 @property (weak, nonatomic) IBOutlet UITableView *costTabelView;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @end
 
 @implementation DetailCostViewController
@@ -29,13 +31,14 @@
     NSMutableDictionary *partsInfoDic = [[userData allPartsInfo] mutableCopy];
     if (partsInfoDic != nil) {
         partsInfo = [partsInfoDic objectForKey:self.vehicleID];
+        partsInfoToDisplay = partsInfo;
         if (partsInfo != nil) {
             [self.costTabelView reloadData];
         }
         
     }
     
-    
+    self.searchBar.delegate = self;
     if ([self.vehicleID isEqualToString:@"All Parts"]) {
         [[ServerController sharedInstance] sendGETServiceRequestForService:SERVER_GET_ALL_PARTS withData:nil withDelegate:self];
     }else{
@@ -62,7 +65,7 @@
         [allPartsInfo addObject:partDetail];
     }
     partsInfo = allPartsInfo;
-    
+    partsInfoToDisplay = partsInfo;
     [self.costTabelView reloadData];
     
     AllUserData *userData = [ArchiveManager getUserData];
@@ -92,7 +95,7 @@
 #pragma mark-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     DebugLog(@"");
-    return [partsInfo count];
+    return [partsInfoToDisplay count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -105,7 +108,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CostTableViewCell"];
     }
     
-    PartCostDetails *details = [partsInfo objectAtIndex:indexPath.row];
+    PartCostDetails *details = [partsInfoToDisplay objectAtIndex:indexPath.row];
     
     cell.titleLabel.text = details.name;
     cell.discriptionLabel.text = [NSString stringWithFormat:@"Part Code: %@",details.code];
@@ -118,6 +121,52 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark-
+#pragma mark- Search bar delegates
+#pragma mark-
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+    return YES;
+}
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    
+    searchBar.text = @"";
+}
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
+    return YES;
+}
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    DebugLog(@"Search Text: %@", searchText);
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
+    NSArray *tempArray = [partsInfo filteredArrayUsingPredicate:predicate];
+    if ([searchText isEqualToString:@""]) {
+        partsInfoToDisplay = partsInfo;
+    } else {
+        partsInfoToDisplay = tempArray;
+    }
+    [self.costTabelView reloadData];
+    
+    if([searchText length] == 0) {
+        [searchBar performSelector: @selector(resignFirstResponder)
+                        withObject: nil
+                        afterDelay: 0.05];
+    }
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    DebugLog(@"");
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
 #pragma mark-
 #pragma mark- Status Bar
 #pragma mark-
