@@ -153,6 +153,7 @@
         [dic setObject:@"Pune" forKey:@"City"];
         [dic setObject:@"MH" forKey:@"State"];
         [dic setObject:@"India" forKey:@"Country"];
+                
         [dic setObject:self.selectDateButton.titleLabel.text forKey:@"Birthdate"];
         [dic setObject:self.passwordTextField.text forKey:@"Password"];
         
@@ -236,9 +237,11 @@
     accountInformation.strAdderess = (NSString *) [userData objectForKey:@"AddressLine1"];
     accountInformation.strUserID = (NSString *) [userData objectForKey:@"UserId"];
     
-    NSString *birtDate = (NSString *) [userData objectForKey:@"Birthdate"];
-    NSString *date = [[birtDate componentsSeparatedByString:@"T"] objectAtIndex:0];
-    accountInformation.strBirtDate = date;
+//    NSString *birtDate = (NSString *) [userData objectForKey:@"Birthdate"];
+//    NSString *date = [[birtDate componentsSeparatedByString:@"T"] objectAtIndex:0];
+    accountInformation.strBirtDate = @"null";
+
+//    accountInformation.strBirtDate = date;
     
     AllUserData * allUserData = [[AllUserData alloc] init];
     allUserData.accountInformation = accountInformation;
