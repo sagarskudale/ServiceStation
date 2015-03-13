@@ -9,6 +9,7 @@
 #import "BikeDetailsViewController.h"
 #import "PdfViewController.h"
 #import "BookVehicleViewController.h"
+#import "CurrentViewControllerHandler.h"
 #import "ArchiveManager.h"
 #import "AllUserData.h"
 #import "AccountInformation.h"
@@ -81,6 +82,7 @@
     
     bookVehicleVC.userID = accountInfo.strUserID;
     bookVehicleVC.userAddress = accountInfo.strAdderess;
+    [CurrentViewControllerHandler sharedInstance].currentViewController = bookVehicleVC;
     [self.navigationController pushViewController:bookVehicleVC animated:YES];
 }
 
@@ -89,6 +91,8 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     PdfViewController *pdfVC = [storyboard instantiateViewControllerWithIdentifier:@"PdfViewController"];
     pdfVC.pdfURL = self.bikeDetails.pdfURL;
+    [CurrentViewControllerHandler sharedInstance].currentViewController = pdfVC;
+
     [self.navigationController pushViewController:pdfVC animated:YES];
     
 }

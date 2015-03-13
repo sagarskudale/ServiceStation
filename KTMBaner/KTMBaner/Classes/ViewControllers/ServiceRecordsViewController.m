@@ -17,6 +17,7 @@
 #import "ServiceRecordTableViewCell.h"
 #import "ServiceRecordDetails.h"
 #import "LoadingPlaceHolderView.h"
+#import "CurrentViewControllerHandler.h"
 
 #define TAG_PLACEHOLDER 12
 
@@ -216,7 +217,10 @@ typedef enum {
         
         ServiceRecordDetails *serviceDetails = [serRecords objectAtIndex:indexPath.row];
         pdfVC.pdfURL = serviceDetails.pdfURL;
+        [CurrentViewControllerHandler sharedInstance].currentViewController = pdfVC;
+
         [self.navigationController pushViewController:pdfVC animated:YES];
+        
     }else{
         [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Network not available..." withDelegate:nil];
     }

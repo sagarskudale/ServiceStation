@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630029271AB3521A00EF7A77 /* CurrentViewControllerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 630029261AB3521A00EF7A77 /* CurrentViewControllerHandler.m */; };
 		630AFD5F1A0D345200B73F41 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AFD5E1A0D345200B73F41 /* ForgotPasswordViewController.m */; };
 		630AFD651A0D57EC00B73F41 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AFD641A0D57EC00B73F41 /* AboutUsViewController.m */; };
 		6327A6C11A0F1AE300855813 /* KtmInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6327A6C01A0F1AE300855813 /* KtmInstagramViewController.m */; };
@@ -137,6 +138,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630029251AB3521A00EF7A77 /* CurrentViewControllerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentViewControllerHandler.h; sourceTree = "<group>"; };
+		630029261AB3521A00EF7A77 /* CurrentViewControllerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentViewControllerHandler.m; sourceTree = "<group>"; };
 		630AFD5D1A0D345200B73F41 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		630AFD5E1A0D345200B73F41 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		630AFD631A0D57EC00B73F41 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 				6333303E1A09C78500ED45E1 /* Utils.m */,
 				635EEFFA1A111CA000203873 /* ArchiveManager.h */,
 				635EEFFB1A111CA000203873 /* ArchiveManager.m */,
+				630029251AB3521A00EF7A77 /* CurrentViewControllerHandler.h */,
+				630029261AB3521A00EF7A77 /* CurrentViewControllerHandler.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1013,6 +1018,7 @@
 				634264111A173D0800EA34F8 /* TechSpecsContainerView.m in Sources */,
 				6335FA3C1A08779600655BFA /* SBJsonWriter.m in Sources */,
 				634264511A177C0100EA34F8 /* CollapsableTableViewHeaderViewController.m in Sources */,
+				630029271AB3521A00EF7A77 /* CurrentViewControllerHandler.m in Sources */,
 				6382DE541A151AAF00BE182F /* BikeDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1138,7 +1144,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a27cca5c-952d-40db-9669-7a0aa48a2c5b";
+				PROVISIONING_PROFILE = "da6bafc6-b0f3-41e1-8a0e-a3f3f66f0877";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1170,7 +1176,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a27cca5c-952d-40db-9669-7a0aa48a2c5b";
+				PROVISIONING_PROFILE = "da6bafc6-b0f3-41e1-8a0e-a3f3f66f0877";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

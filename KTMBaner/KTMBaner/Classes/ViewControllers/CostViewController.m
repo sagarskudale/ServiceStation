@@ -10,6 +10,7 @@
 #import "ArchiveManager.h"
 #import "AllUserData.h"
 #import "BikeDetail.h"
+#import "CurrentViewControllerHandler.h"
 #import "Constants.h"
 #import "DetailCostViewController.h"
 
@@ -100,6 +101,8 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     DetailCostViewController *detailCostVC = [storyboard instantiateViewControllerWithIdentifier:@"DetailCostViewController"];
     detailCostVC.vehicleID = vehicalID;
+    [CurrentViewControllerHandler sharedInstance].currentViewController = detailCostVC;
+
     [self.navigationController pushViewController:detailCostVC animated:YES];
 }
 - (void) saveAndLoadData:(NSArray *) data

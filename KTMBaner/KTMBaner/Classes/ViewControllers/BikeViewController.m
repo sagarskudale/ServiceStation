@@ -9,6 +9,7 @@
 #import "BikeViewController.h"
 #import "BikeTableViewCell.h"
 #import "AllUserData.h"
+#import "CurrentViewControllerHandler.h"
 #import "ArchiveManager.h"
 #import "Constants.h"
 #import "BikeDetail.h"
@@ -171,7 +172,8 @@
         bookVC.bikeName = bikeDetail.bikeName;
         bookVC.userAddress = accountInfo.strAdderess;
         bookVC.vehicleID = [NSString stringWithFormat:@"%d",(int)bikeDetail.vehicleTypeId];
-        
+        [CurrentViewControllerHandler sharedInstance].currentViewController = bookVC;
+
         [self.navigationController pushViewController:bookVC animated:YES];
     }
 }

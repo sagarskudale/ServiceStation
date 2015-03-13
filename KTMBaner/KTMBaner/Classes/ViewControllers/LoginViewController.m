@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "DashBoardViewController.h"
 #import "ForgotPasswordViewController.h"
+#import "CurrentViewControllerHandler.h"
 #import "SignUpViewController.h"
 #import "Constants.h"
 #import "AllUserData.h"
@@ -86,6 +87,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     DashBoardViewController *dashBoardViewController = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = dashBoardViewController;
+
     [self.navigationController pushViewController:dashBoardViewController animated:YES];
 }
 
@@ -134,12 +137,16 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SignUp" bundle:nil];
     SignUpViewController *signUpViewController = [storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = signUpViewController;
+
     [self.navigationController pushViewController:signUpViewController animated:YES];
     
 }
 - (IBAction)actionForgotPassword:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     ForgotPasswordViewController *forgotPasswordVC = [storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = forgotPasswordVC;
+
     [self.navigationController pushViewController:forgotPasswordVC animated:YES];
 }
 

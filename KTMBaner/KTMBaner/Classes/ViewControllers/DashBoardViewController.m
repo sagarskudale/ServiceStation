@@ -13,6 +13,7 @@
 #import "AccountDetailsViewController.h"
 #import "AppointmentViewController.h"
 #import "ShowroomViewController.h"
+#import "CurrentViewControllerHandler.h"
 #import "ServiceRecordsViewController.h"
 #import "CostViewController.h"
 #import "BikeViewController.h"
@@ -147,8 +148,11 @@
 - (void) onBikeViewTapped
 {
     DebugLog(@"");
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     BikeViewController *bikeVC = [storyboard instantiateViewControllerWithIdentifier:@"BikeViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = bikeVC;
+
     [self.navigationController pushViewController:bikeVC animated:YES];
 }
 
@@ -157,6 +161,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     ServiceRecordsViewController *serviceRecordVC = [storyboard instantiateViewControllerWithIdentifier:@"ServiceRecordsViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = serviceRecordVC;
+
     [self.navigationController pushViewController:serviceRecordVC animated:YES];
 }
 
@@ -165,6 +171,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     CostViewController *costVC = [storyboard instantiateViewControllerWithIdentifier:@"CostViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = costVC;
+
     [self.navigationController pushViewController:costVC animated:YES];
 }
 
@@ -173,6 +181,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SignUp" bundle: nil];
     ShowroomViewController *showroomVC = [storyboard instantiateViewControllerWithIdentifier:@"ShowroomViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = showroomVC;
+
     [self.navigationController pushViewController:showroomVC animated:YES];
 }
 
@@ -181,6 +191,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     AppointmentViewController *appointmentVC = [storyboard instantiateViewControllerWithIdentifier:@"AppointmentViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = appointmentVC;
+
     [self.navigationController pushViewController:appointmentVC animated:YES];
 }
 
@@ -189,6 +201,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     AboutUsViewController *aboutUsVC = [storyboard instantiateViewControllerWithIdentifier:@"AboutUsViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = aboutUsVC;
+
     [self.navigationController pushViewController:aboutUsVC animated:YES];
 
 }
@@ -198,6 +212,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     AccountDetailsViewController *accountInfoView = [storyboard instantiateViewControllerWithIdentifier:@"AccountDetailsViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = accountInfoView;
+
     [self.navigationController pushViewController:accountInfoView animated:YES];
 }
 
@@ -206,6 +222,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     KtmInstagramViewController *instagramVC = [storyboard instantiateViewControllerWithIdentifier:@"KtmInstagramViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = instagramVC;
+
     [self.navigationController pushViewController:instagramVC animated:YES];
 }
 

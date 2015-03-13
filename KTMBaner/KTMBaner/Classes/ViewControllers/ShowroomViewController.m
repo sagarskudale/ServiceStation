@@ -13,6 +13,7 @@
 #import "AllUserData.h"
 #import "BikeDetailsViewController.h"
 #import "LoadingPlaceHolderView.h"
+#import "CurrentViewControllerHandler.h"
 
 #define TAG_PLACEHOLDER 12
 
@@ -142,6 +143,8 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     BikeDetailsViewController *bikeDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"BikeDetailsViewController"];
     bikeDetailVC.bikeDetails = bikeDetail;
+    [CurrentViewControllerHandler sharedInstance].currentViewController = bikeDetailVC;
+
     [self.navigationController pushViewController:bikeDetailVC animated:YES];
 }
 

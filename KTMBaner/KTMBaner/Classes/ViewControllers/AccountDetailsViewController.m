@@ -12,6 +12,7 @@
 #import "Utils.h"
 #import "LoginViewController.h"
 #import "AccountInformation.h"
+#import "CurrentViewControllerHandler.h"
 #import "ArchiveManager.h"
 
 @interface AccountDetailsViewController ()
@@ -67,6 +68,7 @@
     }
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = loginViewController;
     [self.navigationController pushViewController:loginViewController animated:YES];
     
 }

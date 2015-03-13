@@ -11,6 +11,7 @@
 #import "DashBoardViewController.h"
 #import "BikeViewController.h"
 #import "Constants.h"
+#import "CurrentViewControllerHandler.h"
 #import "Utils.h"
 #import "ArchiveManager.h"
 
@@ -127,27 +128,30 @@
 - (void) launchDashboard
 {
     DebugLog(@"");
-    UIViewController * vc = self.window.rootViewController;
+    UIViewController * vc = [CurrentViewControllerHandler sharedInstance].currentViewController;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     DashBoardViewController *dashBoardViewController = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = dashBoardViewController;
     [vc.navigationController pushViewController:dashBoardViewController animated:YES];
 }
 
 - (void) launchServiceScreen
 {
     DebugLog(@"");
-    UIViewController * vc = self.window.rootViewController;
+    UIViewController * vc = [CurrentViewControllerHandler sharedInstance].currentViewController;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     ServiceRecordsViewController *serviceRecordVC = [storyboard instantiateViewControllerWithIdentifier:@"ServiceRecordsViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = serviceRecordVC;
     [vc.navigationController pushViewController:serviceRecordVC animated:YES];
 }
 
 - (void) launchVehiclesScreen
 {
     DebugLog(@"");
-    UIViewController * vc = self.window.rootViewController;
+    UIViewController * vc = [CurrentViewControllerHandler sharedInstance].currentViewController;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     BikeViewController *bikeVC = [storyboard instantiateViewControllerWithIdentifier:@"BikeViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = bikeVC;
     [vc.navigationController pushViewController:bikeVC animated:YES];
 }
 

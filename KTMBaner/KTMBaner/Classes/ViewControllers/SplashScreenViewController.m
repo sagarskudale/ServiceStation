@@ -9,6 +9,7 @@
 #import "SplashScreenViewController.h"
 #import "DashBoardViewController.h"
 #import "ArchiveManager.h"
+#import "CurrentViewControllerHandler.h"
 #import "LoginViewController.h"
 #import "PdfViewController.h"
 #import "Constants.h"
@@ -26,6 +27,10 @@
     [self performSelector:@selector(loadNextView) withObject:nil afterDelay:2.0f];
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [CurrentViewControllerHandler sharedInstance].currentViewController = self;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -38,9 +43,13 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     if ([self isUserLoggedIn]) {
         DashBoardViewController *dashBoardViewController = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
+        [CurrentViewControllerHandler sharedInstance].currentViewController = dashBoardViewController;
+
         [self.navigationController pushViewController:dashBoardViewController animated:YES];
     }else{
         LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [CurrentViewControllerHandler sharedInstance].currentViewController = loginViewController;
+
         [self.navigationController pushViewController:loginViewController animated:YES];
     }
 }

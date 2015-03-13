@@ -11,6 +11,7 @@
 #import "AllUserData.h"
 #import "ArchiveManager.h"
 #import "DashBoardViewController.h"
+#import "CurrentViewControllerHandler.h"
 #import "Constants.h"
 #import "Utils.h"
 
@@ -303,6 +304,8 @@
     DebugLog(@"");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     DashBoardViewController *dashBoardViewController = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
+    [CurrentViewControllerHandler sharedInstance].currentViewController = dashBoardViewController;
+
     [self.navigationController pushViewController:dashBoardViewController animated:YES];
 }
 
