@@ -211,6 +211,7 @@ static ServerController *sharedInstance = nil;
 }
 -(void)onDataFetchFailed:(ASIHTTPRequest *)request{
     DebugLog(@"");
+    NSLog(@"Data fetch failed");
     
     [actAlertView hideActivityIndicator];
 }

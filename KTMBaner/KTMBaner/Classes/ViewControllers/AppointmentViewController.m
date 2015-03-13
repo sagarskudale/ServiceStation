@@ -80,7 +80,7 @@
     
     [dataDic setObject:output forKey:@"bookingDate"];
     [dataDic setObject:currBookingDetails.bookingTime forKey:@"bookingTime"];
-    [dataDic setObject:userInfo.strUserID forKey:@"userID"];
+    [dataDic setObject:userInfo.strUserID forKey:@"userId"];
     
     
     [[ServerController sharedInstance] sendPOSTServiceRequestForService:SERVICE_BOOKING_STATUS withData:dataDic withDelegate:self];
@@ -135,7 +135,10 @@
 - (void)onDataFetchComplete:(NSDictionary *)dicData
 {
     DebugLog(@"");
-    
+    currentIndex ++;
+    if ([bookingDetailsArray count] > currentIndex) {
+        [self checkStatusForBookingDetailsAtIndex:currentIndex];
+    }
 }
 #pragma mark-
 #pragma mark- Status Bar

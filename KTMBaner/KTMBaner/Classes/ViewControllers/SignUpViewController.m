@@ -237,12 +237,15 @@
     accountInformation.strAdderess = (NSString *) [userData objectForKey:@"AddressLine1"];
     accountInformation.strUserID = (NSString *) [userData objectForKey:@"UserId"];
     
-//    NSString *birtDate = (NSString *) [userData objectForKey:@"Birthdate"];
-//    NSString *date = [[birtDate componentsSeparatedByString:@"T"] objectAtIndex:0];
-    accountInformation.strBirtDate = @"null";
-
-//    accountInformation.strBirtDate = date;
     
+    id birtDate =  [userData objectForKey:@"Birthdate"];
+    if(birtDate == [NSNull null]){
+        accountInformation.strBirtDate = @"null";
+    }else {
+        NSString *date = [[((NSString *)birtDate) componentsSeparatedByString:@"T"] objectAtIndex:0];
+        accountInformation.strBirtDate = date;
+    }
+        
     AllUserData * allUserData = [[AllUserData alloc] init];
     allUserData.accountInformation = accountInformation;
     
