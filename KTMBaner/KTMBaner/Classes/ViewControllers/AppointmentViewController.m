@@ -19,7 +19,7 @@
 
 @interface AppointmentViewController ()
 {
-    NSArray *bookingDetailsArray;
+    NSMutableArray *bookingDetailsArray;
     NSUInteger currentIndex;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -33,7 +33,7 @@
     [self setStatusBarHidden];
     
     AllUserData *userData = [ArchiveManager getUserData];
-    bookingDetailsArray = userData.bookingDetailsArray;
+    bookingDetailsArray = [userData.bookingDetailsArray mutableCopy];
     
     currentIndex = 0;
     if ([bookingDetailsArray count] > 0) {
@@ -75,7 +75,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSDate *date = [formatter dateFromString:currBookingDetails.bookingDate];
-    [formatter setDateFormat:@"MM-dd-yyyy"];
+    [formatter setDateFormat:@"yyyy/MM/dd"];
     NSString *output = [formatter stringFromDate:date];
     
     [dataDic setObject:output forKey:@"bookingDate"];
@@ -124,6 +124,9 @@
     cell.dateLabel.text = bookingDetails.bookingDate;
     cell.timeLabel.text = bookingDetails.bookingTime;
     cell.statusLabel.text = bookingDetails.bookingStatus;
+    if ([bookingDetails.bookingStatus isEqualToString:@"Approved"]) {
+        cell.statusLabel.textColor = [UIColor greenColor];
+    }
     
     return cell;
 }
@@ -135,9 +138,22 @@
 - (void)onDataFetchComplete:(NSDictionary *)dicData
 {
     DebugLog(@"");
+    NSDictionary *response = [dicData objectForKey:@"Response"];
+    if (response && [[response objectForKey:@"Status"] isEqualToString:@"failure"]) {
+        
+    }else if(response && [[response objectForKey:@"Status"] isEqualToString:@"success"]){
+        BookingDetails *currBookingDetails = [bookingDetailsArray objectAtIndex:currentIndex];
+        currBookingDetails.bookingStatus = @"Approved";
+        [bookingDetailsArray replaceObjectAtIndex:currentIndex withObject:currBookingDetails];
+    }
+    
     currentIndex ++;
     if ([bookingDetailsArray count] > currentIndex) {
         [self checkStatusForBookingDetailsAtIndex:currentIndex];
+    }else{
+        AllUserData *userData = [ArchiveManager getUserData];
+        userData.bookingDetailsArray = bookingDetailsArray;
+        [ArchiveManager storeDataToFile:userData];
     }
 }
 #pragma mark-

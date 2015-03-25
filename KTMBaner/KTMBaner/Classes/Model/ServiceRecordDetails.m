@@ -30,11 +30,30 @@
 - (void) initializeServiceDetailsWithData: (NSDictionary *) serviceDetails
 {
     DebugLog(@"");
-    self.vehicleID = [[serviceDetails objectForKey:KEY_VEHICLE_ID] integerValue];
-    self.kms = [[serviceDetails objectForKey:KEY_KMS] integerValue];
-    self.pdfURL = [serviceDetails objectForKey:KEY_PDFURL];
-    self.date = [serviceDetails objectForKey:KEY_SERVICING_DATE];
-    self.points = [[serviceDetails objectForKey:KEY_POINTS] integerValue];
+    self.vehicleID = 0;
+    self.kms = 0;
+    self.pdfURL = @"";
+    self.date = @"";
+    self.points = 0;
+    if ([serviceDetails objectForKey:KEY_VEHICLE_ID] && [serviceDetails objectForKey:KEY_VEHICLE_ID] !=[NSNull null]) {
+        self.vehicleID = [[serviceDetails objectForKey:KEY_VEHICLE_ID] integerValue];
+    }
+    
+    if ([serviceDetails objectForKey:KEY_KMS] && [serviceDetails objectForKey:KEY_KMS] !=[NSNull null]) {
+        self.kms = [[serviceDetails objectForKey:KEY_KMS] integerValue];
+    }
+    
+    if ([serviceDetails objectForKey:KEY_PDFURL] && [serviceDetails objectForKey:KEY_PDFURL] !=[NSNull null]) {
+        self.pdfURL = [serviceDetails objectForKey:KEY_PDFURL];
+    }
+    
+    if ([serviceDetails objectForKey:KEY_SERVICING_DATE] && [serviceDetails objectForKey:KEY_SERVICING_DATE] !=[NSNull null]) {
+        self.date = [serviceDetails objectForKey:KEY_SERVICING_DATE];
+    }
+    if ([serviceDetails objectForKey:KEY_POINTS] && [serviceDetails objectForKey:KEY_POINTS] !=[NSNull null]) {
+        self.points = [[serviceDetails objectForKey:KEY_POINTS] integerValue];
+    }
+    
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {

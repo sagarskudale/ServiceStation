@@ -23,10 +23,8 @@
     
     
 }
-
-- (void) viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
@@ -38,6 +36,13 @@
     self.webView.delegate = self;
     
     [self.webView loadData:[self getPdfAtUrl:[NSString stringWithFormat:@"http://ktmbaner.com/FileUploads/%@",self.pdfURL]] MIMEType: @"application/pdf" textEncodingName: @"UTF-8" baseURL:nil];
+    
+}
+- (void) viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    
     
     
     //    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.pdfURL]]]];
