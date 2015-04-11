@@ -72,6 +72,8 @@
             height = height + 15;
         }
         
+        NSLog(@"Height : %f",height);
+        
         CGPoint position = CGPointMake(((i % 2) * (15 + width)) + 15,height );
         
         BikeDetailView *detailView = [[BikeDetailView alloc] initWithFrame:CGRectMake(position.x, position.y, detailViewSize.width, detailViewSize.height) withBikeDetails:[bikeInfoArray objectAtIndex:i]];
@@ -81,11 +83,13 @@
         
         
     }
-    if ([bikeInfoArray count] % 2 == 0) {
-        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height);
-    }else{
-        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height + width * 1.4 + 15);
-    }
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height + width * 1.4 + 15);
+    
+//    if ([bikeInfoArray count] % 2 == 0) {
+//        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height);
+//    }else{
+//        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, height + width * 1.4 + 15);
+//    }
     
 }
 

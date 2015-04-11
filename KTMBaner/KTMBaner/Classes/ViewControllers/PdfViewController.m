@@ -35,8 +35,31 @@
     
     self.webView.delegate = self;
     
-    [self.webView loadData:[self getPdfAtUrl:[NSString stringWithFormat:@"http://ktmbaner.com/FileUploads/%@",self.pdfURL]] MIMEType: @"application/pdf" textEncodingName: @"UTF-8" baseURL:nil];
     
+    NSString *url = [NSString stringWithFormat:@"http://ktmbaner.com/FileUploads/%@",self.pdfURL];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        NSArray *parts = [url componentsSeparatedByString:@"/"];
+        NSString *filename = [parts objectAtIndex:[parts count]-1];
+        
+        NSString *path = NSHomeDirectory();
+        path = [NSString stringWithFormat:@"%@/%@",path,filename];
+        NSData *pdfData = [NSData dataWithContentsOfFile:path];
+        if (pdfData == nil) {
+            NSArray *parts = [url componentsSeparatedByString:@"/"];
+            NSString *filename = [parts objectAtIndex:[parts count]-1];
+            
+            
+            NSString *path = NSHomeDirectory();
+            path = [NSString stringWithFormat:@"%@/%@",path,filename];
+            
+            pdfData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+            [pdfData writeToFile:path atomically:YES];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [self.webView loadData:pdfData MIMEType: @"application/pdf" textEncodingName: @"UTF-8" baseURL:nil];
+        });
+    });
+        
 }
 - (void) viewWillAppear:(BOOL)animated {
     

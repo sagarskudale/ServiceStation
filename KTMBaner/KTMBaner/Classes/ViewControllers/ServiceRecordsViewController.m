@@ -211,7 +211,6 @@ typedef enum {
 {
     DebugLog(@"");
     
-    if ([[ServerController sharedInstance] isNetworkAvailabe]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
         PdfViewController *pdfVC = [storyboard instantiateViewControllerWithIdentifier:@"PdfViewController"];
         
@@ -220,12 +219,7 @@ typedef enum {
         [CurrentViewControllerHandler sharedInstance].currentViewController = pdfVC;
 
         [self.navigationController pushViewController:pdfVC animated:YES];
-        
-    }else{
-        [Utils displayAlerViewWithTitle:@"KTM Baner" withMessage:@"Network not available..." withDelegate:nil];
-    }
-    
-    
+
     
 }
 
