@@ -45,6 +45,9 @@
 - (void) addButtonsForAllBikeData:(NSArray *) allBikesData
 {
     DebugLog(@"");
+    
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     CGRect btnRect = CGRectMake(20, 10, self.view.frame.size.width - 40, 40);
     
     
@@ -154,6 +157,11 @@
 - (IBAction)actionBackButton:(id)sender {
     DebugLog(@"");
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)onRefreshButton:(id)sender {
+    DebugLog(@"");
+    [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_MERCHANT_VEHICAL withData:nil withDelegate:self];
 }
 #pragma mark-
 #pragma mark- Status Bar

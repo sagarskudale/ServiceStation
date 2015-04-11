@@ -199,6 +199,13 @@
 
 }
 
+- (IBAction)onRefreshButton:(id)sender {
+    DebugLog(@"");
+    NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithCapacity:1];
+    [dataDic setObject:[self getUserID] forKey:@"userId"];
+    [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_GET_USER_BIKES withData:dataDic withDelegate:self];
+}
+
 #pragma mark-
 #pragma mark- Status Bar
 #pragma mark-

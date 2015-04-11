@@ -58,6 +58,7 @@
 - (void) addBikeDetails
 {
     DebugLog(@"");
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     [self removePlaceHolderView];
     
@@ -122,6 +123,11 @@
 {
     DebugLog(@"");
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)actionRefreshButton:(id)sender {
+    DebugLog(@"");
+    [[ServerController sharedInstance] sendGETServiceRequestForService:SERVICE_MERCHANT_VEHICAL withData:nil withDelegate:self];
 }
 
 #pragma mark-

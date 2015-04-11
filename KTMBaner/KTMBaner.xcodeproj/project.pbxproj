@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		630029271AB3521A00EF7A77 /* CurrentViewControllerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 630029261AB3521A00EF7A77 /* CurrentViewControllerHandler.m */; };
+		6305BEBE1AD9244E00A683D6 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6305BEBD1AD9244E00A683D6 /* refresh.png */; };
 		630AFD5F1A0D345200B73F41 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AFD5E1A0D345200B73F41 /* ForgotPasswordViewController.m */; };
 		630AFD651A0D57EC00B73F41 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AFD641A0D57EC00B73F41 /* AboutUsViewController.m */; };
 		6327A6C11A0F1AE300855813 /* KtmInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6327A6C01A0F1AE300855813 /* KtmInstagramViewController.m */; };
@@ -140,6 +141,7 @@
 /* Begin PBXFileReference section */
 		630029251AB3521A00EF7A77 /* CurrentViewControllerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentViewControllerHandler.h; sourceTree = "<group>"; };
 		630029261AB3521A00EF7A77 /* CurrentViewControllerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentViewControllerHandler.m; sourceTree = "<group>"; };
+		6305BEBD1AD9244E00A683D6 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		630AFD5D1A0D345200B73F41 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		630AFD5E1A0D345200B73F41 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		630AFD631A0D57EC00B73F41 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
@@ -782,6 +784,7 @@
 				63BF3A201A643C550084B04C /* AppIcon29x29.png */,
 				63BF3A211A643C550084B04C /* AppIcon29x29@2x.png */,
 				63BF3A261A643D890084B04C /* Default-568h@2x.png.png */,
+				6305BEBD1AD9244E00A683D6 /* refresh.png */,
 				63BF3A241A643D020084B04C /* icon40x40@2x.png */,
 				639DEC6A1A0E395000B89BDC /* AppIcon60x60@3x.png */,
 				6394B48B1A2AEDA4002FB0AF /* bike_black.png */,
@@ -922,6 +925,7 @@
 				639DEC671A0E38C400B89BDC /* AppIcon60x60.png in Resources */,
 				6335A2401A0B1CA600C2CB7C /* ic_launcher.png in Resources */,
 				632BD0811A06998E00ADBBED /* bike.png in Resources */,
+				6305BEBE1AD9244E00A683D6 /* refresh.png in Resources */,
 				632BD0831A06998E00ADBBED /* instagram.png in Resources */,
 				6342645A1A177C0100EA34F8 /* CollapsableTableViewHeaderViewPlain_iOS7.xib in Resources */,
 				632BD0871A06998E00ADBBED /* showroom.png in Resources */,

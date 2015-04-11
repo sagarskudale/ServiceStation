@@ -234,14 +234,29 @@
                                             <constraint firstAttribute="width" constant="30" id="sXS-jk-jnZ"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7c-AJ-nP8">
+                                        <rect key="frame" x="258" y="17" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="lhN-1K-BpM"/>
+                                            <constraint firstAttribute="height" constant="40" id="nvG-fi-Dvc"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="refresh.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionRefreshButton:" destination="c9C-wL-ELX" eventType="touchUpInside" id="POE-a7-16x"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.39607843139999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Qnv-5R-7Pz" firstAttribute="leading" secondItem="xEh-4h-1hr" secondAttribute="leading" constant="25" id="AaO-tj-s8q"/>
+                                    <constraint firstAttribute="centerY" secondItem="e7c-AJ-nP8" secondAttribute="centerY" constant="-4.5" id="LZ8-OU-dbg"/>
                                     <constraint firstAttribute="centerY" secondItem="Qnv-5R-7Pz" secondAttribute="centerY" id="Yvr-PR-Egr"/>
                                     <constraint firstAttribute="height" constant="65" id="auW-ts-3Fb"/>
                                     <constraint firstAttribute="centerY" secondItem="s0U-gb-SPM" secondAttribute="centerY" constant="-0.5" id="hFL-vg-Fm7"/>
                                     <constraint firstItem="s0U-gb-SPM" firstAttribute="leading" secondItem="xEh-4h-1hr" secondAttribute="leading" constant="3" id="q8I-ke-zV5"/>
+                                    <constraint firstAttribute="trailing" secondItem="e7c-AJ-nP8" secondAttribute="trailing" constant="22" id="sxa-8j-Q4F"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCG-zu-Z7A">
@@ -291,6 +306,7 @@
     <resources>
         <image name="back_white.png" width="32" height="32"/>
         <image name="ic_launcher.png" width="45" height="45"/>
+        <image name="refresh.png" width="36" height="36"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
